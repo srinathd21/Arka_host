@@ -4,29 +4,19 @@
 body {
   font-family: "Montserrat", sans-serif;
 
+
 }
-
-
 .slide_card_content p{
   font-size: 18px;
 }
 .nav {
-  background-color: #ffffff;
+  background-color: #f2f6e8;
   padding: 20px 0px;
   font-weight: 600;
-  border-bottom: 1px solid rgb(243, 243, 243);
-  position: sticky;
-  top: 0px;
-  z-index: 3;
 }
-#top_nav_link_mob{
-  text-decoration: none;
-  display: inline-block;
-  color: rgb(69, 69, 69);
-  margin: 8px 0px 0px 15px;
-}
+
 .grd, .testimonial_txt, .category_txt{
-  font-size: 32px;
+  font-size: 25px;
   font-weight: 600;
   background: linear-gradient(22deg, rgba(223, 0, 0, 1) 40%, rgba(112, 0, 216, 1) 98%);
   -webkit-background-clip: text;
@@ -36,14 +26,31 @@ body {
 .nav-item {
   list-style: none;
 }
+.logo{
+  
+  margin: -2px 0px 0px 0px;
+}
+.navbar_logo{
+  margin: 0px 0px 0px 10px;
+  padding: 10px;
+  text-decoration: none;
+  
+}
 
-.content a{
+.navbar_logo img, .navbar_logo div{
+  display: inline-block;
+  
+}
+.navbar_logo div{
   color: #313131;
-  font-size: 14px;
+  font-size: 18px;
+  margin-top: -50px;
+  
+ 
 }
 
 .navbar_logo img{
-  width: 70px;
+  width: 20px;
   
 }
 h4 {
@@ -57,7 +64,11 @@ h4 {
   position: relative;
   left: 100px;
   top: -1px;
-  
+}
+
+.content a {
+  text-decoration: none;
+
 }
 
 .content_products img {
@@ -135,7 +146,7 @@ h4 {
 
 .dropdown-content a {
   text-align: center;
-  color: #424242;
+  color: black;
   width: 130px;
   padding: 12px 16px;
   text-decoration: none;
@@ -161,23 +172,23 @@ h4 {
 
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 766px) {
   .content div {
     display: none;
   }
   .logo{
   
-    margin: -2px 0px 0px 28vw;
+    margin: -2px 0px 0px 25vw;
   }
 }
 
-@media screen and (max-width: 370px) {
+@media screen and (max-width: 360px) {
   .content div {
     display: none;
   }
-  .navbar_logo img{
-    position: relative;
-
+  .logo{
+  
+    margin: -2px 0px 0px 20vw;
   }
 }
 
@@ -204,7 +215,7 @@ h4 {
   font-weight: 510;
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 769px) {
   .btn {
     background-color: #000000;
     color: #ffffff;
@@ -219,7 +230,7 @@ h4 {
   }
 }
 
-@media screen and (max-width: 968px) {
+@media screen and (max-width: 768px) {
   .btn {
     padding: 0;
     color: #000000;
@@ -319,7 +330,7 @@ h4 {
 .nav_link>a {
   text-decoration: none;
   margin-right: 15px;
-  color: #3a3a3a;
+  color: #000000;
 }
 
 .nav_link:hover {
@@ -436,7 +447,7 @@ h4 {
   background-color: #b4fc00;
 }
 
-@media screen and (max-width: 968px) {
+@media screen and (max-width: 768px) {
   .slide-content {
     margin: 0 10px;
   }

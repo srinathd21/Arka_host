@@ -29,4 +29,3 @@ var swiper = new Swiper(".slide-content", {
         },
     },
   });
-
