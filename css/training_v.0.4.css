@@ -258,7 +258,7 @@ nav {
     color: black;
     display:inline-block;
     height: 300px;
-    width: 350px;
+    width: 320px;
     background-color: white;
     border-radius: 10px;
     margin: 10px;
@@ -473,12 +473,7 @@ footer{
     .footer_links a{
         margin-right: 0px;
     }
-    #crs_left_btn{
-        top: 500px;
-        left: 20vw;
-    }
-    #crs_right_btn{
-        top: 500px;
-        right: 20vw;
+    #crs_left_btn,#crs_right_btn{
+        display: none;
     }
 }

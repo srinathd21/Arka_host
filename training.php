@@ -23,7 +23,7 @@
     <script src="https://kit.fontawesome.com/8b7cdef8f0.js" crossorigin="anonymous"></script>
 
     <!-- css -->
-    <link rel="stylesheet" href="css/training_v.0.3.css">
+    <link rel="stylesheet" href="css/training_v.0.4.css">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 

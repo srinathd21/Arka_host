@@ -37,3 +37,38 @@ cardLeftBtn.addEventListener("click", function() {
 })
 //console.log("outercontainer", innercardWidth,innercardWidth*innerContainer.length+150)
 
+const swipeArea = outerContainer;
+
+let startX = 0;
+let endX = 0;
+
+swipeArea.addEventListener('touchstart', (event) => {
+    startX = event.touches[0].clientX;
+});
+
+swipeArea.addEventListener('touchend', (event) => {
+    endX = event.changedTouches[0].clientX;
+    
+    // Determine the swipe direction
+    if (endX > startX + 50) { // Swiped right (50px threshold to ensure it's a swipe)
+        onSwipeRight();
+    }
+
+    if (endX < startX + 50) { // Swiped right (50px threshold to ensure it's a swipe)
+        onSwipeLeft();
+    }
+});
+
+function onSwipeRight() {
+    if(innerContainer_1.style.marginLeft.slice(0,-2) !=  0){
+        console.log((innerContainer_1.style.width.slice(0,-2))+innercardWidth,((innerContainer_1.style.marginLeft.slice(0,-2))-innercardWidth))
+        innerContainer_1.style.marginLeft = ((+innerContainer_1.style.marginLeft.slice(0,-2))+innercardWidth)+"px"
+    }
+    
+}
+function onSwipeLeft(){
+    if(-totalwidth != ((innerContainer_1.style.marginLeft.slice(0,-2)))){
+        console.log((innerContainer_1.style.width.slice(0,-2))-innercardWidth)
+        innerContainer_1.style.marginLeft = ((+innerContainer_1.style.marginLeft.slice(0,-2))-innercardWidth)+"px"
+    }
+}
