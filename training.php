@@ -23,7 +23,7 @@
     <script src="https://kit.fontawesome.com/8b7cdef8f0.js" crossorigin="anonymous"></script>
 
     <!-- css -->
-    <link rel="stylesheet" href="css/training_v.0.2.css">
+    <link rel="stylesheet" href="css/training_v.0.3.css">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
@@ -147,136 +147,106 @@
         </div>
     </div>
 
-    <div class="container all_courses">
-        <div class="all_courses_title">
-            <h2>Learn industry skills in less than 6 months</h2>
-
-            <a href="" class="explore_link" style="">Explore all courses<i class="fa-solid fa-arrow-right"></i></a>
-        </div>
-        <div class="all_courses_container ">
-            <a class="all_courses_list " href="">
-                <div class="course_title">
-                    <h2 class="text-black">Python</h2>
-                    <p>Extensive syllabus</p>
-
-                    <span><i class="fa-solid fa-book-open"></i>Specialized certificate</span>
-                </div>
-                <div class="course_details">
-                    <span><i class="fa-regular fa-calendar-days"></i>120 Hours</span><br>
-                    <span><i class="fa-regular fa-circle-check"></i>Certification program</span>
-                </div>
-            </a>
+    <div id="card_slider">
+    <button id="crs_left_btn"><</button>
+    <button id="crs_right_btn">></button>
+        <div class="container all_courses">
 
 
+            <div class="all_courses_title">
+                <h2>Learn industry skills in less than 6 months</h2>
 
-            <a class="all_courses_list" href="">
-                <div class="course_title">
-                    <h2 class="text-black">Java</h2>
-                    <p>Extensive syllabus</p>
-
-                    <span><i class="fa-solid fa-book-open"></i>Specialized certificate</span>
-                </div>
-                <div class="course_details">
-                    <span><i class="fa-regular fa-calendar-days"></i>120 Hours</span><br>
-                    <span><i class="fa-regular fa-circle-check"></i>Certification program</span>
-                </div>
-            </a>
-
-            <a class="all_courses_list" href="">
-                <div class="course_title">
-                    <h2 class="text-black">Graphic Design</h2>
-                    <p>Extensive syllabus</p>
-
-                    <span><i class="fa-solid fa-book-open"></i>Specialized certificate</span>
-                </div>
-                <div class="course_details">
-                    <span><i class="fa-regular fa-calendar-days"></i>200 Hours</span><br>
-                    <span><i class="fa-regular fa-circle-check"></i>Certification program</span>
-                </div>
-            </a>
-        </div>
-
-    </div>
-
-    
-
-    <div class="container all_courses_container_mob">
-        <!-- Carousel -->
-
-        <!-- testimoniyal mobile view -->
-        <div id="demo_m" class="carousel slide mt-5" data-bs-ride="carousel">
-
-            <!-- Indicators/dots -->
-            <!-- <div class="carousel-indicators">
-                <button type="button" data-bs-target="#demo2" data-bs-slide-to="0" class="active"></button>
-                <button type="button" data-bs-target="#demo2" data-bs-slide-to="1"></button>
-            </div> -->
-
-            <!-- The slideshow/carousel -->
-            <div class="carousel-inner">
-                <div class="carousel-item active text-center">
-
-                    <a class="all_courses_list " href="">
-                        <div class="course_title">
-                            <h2 class="text-black">Python</h2>
-                            <p>Extensive syllabus</p>
-
-                            <span><i class="fa-solid fa-book-open"></i>Specialized certificate</span>
-                        </div>
-                        <div class="course_details">
-                            <span><i class="fa-regular fa-calendar-days"></i>120 Hours</span><br>
-                            <span><i class="fa-regular fa-circle-check"></i>Certification program</span>
-                        </div>
-                    </a>
-
-                </div>
-
-                <div class="carousel-item text-center">
-                    <a class="all_courses_list" href="">
-                        <div class="course_title">
-                            <h2 class="text-black">Java</h2>
-                            <p>Extensive syllabus</p>
-
-                            <span><i class="fa-solid fa-book-open"></i>Specialized certificate</span>
-                        </div>
-                        <div class="course_details">
-                            <span><i class="fa-regular fa-calendar-days"></i>120 Hours</span><br>
-                            <span><i class="fa-regular fa-circle-check"></i>Certification program</span>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="carousel-item text-center">
-                    <a class="all_courses_list" href="">
-                        <div class="course_title">
-                            <h2 class="text-black">Graphic Design</h2>
-                            <p>Extensive syllabus</p>
-
-                            <span><i class="fa-solid fa-book-open"></i>Specialized certificate</span>
-                        </div>
-                        <div class="course_details">
-                            <span><i class="fa-regular fa-calendar-days"></i>200 Hours</span><br>
-                            <span><i class="fa-regular fa-circle-check"></i>Certification program</span>
-                        </div>
-                    </a>
-                </div>
-
+                <a href="" class="explore_link" style="">Explore all courses<i class="fa-solid fa-arrow-right"></i></a>
             </div>
 
-            <!-- Left and right controls/icons -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#demo_m" data-bs-slide="prev">
-                <span style="color: #90cab6; font-size: 20px; position: relative; right: 20px;"><i
-                        class="fa-solid fa-less-than"></i></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#demo_m" data-bs-slide="next">
-                <span style="color: #90cab6; font-size: 20px; position: relative; left: 20px;"><i
-                        class="fa-solid fa-greater-than"></i></span>
-            </button>
+            <div class="all_courses_container ">
+                <a class="all_courses_list " href="">
+                    <div class="course_title">
+                        <h2 class="text-black">Python</h2>
+                        <p>Extensive syllabus</p>
+
+                        <span><i class="fa-solid fa-book-open"></i>Specialized certificate</span>
+                    </div>
+                    <div class="course_details">
+                        <span><i class="fa-regular fa-calendar-days"></i>120 Hours</span><br>
+                        <span><i class="fa-regular fa-circle-check"></i>Certification program</span>
+                    </div>
+                </a>
+
+
+
+                <a class="all_courses_list" href="">
+                    <div class="course_title">
+                        <h2 class="text-black">Java</h2>
+                        <p>Extensive syllabus</p>
+
+                        <span><i class="fa-solid fa-book-open"></i>Specialized certificate</span>
+                    </div>
+                    <div class="course_details">
+                        <span><i class="fa-regular fa-calendar-days"></i>120 Hours</span><br>
+                        <span><i class="fa-regular fa-circle-check"></i>Certification program</span>
+                    </div>
+                </a>
+
+
+                <a class="all_courses_list" href="">
+                    <div class="course_title">
+                        <h2 class="text-black">Graphic Design</h2>
+                        <p>Extensive syllabus</p>
+
+                        <span><i class="fa-solid fa-book-open"></i>Specialized certificate</span>
+                    </div>
+                    <div class="course_details">
+                        <span><i class="fa-regular fa-calendar-days"></i>200 Hours</span><br>
+                        <span><i class="fa-regular fa-circle-check"></i>Certification program</span>
+                    </div>
+                </a>
+
+                <a class="all_courses_list" href="">
+                    <div class="course_title">
+                        <h2 class="text-black">Front End</h2>
+                        <p>Extensive syllabus</p>
+
+                        <span><i class="fa-solid fa-book-open"></i>Specialized certificate</span>
+                    </div>
+                    <div class="course_details">
+                        <span><i class="fa-regular fa-calendar-days"></i>200 Hours</span><br>
+                        <span><i class="fa-regular fa-circle-check"></i>Certification program</span>
+                    </div>
+                </a>
+
+                <a class="all_courses_list" href="">
+                    <div class="course_title">
+                        <h2 class="text-black">Back End</h2>
+                        <p>Extensive syllabus</p>
+
+                        <span><i class="fa-solid fa-book-open"></i>Specialized certificate</span>
+                    </div>
+                    <div class="course_details">
+                        <span><i class="fa-regular fa-calendar-days"></i>200 Hours</span><br>
+                        <span><i class="fa-regular fa-circle-check"></i>Certification program</span>
+                    </div>
+                </a>
+
+                <a class="all_courses_list" href="">
+                    <div class="course_title">
+                        <h2 class="text-black">PHP</h2>
+                        <p>Extensive syllabus</p>
+
+                        <span><i class="fa-solid fa-book-open"></i>Specialized certificate</span>
+                    </div>
+                    <div class="course_details">
+                        <span><i class="fa-regular fa-calendar-days"></i>200 Hours</span><br>
+                        <span><i class="fa-regular fa-circle-check"></i>Certification program</span>
+                    </div>
+                </a>
+            </div>
+
         </div>
 
-
-
     </div>
+
+
 
     <!-- Trend Courses -->
 
@@ -516,15 +486,16 @@
             </div>
 
             <div class="footer_links">
-                <a href="tel:+9488434411" class=""><i class="fa-solid fa-phone"></i>+91 9488 4344 11</a>
-                <a href="mailto:support@arka.org.in" class=""><i class="fa-regular fa-envelope-open"></i>support@arka.org.in</a>
+                <a href="tel:+919488434411" class=""><i class="fa-solid fa-phone"></i>+91 9488 4344 11</a>
+                <a href="mailto:support@arka.org.in" class=""><i
+                        class="fa-regular fa-envelope-open"></i>support@arka.org.in</a>
             </div>
         </div>
     </footer>
 
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
+    <script src="js/training.js"></script>
 </body>
 
 </html>

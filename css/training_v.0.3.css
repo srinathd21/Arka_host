@@ -231,17 +231,55 @@ nav {
 .all_courses_title a {
     display: inline-block;
 }
-
-.all_courses_container {
-    background-color: #f5f5f7;
-    padding: 20px;
-    margin-top: 30px;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    align-items: center;
+.all_courses{
+    overflow: hidden;
 }
 
+#crs_left_btn,#crs_right_btn{
+    background-color: white;
+    border: none;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    box-shadow: 1px 1px 10px rgb(169, 169, 169);
+    font-size: 25px;
+    padding-bottom: 5px;
+    color: gray;
+    font-weight: 700;
+}
+.all_courses_container {
+    background-color: #f5f5f7;
+    padding: 10px;
+    margin-top: 50px;
+}
+
+.all_courses_list {
+    text-decoration: none;
+    color: black;
+    display:inline-block;
+    height: 300px;
+    width: 350px;
+    background-color: white;
+    border-radius: 10px;
+    margin: 10px;
+    box-shadow: rgba(127, 127, 127, 0.6) 5px 10px 20px -3px, rgba(0, 0, 0, 0.3) 0px 4px 6px -2px;
+    transition: .3s linear;
+}
+#card_slider{
+    position: relative;
+}
+#crs_left_btn{
+    position: absolute;
+    left: 10px;
+    top: 250px;
+   
+}
+#crs_right_btn{
+    position: absolute;
+    right: 10px;
+    top: 250px;
+   
+}
 .trand_courses_container {
     background-color: #fffed9;
     padding: 20px;
@@ -250,19 +288,6 @@ nav {
     justify-content: space-around;
     flex-wrap: wrap;
     align-items: center;
-}
-
-.all_courses_list {
-    text-decoration: none;
-    color: black;
-    display: inline-block;
-    height: 300px;
-    width: 300px;
-    background-color: white;
-    border-radius: 10px;
-    margin: 10px;
-    box-shadow: rgba(127, 127, 127, 0.6) 5px 10px 40px -3px, rgba(0, 0, 0, 0.3) 0px 4px 6px -2px;
-    transition: .3s linear;
 }
 
 .all_courses_list:hover {
@@ -435,14 +460,25 @@ footer{
 }
 
 @media screen and (max-width:775px) {
-    .all_courses_container_mob,.trend_courses_container_mob {
+    .trend_courses_container_mob {
         display: block;
     }
 
-    .all_courses_container,.trand_courses_container {
+    .trand_courses_container {
         display: none;
+    }
+    .trand_courses{
+        margin-top: 200px;
     }
     .footer_links a{
         margin-right: 0px;
+    }
+    #crs_left_btn{
+        top: 500px;
+        left: 20vw;
+    }
+    #crs_right_btn{
+        top: 500px;
+        right: 20vw;
     }
 }

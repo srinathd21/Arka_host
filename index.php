@@ -90,7 +90,7 @@
             </div>
 
             <div class="d-flex mx-3">
-                <a href="tel:+9488434411" style="margin-right: 30px;"><i class="fa-solid fa-phone"
+                <a href="tel:+919488434411" style="margin-right: 30px;"><i class="fa-solid fa-phone"
                         style="color: rgb(0, 0, 0); font-size: 13px;"></i></a>
 
                 <a href="https://www.google.com/maps/place/Arka+Networkz+System/@12.7360388,77.8222739,17z/data=!3m1!4b1!4m6!3m5!1s0x3bae7185e99a9cb5:0x3520348054405036!8m2!3d12.7360336!4d77.8248488!16s%2Fg%2F11t1ds8dv0?authuser=0&entry=ttu"
