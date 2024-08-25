@@ -1,7 +1,5 @@
-a{
-    display: inline-block;
-}
-.supt_float_container span{
+
+#top_float_div span{
     background-color: black;
     color: white;
     padding: 4px 10px;
@@ -11,20 +9,15 @@ a{
     top: 47px;
 }
 
-.supt_float_container {
-    position: fixed;
-    bottom: 80px;
-    right: 50px; 
-}
 
 .call_float_btn a,.whatsapp_float_btn a{
     text-align: center;
     border-radius: 50%;
     border: none;
-    background-color: #ee2c3c;
     color: white;
     padding: 18px 22px;
     color: white;
+    display: inline-block;
     font-size: 24px;
     
 }
@@ -44,7 +37,6 @@ a{
 
 #top_float_div{
     display: none;
-    transition: 1s;
 }
 
 .float_btn {
@@ -56,7 +48,11 @@ a{
     background-color: #ee2c3c;
     color: white;
 }
-
+.supt_float_container {
+    position: fixed;
+    bottom: 80px;
+    right: 50px; 
+}
 .supt_float_container:hover #top_float_div{
     display: block;
 }
@@ -101,5 +97,34 @@ a{
 @media screen and (max-width: 768px) {
     .supt_float_container_mob{
         display: block;
+    }
+
+    .call_float_btn a,.whatsapp_float_btn a{
+        padding: 10px 12px;
+        font-size: 15px;
+    }
+
+    .float_btn {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        font-size: 20px;
+        border: none;
+        color: white;
+    }
+    #top_float_div span{
+        background-color: black;
+        color: white;
+        font-size: 12px;
+        padding: 4px 10px;
+        border-radius: 5px;
+        position: relative;
+        left: -64px;
+        top: 32px;
+    }
+    .supt_float_container {
+        position: fixed;
+        bottom: 40px;
+        right: 0px; 
     }
 }

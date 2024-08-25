@@ -7,7 +7,7 @@
         <span>Call us</span>
 
         <div class="call_float_btn">
-            <a href="#" ><i class="fa-solid fa-phone"></i></a>
+            <a href="tel:+919488434411" ><i class="fa-solid fa-phone"></i></a>
         </div>
     </div>
 
