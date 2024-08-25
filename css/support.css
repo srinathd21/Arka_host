@@ -52,6 +52,7 @@
     position: fixed;
     bottom: 80px;
     right: 50px; 
+    z-index: 6;
 }
 .supt_float_container:hover #top_float_div{
     display: block;
@@ -125,6 +126,6 @@
     .supt_float_container {
         position: fixed;
         bottom: 40px;
-        right: 0px; 
+        right: 45px; 
     }
 }
