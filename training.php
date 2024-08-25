@@ -8,19 +8,7 @@
 
     <link rel="icon" href="img/Arka Logo.png" type="image/png">
 
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Google Font  -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
-
-
-    <!--  Font Awesome  -->
-    <script src="https://kit.fontawesome.com/8b7cdef8f0.js" crossorigin="anonymous"></script>
+    <?php include 'links.php'; ?>
 
     <!-- css -->
     <link rel="stylesheet" href="css/training_v.0.4.css">
@@ -34,84 +22,7 @@
 <body>
     <?php include 'topnav.php'; ?>
 
-    <nav class="container">
-        <button class="btn d-lg-none mx-3" style="margin-top: -5px ;" type="button" data-bs-toggle="offcanvas"
-            data-bs-target="#demo">
-            <i class="fa-solid fa-bars" style="color: #000000;"></i>
-        </button>
-        <div class="logo">
-            <div class="logo_img">
-                <img src="img/Arka_logo.png" alt="">
-            </div>
-        </div>
-        <div class="dropdown">
-            <button type="button" class="nav_dropdown" data-bs-toggle="dropdown">
-                Categories <i class="fa-solid fa-chevron-down" style="color: rgb(83, 83, 83); font-size:12px;"></i>
-            </button>
-            <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Link 1</a></li>
-                <li><a class="dropdown-item" href="#">Link 2</a></li>
-                <li><a class="dropdown-item" href="#">Link 3</a></li>
-            </ul>
-        </div>
-        <div class="srch_input">
-            <input class="srch_input_1" type="text" placeholder="Search">
-            <button><i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i></button>
-        </div>
-        <div class="nav_links">
-            <ul>
-                <li><a href="">Identify your career</a></li>
-                <li><a href="">Support</a></li>
-                <li><a href="">Sign in <span class="profile_icon"><i style="font-size:25px; color:gray;"
-                                class="fa-regular fa-user"></i></span> </li></a>
-            </ul>
-        </div>
-
-        <!-- Offcanva -->
-
-        <div class="offcanvas offcanvas-start offcanvas-lg" id="demo">
-            <div class="offcanvas-header">
-                <h1 class="offcanvas-title mx-auto">Arka Technology</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
-            </div>
-
-            <div class="offcanvas-body">
-                <div>
-                    <a id="top_nav_link_mob" href="index.php">For Business</a>
-                </div>
-
-                <div>
-                    <a id="top_nav_link_mob" href="training.php">For Training</a>
-                </div>
-                <div class="dropdown_mob">
-                    <button type="button" class="nav_dropdown mt-2" data-bs-toggle="dropdown">
-                        Categories <i class="fa-solid fa-chevron-down"
-                            style="color: rgb(83, 83, 83); font-size:12px;"></i>
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Link 1</a></li>
-                        <li><a class="dropdown-item" href="#">Link 2</a></li>
-                        <li><a class="dropdown-item" href="#">Link 3</a></li>
-                    </ul>
-                </div>
-                <ul class="nav_link_mob">
-                    <li><a href="">Identify your career</a></li>
-                    <li><a href="">Support</a></li>
-                    <li><a href="">Sign in <span class="profile_icon"><i style="font-size:25px; color:gray;"
-                                    class="fa-regular fa-user"></i></span> </li></a>
-                </ul>
-            </div>
-        </div>
-        <div style="display:flex; position:relative;">
-            <div class="srch_input_mob">
-                <input class="srch_input_1_mob" type="text">
-                <button><i class="fa-solid fa-magnifying-glass"
-                        style="color: #ffffff;font-size:12px; position:relative;top:-3px;"></i></button>
-            </div>
-
-        </div>
-
-    </nav>
+    <?php include 'training_nav.php'; ?>
 
     <div style="position:relative;" class="">
         <img class="cover_img_pc" src="img/Arka-Cover-1920x600-Individual.avif" width="100%" alt="">
@@ -147,103 +58,105 @@
         </div>
     </div>
 
-    <div id="card_slider">
-    <button id="crs_left_btn"><</button>
-    <button id="crs_right_btn">></button>
-        <div class="container all_courses">
+    <div class="container ">
+        <div id="card_slider">
+            <button id="crs_left_btn" onclick="onSwipeRight()">< </button>
+                    <button id="crs_right_btn" onclick="onSwipeLeft()">></button>
+                    <div class="all_courses">
 
 
-            <div class="all_courses_title">
-                <h2>Learn industry skills in less than 6 months</h2>
+                        <div class="all_courses_title">
+                            <h2>Learn industry skills in less than 6 months</h2>
 
-                <a href="" class="explore_link" style="">Explore all courses<i class="fa-solid fa-arrow-right"></i></a>
-            </div>
+                            <a href="" class="explore_link" style="">Explore all courses<i
+                                    class="fa-solid fa-arrow-right"></i></a>
+                        </div>
 
-            <div class="all_courses_container ">
-                <a class="all_courses_list " href="">
-                    <div class="course_title">
-                        <h2 class="text-black">Python</h2>
-                        <p>Extensive syllabus</p>
+                        <div class="all_courses_container ">
+                            <a class="all_courses_list " href="">
+                                <div class="course_title">
+                                    <h2 class="text-black">Python</h2>
+                                    <p>Extensive syllabus</p>
 
-                        <span><i class="fa-solid fa-book-open"></i>Specialized certificate</span>
+                                    <span><i class="fa-solid fa-book-open"></i>Specialized certificate</span>
+                                </div>
+                                <div class="course_details">
+                                    <span><i class="fa-regular fa-calendar-days"></i>120 Hours</span><br>
+                                    <span><i class="fa-regular fa-circle-check"></i>Certification program</span>
+                                </div>
+                            </a>
+
+
+
+                            <a class="all_courses_list" href="">
+                                <div class="course_title">
+                                    <h2 class="text-black">Java</h2>
+                                    <p>Extensive syllabus</p>
+
+                                    <span><i class="fa-solid fa-book-open"></i>Specialized certificate</span>
+                                </div>
+                                <div class="course_details">
+                                    <span><i class="fa-regular fa-calendar-days"></i>120 Hours</span><br>
+                                    <span><i class="fa-regular fa-circle-check"></i>Certification program</span>
+                                </div>
+                            </a>
+
+                            <a class="all_courses_list" href="">
+                                <div class="course_title">
+                                    <h2 class="text-black">Graphic Design</h2>
+                                    <p>Extensive syllabus</p>
+
+                                    <span><i class="fa-solid fa-book-open"></i>Specialized certificate</span>
+                                </div>
+                                <div class="course_details">
+                                    <span><i class="fa-regular fa-calendar-days"></i>200 Hours</span><br>
+                                    <span><i class="fa-regular fa-circle-check"></i>Certification program</span>
+                                </div>
+                            </a>
+
+                            <a class="all_courses_list" href="">
+                                <div class="course_title">
+                                    <h2 class="text-black">Front End</h2>
+                                    <p>Extensive syllabus</p>
+
+                                    <span><i class="fa-solid fa-book-open"></i>Specialized certificate</span>
+                                </div>
+                                <div class="course_details">
+                                    <span><i class="fa-regular fa-calendar-days"></i>200 Hours</span><br>
+                                    <span><i class="fa-regular fa-circle-check"></i>Certification program</span>
+                                </div>
+                            </a>
+
+                            <a class="all_courses_list" href="">
+                                <div class="course_title">
+                                    <h2 class="text-black">Back End</h2>
+                                    <p>Extensive syllabus</p>
+
+                                    <span><i class="fa-solid fa-book-open"></i>Specialized certificate</span>
+                                </div>
+                                <div class="course_details">
+                                    <span><i class="fa-regular fa-calendar-days"></i>200 Hours</span><br>
+                                    <span><i class="fa-regular fa-circle-check"></i>Certification program</span>
+                                </div>
+                            </a>
+
+                            <a class="all_courses_list" href="">
+                                <div class="course_title">
+                                    <h2 class="text-black">PHP</h2>
+                                    <p>Extensive syllabus</p>
+
+                                    <span><i class="fa-solid fa-book-open"></i>Specialized certificate</span>
+                                </div>
+                                <div class="course_details">
+                                    <span><i class="fa-regular fa-calendar-days"></i>200 Hours</span><br>
+                                    <span><i class="fa-regular fa-circle-check"></i>Certification program</span>
+                                </div>
+                            </a>
+                        </div>
+
                     </div>
-                    <div class="course_details">
-                        <span><i class="fa-regular fa-calendar-days"></i>120 Hours</span><br>
-                        <span><i class="fa-regular fa-circle-check"></i>Certification program</span>
-                    </div>
-                </a>
-
-
-
-                <a class="all_courses_list" href="">
-                    <div class="course_title">
-                        <h2 class="text-black">Java</h2>
-                        <p>Extensive syllabus</p>
-
-                        <span><i class="fa-solid fa-book-open"></i>Specialized certificate</span>
-                    </div>
-                    <div class="course_details">
-                        <span><i class="fa-regular fa-calendar-days"></i>120 Hours</span><br>
-                        <span><i class="fa-regular fa-circle-check"></i>Certification program</span>
-                    </div>
-                </a>
-
-
-                <a class="all_courses_list" href="">
-                    <div class="course_title">
-                        <h2 class="text-black">Graphic Design</h2>
-                        <p>Extensive syllabus</p>
-
-                        <span><i class="fa-solid fa-book-open"></i>Specialized certificate</span>
-                    </div>
-                    <div class="course_details">
-                        <span><i class="fa-regular fa-calendar-days"></i>200 Hours</span><br>
-                        <span><i class="fa-regular fa-circle-check"></i>Certification program</span>
-                    </div>
-                </a>
-
-                <a class="all_courses_list" href="">
-                    <div class="course_title">
-                        <h2 class="text-black">Front End</h2>
-                        <p>Extensive syllabus</p>
-
-                        <span><i class="fa-solid fa-book-open"></i>Specialized certificate</span>
-                    </div>
-                    <div class="course_details">
-                        <span><i class="fa-regular fa-calendar-days"></i>200 Hours</span><br>
-                        <span><i class="fa-regular fa-circle-check"></i>Certification program</span>
-                    </div>
-                </a>
-
-                <a class="all_courses_list" href="">
-                    <div class="course_title">
-                        <h2 class="text-black">Back End</h2>
-                        <p>Extensive syllabus</p>
-
-                        <span><i class="fa-solid fa-book-open"></i>Specialized certificate</span>
-                    </div>
-                    <div class="course_details">
-                        <span><i class="fa-regular fa-calendar-days"></i>200 Hours</span><br>
-                        <span><i class="fa-regular fa-circle-check"></i>Certification program</span>
-                    </div>
-                </a>
-
-                <a class="all_courses_list" href="">
-                    <div class="course_title">
-                        <h2 class="text-black">PHP</h2>
-                        <p>Extensive syllabus</p>
-
-                        <span><i class="fa-solid fa-book-open"></i>Specialized certificate</span>
-                    </div>
-                    <div class="course_details">
-                        <span><i class="fa-regular fa-calendar-days"></i>200 Hours</span><br>
-                        <span><i class="fa-regular fa-circle-check"></i>Certification program</span>
-                    </div>
-                </a>
-            </div>
 
         </div>
-
     </div>
 
 
@@ -477,21 +390,24 @@
         </div>
     </div>
 
-    <!--    Footer      -->
-    <footer class="bg-black p-5">
+    <!--    supports      -->
+    <div class="bg-black p-5 supports">
         <div class="container text-center text-white bg-black p-2">
             <div>
                 <h1>Support @<span style="color:green;">Arka</span></h1>
                 <p>We are available between 08:00 AM and 08:00 PM</p>
             </div>
 
-            <div class="footer_links">
+            <div class="supports_links">
                 <a href="tel:+919488434411" class=""><i class="fa-solid fa-phone"></i>+91 9488 4344 11</a>
                 <a href="mailto:support@arka.org.in" class=""><i
                         class="fa-regular fa-envelope-open"></i>support@arka.org.in</a>
             </div>
         </div>
-    </footer>
+    </div>
+    
+    <?php include 'supports.php'; ?>
+    
 
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
