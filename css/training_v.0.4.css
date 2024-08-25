@@ -58,7 +58,7 @@
 .business_numbers {
     position: relative;
     top: -20px;
-    width: 70%;
+    width: 80% !important;
     border-radius: 10px;
     background-color: white;
     display: flex;
@@ -295,7 +295,7 @@
 
     .business_numbers {
         padding: 15px;
-        width: 80%;
+        width: 80% !important;
         top: -10px;
         box-shadow: 0px 5px 1px #97c5b6, 5px 5px 10px rgb(197, 194, 194, 0.7), -5px 5px 10px rgb(197, 194, 194, 0.7);
     }
