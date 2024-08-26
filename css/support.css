@@ -46,7 +46,7 @@
 .supt_float_container {
     padding: 10px;
     position: fixed;
-    bottom: 80px;
+    bottom: 60px;
     right: 30px; 
     z-index: 6;
 }
@@ -98,7 +98,6 @@
         font-size: 15px;
         margin: 5px;
     }
-
 
     .float_btn {
        display: none;

@@ -19,12 +19,20 @@ body {
   top: 0px;
   z-index: 3;
 }
-#top_nav_link_mob{
+
+#top_nav_link_mob,.dropdown_mob >a{
+  border: 1px solid gray;
+  width: 200px;
+  padding: 10px;
+  border-radius: 7px;
+  color: rgb(69, 69, 69);
   text-decoration: none;
   display: inline-block;
-  color: rgb(69, 69, 69);
-  margin: 8px 0px 0px 15px;
+  margin-top: 20px;
 }
+
+
+
 .grd, .testimonial_txt, .category_txt{
   font-size: 32px;
   font-weight: 600;
@@ -161,13 +169,16 @@ h4 {
 
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 991px) {
   .content div {
     display: none;
   }
   .logo{
-  
-    margin: -2px 0px 0px 25vw;
+    width: 80px;
+    position: absolute;
+    top: 17px;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 
@@ -175,10 +186,7 @@ h4 {
   .content div {
     display: none;
   }
-  .logo{
-  
-    margin: -2px 0px 0px 20vw;
-  }
+ 
 }
 
 .cp_button {
@@ -204,7 +212,7 @@ h4 {
   font-weight: 510;
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 991px) {
   .btn {
     background-color: #000000;
     color: #ffffff;
@@ -217,6 +225,8 @@ h4 {
     color: #000000;
     border: 2px solid #000000;
   }
+
+ 
 }
 
 @media screen and (max-width: 968px) {
@@ -354,9 +364,6 @@ h4 {
   .carousel_overlay_2 {
     display: block;
 
-  }
-  .logo{
-    margin-right: 0px;
   }
 
   .carousel_overlay,

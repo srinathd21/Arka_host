@@ -9,7 +9,7 @@
 
     <div id="top_float_div">
         
-        <a class="whatsapp_float_btn" target="blank" href="https://wa.me/9488434411"><i class="fa-brands fa-whatsapp"></i></a>
+        <a class="whatsapp_float_btn" target="blank" href="https://wa.me/+919488434411"><i class="fa-brands fa-whatsapp"></i></a>
     </div>
 
     <div>
@@ -21,5 +21,5 @@
 
 <div class="supt_float_container_mob text-center" style="">
     <a href="tel:+919488434411" class=""><i class="fa-solid fa-phone"></i>Call us</a>
-    <a href="https://wa.me/+9488434411" target="blank" class=""><i class="fa-brands fa-whatsapp"></i>Whatsapp</a>
+    <a href="https://wa.me/+919488434411" target="blank" class=""><i class="fa-brands fa-whatsapp"></i>Whatsapp</a>
 </div>

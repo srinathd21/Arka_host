@@ -231,7 +231,7 @@
     font-weight:600;
 }
 .std_msg{
-    font-weight: 600;
+    font-weight: 490 !important;
 }
 .std_details{
     color: gray;

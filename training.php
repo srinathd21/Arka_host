@@ -11,7 +11,7 @@
     <?php include 'links.php'; ?>
 
     <!-- css -->
-    <link rel="stylesheet" href="css/training_v.0.6.css">
+    <link rel="stylesheet" href="css/training_v.0.7.css">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
@@ -381,11 +381,11 @@
 
                 <!-- Left and right controls/icons -->
                 <button class="carousel-control-prev" type="button" data-bs-target="#demo_testi" data-bs-slide="prev">
-                    <span style="color: #000000; font-size: 20px; position: absolute; right: 5px;"><i
+                    <span style="color: #000000; font-size: 20px; position: absolute; right: 40px;"><i
                             class="fa-solid fa-less-than"></i></span>
                 </button>
                 <button class="carousel-control-next" type="button" data-bs-target="#demo_testi" data-bs-slide="next">
-                    <span style="color: #000000; font-size: 20px; position: absolute; left: 5px;"><i
+                    <span style="color: #000000; font-size: 20px; position: absolute; left: 40px;"><i
                             class="fa-solid fa-greater-than"></i></span>
                 </button>
             </div>

@@ -10,19 +10,9 @@
 
     <link rel="icon" href="img/Arka Logo.png" type="image/png">
 
+    <?php include 'links.php'; ?>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Google Font  -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
-
-
-    <!--  Font Awesome  -->
-    <script src="https://kit.fontawesome.com/8b7cdef8f0.js" crossorigin="anonymous"></script>
+    
 
     <!-- _____ Slick Slider _____ -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css">
@@ -31,14 +21,8 @@
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/index.v.1.css">
 
-
-
-    <!-- _____ AOS _____ -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <style>
         * {
             font-family: "Segoe UI", Arial, sans-serif;
@@ -60,7 +44,7 @@
                 <i class="fa-solid fa-bars" style="color: #000000;"></i>
             </button>
             <div class="logo">
-                <a class="navbar_logo" href="javascript:void(0)">
+                <a class="navbar_logo" href="index.php">
                     <img src="img/Arka_logo.png" style="200px" alt="">
                 </a>
             </div>
@@ -105,28 +89,40 @@
     <div>
         <div class="offcanvas offcanvas-start offcanvas-md" id="demo">
             <div class="offcanvas-header">
-                <h1 class="offcanvas-title mx-auto">Arka Technology</h1>
+                <div class="logo">
+                    <a class="navbar_logo" href="index.php">
+                        <img src="img/Arka_logo.png" style="200px" alt="">
+                    </a>
+                </div>
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
             </div>
-            <div>
-                <a id="top_nav_link_mob" href="index.php">For Business</a>
-            </div>
 
-            <div>
-                <a id="top_nav_link_mob" href="training.php">For Training</a>
-            </div>
             <div class="offcanvas-body">
-                <p>Course</p>
-                <p>Service</p>
-                <p>Career</p>
-                <div class="nav_link dropdown">
-                    <a class="nav_link dropbtn">More <i class="fa-solid fa-angle-down"></i></a>
-                    <div class="dropdown-content">
-                        <a href="php/dataform.php">Register</a>
-                        <a href="#">Link 2</a>
-                        <a href="#">Link 3</a>
-                    </div>
+                <div>
+                    <a id="top_nav_link_mob" href="index.php">For Business</a>
+                </div>
 
+                <div>
+                    <a id="top_nav_link_mob" href="training.php">For Training</a>
+                </div>
+
+                <div>
+                    <a id="top_nav_link_mob" href="">Service</a>
+                </div>
+
+                <div>
+                    <a id="top_nav_link_mob" href="">Career</a>
+                </div>
+
+                <div class="dropdown_mob">
+                    <a type="button" class="" data-bs-toggle="dropdown">
+                        More <i class="fa-solid fa-chevron-down" style="color: rgb(83, 83, 83); font-size:12px;"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="php/dataform.php">Register</a></li>
+                        <li><a class="dropdown-item" href="#">Link 2</a></li>
+                        <li><a class="dropdown-item" href="#">Link 3</a></li>
+                    </ul>
                 </div>
             </div>
         </div>

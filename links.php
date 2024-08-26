@@ -11,3 +11,6 @@
 
     <!--  Font Awesome  -->
     <script src="https://kit.fontawesome.com/8b7cdef8f0.js" crossorigin="anonymous"></script>
+
+<!-- _____ AOS _____ -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
