@@ -1,5 +1,5 @@
 .tob_banner_div{
-    display: none;
+    display: ;
     height: 100%;
     width: 100%;
     background-color: rgba(189, 189, 189, 0.9);
@@ -22,10 +22,10 @@
     height: 30px;
     width: 30px;
 }
-@media screen and(max-width:775px) {
+@media screen and (max-width:775px) {
     .banner_content{
-        height: 80%;
-        width: 90%;
+        height: 400px;
+        width: 80%;
         margin: 100px auto;
         background-color: rgb(255, 255, 255);
         border-radius: 10px;
