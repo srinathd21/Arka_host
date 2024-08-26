@@ -21,6 +21,8 @@
     top: 10px;
     height: 30px;
     width: 30px;
+    border-radius: 50%;
+    border: none;
 }
 @media screen and (max-width:775px) {
     .banner_content{
