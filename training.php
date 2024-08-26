@@ -24,6 +24,9 @@
 
     <?php include 'training_nav.php'; ?>
 
+    <?php include 'top_banner.php'; ?>
+
+
     <div style="position:relative;" class="">
         <img class="cover_img_pc" src="img/Arka-Cover-1920x600-Individual.avif" width="100%" alt="">
 

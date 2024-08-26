@@ -1,0 +1,34 @@
+.tob_banner_div{
+    display: none;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(189, 189, 189, 0.9);
+    position: fixed;
+    top: 0px;
+    z-index: 10;
+}
+.banner_content{
+    height: 400px;
+    width: 50%;
+    margin: 100px auto;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    position: relative;
+}
+.banner_close_btn{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    height: 30px;
+    width: 30px;
+}
+@media screen and(max-width:775px) {
+    .banner_content{
+        height: 80%;
+        width: 90%;
+        margin: 100px auto;
+        background-color: rgb(255, 255, 255);
+        border-radius: 10px;
+        position: relative;
+    }
+}
