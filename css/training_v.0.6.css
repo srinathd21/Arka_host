@@ -175,10 +175,6 @@
     align-items: center;
 }
 
-.all_courses_list:hover {
-    transform: scale(1.1);
-    box-shadow: none;
-}
 
 .trend_courses_list {
     text-decoration: none;
@@ -242,10 +238,13 @@
     line-height: 10px;
 }
 .std_testimonial_box{
-    padding: 0px 10vw;
+    padding: 0px 12vw;
 }
 .supports{
     margin-top: 10px;
+}
+.supports_links :nth-child(1){
+   margin-right: 5px;
 }
 
 .supports_links a{
@@ -254,8 +253,6 @@
     border-radius: 20px;
     text-decoration: none;
     color: white;
-    margin-top: 30px;
-    margin-right: 30px;
     padding-right: 10px;
 }
 .supports_links a i{
@@ -270,20 +267,22 @@
 }
 @media screen and (max-width: 992px) {
     .business_numbers h2 {
+        margin-top: 8px;
         font-weight: 700;
         font-size: 16px;
     }
 
     .business_numbers h5 {
+        
         font-weight: 500;
         font-size: 8px;
     }
 
     .business_numbers span {
-        height: 50px;
+        height: 40px;
         margin: 0px 10px;
         position: relative;
-        top: 3px;
+        top: 10px;
         width: 1px;
         border: 1px solid rgb(167, 167, 167, 0.5);
     }
@@ -292,7 +291,7 @@
         padding: 5px;
         width: 80% !important;
         top: -10px;
-        box-shadow: 0px 5px 1px #97c5b6, 5px 5px 10px rgb(197, 194, 194, 0.7), -5px 5px 10px rgb(197, 194, 194, 0.7);
+        box-shadow: 0px 3px 1px #97c5b6, 5px 5px 10px rgb(197, 194, 194, 0.7), -5px 5px 10px rgb(197, 194, 194, 0.7);
     }
 
     .cover_overlay {
@@ -314,6 +313,7 @@
     }
     .supports_links a{
         margin-right: 0px;
+        font-size: 12px;
     }
     #crs_left_btn,#crs_right_btn{
         display: none;

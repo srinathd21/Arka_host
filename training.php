@@ -11,7 +11,7 @@
     <?php include 'links.php'; ?>
 
     <!-- css -->
-    <link rel="stylesheet" href="css/training_v.0.5.css">
+    <link rel="stylesheet" href="css/training_v.0.6.css">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
@@ -301,7 +301,7 @@
             <!-- Carousel -->
 
             <!-- testimoniyal mobile view -->
-            <div id="demo_testi" class="carousel slide mt-5" data-bs-ride="carousel">
+            <div id="demo_testi" class="carousel slide mt-5" style="height:400px" data-bs-ride="carousel">
 
                 <!-- Indicators/dots -->
                 <!-- <div class="carousel-indicators">
@@ -318,7 +318,7 @@
                                 style="width: 150px;" />
 
                             <p class="std_msg">
-                                <i class="fas fa-quote-left pe-2"></i>
+                                <i class="fas fa-quote-left p-2"></i>
                                 I pursued my internship in ccna . Teaching was ultimately best.I would recommend it for
                                 others for those who wanted to enhance theirskills in the field of hardware and
                                 networking.
@@ -338,7 +338,7 @@
                                 style="width: 150px;" />
 
                             <p class="std_msg">
-                                <i class="fas fa-quote-left pe-2"></i>
+                                <i class="fas fa-quote-left p-2"></i>
                                 I am Greeshma M currently doing my BTech IT in Sri Krishna College of Engineering and
                                 Technology . I planned to take an internship for Full Stack development in Arka Network
                                 System and I've Successfully completed my Full Stack in Python.
@@ -361,7 +361,7 @@
                                 style="width: 150px;" />
 
                             <p class="std_msg">
-                                <i class="fas fa-quote-left pe-2"></i>
+                                <i class="fas fa-quote-left p-2"></i>
                                 I'm grateful to have had the opportunity to participate in the placement program
                                 organized by Arka Networkz Systems, which led to my successful placement at AGATE
                                 company in a desirable role. This program was incredibly beneficial for me, and I
@@ -378,11 +378,11 @@
 
                 <!-- Left and right controls/icons -->
                 <button class="carousel-control-prev" type="button" data-bs-target="#demo_testi" data-bs-slide="prev">
-                    <span style="color: #000000; font-size: 20px; position: relative; right: 20px;"><i
+                    <span style="color: #000000; font-size: 20px; position: absolute; right: 5px;"><i
                             class="fa-solid fa-less-than"></i></span>
                 </button>
                 <button class="carousel-control-next" type="button" data-bs-target="#demo_testi" data-bs-slide="next">
-                    <span style="color: #000000; font-size: 20px; position: relative; left: 20px;"><i
+                    <span style="color: #000000; font-size: 20px; position: absolute; left: 5px;"><i
                             class="fa-solid fa-greater-than"></i></span>
                 </button>
             </div>
@@ -391,10 +391,10 @@
     </div>
 
     <!--    supports      -->
-    <div class="bg-black p-5 supports">
+    <div class="bg-black p-2 pb-5 supports">
         <div class="container text-center text-white bg-black p-2">
             <div>
-                <h1>Support @<span style="color:green;">Arka</span></h1>
+                <h1>Support @<span style="color:green;">arka</span></h1>
                 <p>We are available between 08:00 AM and 08:00 PM</p>
             </div>
 
