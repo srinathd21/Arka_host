@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
 body {
-  font-family: "Montserrat", sans-serif;
+  color: #323130;
 
 }
 
@@ -21,14 +21,13 @@ body {
 }
 
 #top_nav_link_mob,.dropdown_mob >a{
-  border: 1px solid gray;
-  width: 200px;
-  padding: 10px;
-  border-radius: 7px;
-  color: rgb(69, 69, 69);
-  text-decoration: none;
-  display: inline-block;
-  margin-top: 20px;
+  border-bottom: 1px solid rgb(221, 221, 221);
+    width: 100%;
+    padding: 10px 0px 15px 10px;
+    color: rgb(69, 69, 69);
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 5px;
 }
 
 

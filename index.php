@@ -21,11 +21,12 @@
     <link rel="stylesheet" href="css/swiper-bundle.min.css">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="css/index.v.1.css">
+    <link rel="stylesheet" href="css/index.v.2.css">
 
     <style>
         * {
             font-family: "Segoe UI", Arial, sans-serif;
+            
         }
     </style>
 
@@ -87,8 +88,8 @@
 
     <!-- Offcanva -->
     <div>
-        <div class="offcanvas offcanvas-start offcanvas-md" id="demo">
-            <div class="offcanvas-header">
+        <div class="offcanvas offcanvas-start offcanvas-md" style="background-color:#f2f2f2;" id="demo">
+            <div class="offcanvas-header mb-5">
                 <div class="logo">
                     <a class="navbar_logo" href="index.php">
                         <img src="img/Arka_logo.png" style="200px" alt="">
@@ -97,7 +98,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
             </div>
 
-            <div class="offcanvas-body">
+            <div class="">
                 <div>
                     <a id="top_nav_link_mob" href="index.php">For Business</a>
                 </div>

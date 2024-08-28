@@ -19,11 +19,11 @@
   display: inline-block;
   text-align: center;
   font-size: 18px;
-  color: white;
+  color: white !important;
 }
 .top_nav a:hover{
   background-color: white;
-  color: #000000;
+  color: #000000 !important;
   border-bottom: 5px solid white;
   
 }

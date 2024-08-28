@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="css/training_nav_v.1.css">
+<link rel="stylesheet" href="css/training_nav_v.2.css">
 <nav class="container">
     <button class="btn d-lg-none mx-3" style="margin-top: -5px ;" type="button" data-bs-toggle="offcanvas"
         data-bs-target="#demo">
@@ -21,7 +21,7 @@
     </div>
     <div class="srch_input">
         <input class="srch_input_1" type="text" placeholder="Search">
-        <button><i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i></button>
+        <button><i class="fa-solid fa-magnifying-glass" style="color: #ffffff !important;"></i></button>
     </div>
     <div class="nav_links">
         <ul>
@@ -34,15 +34,15 @@
 
     <!-- Offcanva -->
 
-    <div class="offcanvas offcanvas-start offcanvas-lg" id="demo">
-        <div class="offcanvas-header">
+    <div class="offcanvas offcanvas-start offcanvas-lg" id="demo" style="background-color:#f2f2f2;">
+        <div class="offcanvas-header mb-5">
             <div class="logo_img_mob">
                 <img src="img/Arka_logo.png" alt="">
             </div>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
         </div>
 
-        <div class="offcanvas-body">
+        <div class="">
             <div>
                 <a id="top_nav_link_mob" href="index.php">For Business</a>
             </div>
@@ -67,7 +67,7 @@
         </div>
     </div>
     <div>
-        <a href=""><span class="profile_icon_mob"><i style="font-size:17px; color:gray;"
+        <a href=""><span class="profile_icon_mob"><i style="font-size:17px; color:gray; margin-right: 10px;"
                     class="fa-regular fa-user"></i></span> </li></a>
     </div>
 

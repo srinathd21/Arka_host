@@ -11,7 +11,7 @@
     <?php include 'links.php'; ?>
 
     <!-- css -->
-    <link rel="stylesheet" href="css/training_v.0.7.css">
+    <link rel="stylesheet" href="css/training_v.0.8.css">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
@@ -63,7 +63,8 @@
 
     <div class="container ">
         <div id="card_slider">
-            <button id="crs_left_btn" onclick="onSwipeRight()">< </button>
+            <button id="crs_left_btn" onclick="onSwipeRight()">
+                < </button>
                     <button id="crs_right_btn" onclick="onSwipeLeft()">></button>
                     <div class="all_courses">
 
@@ -395,10 +396,10 @@
 
     <!--    supports      -->
     <div class="bg-black p-2 pb-5 supports">
-        <div class="container text-center text-white bg-black p-2">
+        <div class="container text-center text-white bg-black pt-4">
             <div>
-                <h1>Support @<span style="color:green;">arka</span></h1>
-                <p>We are available between 08:00 AM and 08:00 PM</p>
+                <h1 id="supports_txt">Support@<span style="color:green !important;">arka</span></h1>
+                <p style="font-size:15px;" id="supports_txt">We are available between 08:00 AM and 08:00 PM</p>
             </div>
 
             <div class="supports_links">
@@ -408,9 +409,52 @@
             </div>
         </div>
     </div>
-    
+
     <?php include 'supports.php'; ?>
-    
+
+
+    <!-- Students Doubts  -->
+    <div class="container mt-5 mb-5">
+        <div>
+            <h3>QAS</h3>
+        </div>
+        <div class="qas_div">
+            <a href="#dbts_py_vs_java" class="dbts" data-bs-toggle="collapse">Simple collapsible</a>
+            <div id="dbts_py_vs_java" class="collapse dbts_ans">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </div>
+        </div>
+
+        <div class="qas_div">
+            <a href="#dbts_ds" class="dbts" data-bs-toggle="collapse">Simple collapsible</a>
+            <div id="dbts_ds" class="collapse dbts_ans">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </div>
+        </div>
+
+        <div class="qas_div">
+            <a href="#dbts_3" class="dbts" data-bs-toggle="collapse">Simple collapsible</a>
+            <div id="dbts_3" class="collapse dbts_ans">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </div>
+        </div>
+
+        <div class="qas_div">
+            <a href="#dbts_4" class="dbts" data-bs-toggle="collapse">Simple collapsible</a>
+            <div id="dbts_4" class="collapse dbts_ans">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </div>
+        </div>
+    </div>
+
 
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
