@@ -11,7 +11,7 @@
     <?php include 'links.php'; ?>
 
     <!-- css -->
-    <link rel="stylesheet" href="css/training_v.0.8.css">
+    <link rel="stylesheet" href="css/training_v.0.9.css">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
@@ -72,7 +72,7 @@
                         <div class="all_courses_title">
                             <h2>Learn industry skills in less than 6 months</h2>
 
-                            <a href="" class="explore_link" style="">Explore all courses<i
+                            <a href="all_course.php" class="explore_link" style="">Explore all courses<i
                                     class="fa-solid fa-arrow-right"></i></a>
                         </div>
 
@@ -412,50 +412,7 @@
 
     <?php include 'supports.php'; ?>
 
-
-    <!-- Students Doubts  -->
-    <div class="container mt-5 mb-5">
-        <div>
-            <h3>QAS</h3>
-        </div>
-        <div class="qas_div">
-            <a href="#dbts_py_vs_java" class="dbts" data-bs-toggle="collapse">Simple collapsible</a>
-            <div id="dbts_py_vs_java" class="collapse dbts_ans">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            </div>
-        </div>
-
-        <div class="qas_div">
-            <a href="#dbts_ds" class="dbts" data-bs-toggle="collapse">Simple collapsible</a>
-            <div id="dbts_ds" class="collapse dbts_ans">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            </div>
-        </div>
-
-        <div class="qas_div">
-            <a href="#dbts_3" class="dbts" data-bs-toggle="collapse">Simple collapsible</a>
-            <div id="dbts_3" class="collapse dbts_ans">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            </div>
-        </div>
-
-        <div class="qas_div">
-            <a href="#dbts_4" class="dbts" data-bs-toggle="collapse">Simple collapsible</a>
-            <div id="dbts_4" class="collapse dbts_ans">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            </div>
-        </div>
-    </div>
-
-
+    <?php include 'std_doubts.php'; ?>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/training.js"></script>
