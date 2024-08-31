@@ -1,4 +1,3 @@
-<?php include 'links.php'; ?>
 <link rel="stylesheet" href="css/top_banner.css">
 
 <div class="tob_banner_div">
