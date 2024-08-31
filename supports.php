@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 
+=======
+<?php include 'links.php'; ?>
+>>>>>>> 1c99d0ef98ccbe1f9a3b2ad80ed8c640df1a2086
 <link rel="stylesheet" href="css/support.v.2.css">
 <!--  Supports Float Button -->
 
