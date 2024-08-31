@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="css/training_nav_v.2.css">
+<div style="background-color:white;">
 <nav class="container">
     <button class="btn d-lg-none mx-3" style="margin-top: -5px ;" type="button" data-bs-toggle="offcanvas"
         data-bs-target="#demo">
@@ -72,3 +73,4 @@
     </div>
 
 </nav>
+</div>

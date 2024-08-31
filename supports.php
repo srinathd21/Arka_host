@@ -1,5 +1,5 @@
-<?php include 'links.php'; ?>
-<link rel="stylesheet" href="css/support.v.1.css">
+
+<link rel="stylesheet" href="css/support.v.2.css">
 <!--  Supports Float Button -->
 
 <div class="supt_float_container">

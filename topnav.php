@@ -19,6 +19,7 @@
   display: inline-block;
   text-align: center;
   font-size: 18px;
+  border-bottom: 5px solid black;
   color: white !important;
 }
 .top_nav a:hover{
