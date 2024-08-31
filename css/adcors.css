@@ -1,0 +1,25 @@
+form{
+    border: 1px solid gray;
+    padding: 50px;
+    display: inline-block;
+    border-radius: 10px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.cards{
+    border: 1px solid gray;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+.cards >div{
+    padding: 40px;
+    width: 30vw;
+    
+}
+.card_1 div, .card_2 div{
+    margin-bottom: 25px;
+}
