@@ -1,8 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All | Courses</title>
+
+    <?php include "links.php"; ?>
+    <link rel="stylesheet" href="css/all_course.css">
+</head>
+<body>
+
 
 <?php include "topnav.php"; ?>
 <?php include "training_nav.php"; ?>
-<?php include "links.php"; ?>
-<link rel="stylesheet" href="css/all_course.css">
+
 
 <?php include 'db_link.php';?>
 <?php
@@ -100,3 +111,6 @@ $result = $conn->query($sql);
 
 <!-- // Close the database connection
      $conn->close(); -->
+    
+</body>
+</html>
