@@ -1,20 +1,79 @@
 body{
     background-color: rgb(248, 248, 248);
 }
+
+.cover_img_mob {
+    display: none;
+}
+
+.cover_overlay {
+    position: absolute;
+    top: 6vw;
+    left: 100px;
+}
+
+.cover_overlay h1 {
+    font-size: 4vw;
+}
+
+.cover_overlay p {
+    font-size: 1.3vw;
+    margin-top: 20px;
+}
+
+.cover_overlay_link {
+    position: absolute;
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    font-size: 1.2vw;
+    font-weight: 500;
+    margin-left: 20px;
+    margin-top: 1vw;
+}
+
+.cover_overlay_circle {
+    display: inline-block;
+    margin-left: 50px;
+    height: 3.4vw;
+    width: 3.4vw;
+    border-radius: 50%;
+    background-color: #71e2ba;
+}
+
+.fa-arrow-right {
+    position: relative;
+    top: 3px;
+    left: 5px;
+
+
+}
+
+.explore_link {
+    text-decoration: none;
+    color: gray;
+    font-weight: 600;
+    transition: .2s ease-out;
+}
+
+.explore_link:hover {
+    word-spacing: 2px;
+    letter-spacing: .5px;
+}
+
 #software_courses,#networking_courses{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
 }
 .course_name{
-    margin-bottom: 20px;
+    margin: 20px 0px 10px 0px;
 }
 .course_cards{
     text-decoration: none;
     color: black;
     display:block;
     height: 300px;
-    width: 350px;
+    width: 300px;
     background-color: white;
     border-radius: 10px;
     margin: 10px;
@@ -42,4 +101,18 @@ body{
 .course_details span i {
     color: #427a7a;
     margin-right: 10px;
+}
+
+
+@media screen and (max-width: 992px) {
+
+    .cover_overlay {
+        display: none;
+    }
+
+}
+@media screen and (max-width:1200px){
+    #software_courses,#networking_courses{  
+        justify-content:center ;
+    }
 }

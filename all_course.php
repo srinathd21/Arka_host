@@ -14,6 +14,23 @@
 <?php include "topnav.php"; ?>
 <?php include "training_nav.php"; ?>
 
+<div style="position:relative;" class="">
+        <img class="cover_img_pc" src="img/Arka-Cover-1920x600-Individual.avif" width="100%" alt="">
+
+        <div class="cover_overlay">
+            <h1>Industry-focused <br>
+                learning</h1>
+            <p>Learn from real-world industry projects, connect with industry professionals,<br>
+                apply your knowledge to practical tasks.</p>
+
+            <div>
+                <span class="cover_overlay_circle"> <a class="cover_overlay_link" href="">Find your way <i
+                            class="fa-solid fa-arrow-right"></i></a></span>
+            </div>
+        </div>
+        <img class="cover_img_mob" src="img/Arka-Cover-mob.avif" width="100%" alt="">
+    </div>
+
 
 <?php include 'db_link.php';?>
 <?php
@@ -29,9 +46,14 @@ $result = $conn->query($sql);
 ?>
 
 <div class="container">
+    <div class="mt-4 mb-3">
+        <h3>View all courses</h3>
+
+        <hr>
+    </div>
     <div class="course_container">
         <div class="course_name">
-            <h1>Software</h1>
+            <h4>Software</h4>
         </div>
         <div id="software_courses">
             <?php
@@ -74,7 +96,7 @@ $result = $conn->query($sql);
     ?>
     <div class="course_container">
         <div class="course_name">
-            <h1>Networking</h1>
+            <h4>Networking</h>
         </div>
         <div id="networking_courses">
             <?php
@@ -112,5 +134,6 @@ $result = $conn->query($sql);
 <!-- // Close the database connection
      $conn->close(); -->
     
+     <?php include "supports.php";?>
 </body>
 </html>
