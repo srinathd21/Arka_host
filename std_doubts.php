@@ -1,15 +1,16 @@
 <style>
     #accordion>div{
-        margin-bottom: 10px;
+        margin-bottom: 15px;
     }
 
     #accordion a {
         position: relative;
         width: 100%;
         display: inline-block;
-        padding: 10px;
+        padding: 7px;
         text-decoration: none;
         font-size: 20px;
+        color: #323130 !important;
     }
     #accordion a i{
         position: absolute;

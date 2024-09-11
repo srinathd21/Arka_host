@@ -3,25 +3,9 @@
 <div class="tob_banner_div">
     <div class="banner_content">
         <button class="banner_close_btn" onclick="banner_close()">X</button>
-
-        <div class="banner_title">
-            <h3 class="text-center">Register Now</h3>
+        <div class="banner_inner_div">
+            
         </div>
-
-        <form class="banner_form" action="">
-            <div>
-                <input type="text" name="" id="" placeholder="Enter name">
-            </div>
-
-            <div>
-                <input type="text" placeholder="Contact number">
-            </div>
-        </form>
-
-        <div class="banner_submit_btn text-center">
-            <button class="">Submit</button>
-        </div>
-    
 
     </div>
 </div>

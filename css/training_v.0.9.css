@@ -3,7 +3,6 @@
     margin: 0px;
     box-sizing: border-box;
     font-family: "Segoe UI", Arial, sans-serif;
-    color: #323130 !important;
 }
 
 .cover_img_mob {
@@ -318,7 +317,9 @@
     .cover_overlay {
         display: none;
     }
-
+    .testimonial{
+        height: 680px !important;
+    }
 }
 
 @media screen and (max-width:775px) {

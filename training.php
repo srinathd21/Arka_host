@@ -15,8 +15,6 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-
-
 </head>
 
 <body>
@@ -295,7 +293,7 @@
 
     <!--    Testimonials      -->
 
-    <div class="testimonial" style=" height: 710px;">
+    <div class="testimonial" style="">
         <div class="container">
 
             <div class="text-center" style="margin-top:100px;">
@@ -410,9 +408,12 @@
         </div>
     </div>
 
-    <?php include 'supports.php'; ?>
 
     <?php include 'std_doubts.php'; ?>
+
+    <?php include 'supports.php'; ?>
+
+    <?php include "training_footer.php";?>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/training.js"></script>

@@ -61,9 +61,12 @@ body{
     letter-spacing: .5px;
 }
 
-#software_courses,#networking_courses{
+#course_cards_div{
     display: flex;
     flex-wrap: wrap;
+    background-color: rgb(238, 238, 238,0.3);
+    padding: 15px;
+    border-radius: 15px;
 }
 .course_name{
     margin: 20px 0px 10px 0px;
@@ -73,7 +76,7 @@ body{
     color: black;
     display:block;
     height: 300px;
-    width: 300px;
+    width: 295px;
     background-color: white;
     border-radius: 10px;
     margin: 10px;
@@ -112,7 +115,7 @@ body{
 
 }
 @media screen and (max-width:1200px){
-    #software_courses,#networking_courses{  
+    #course_cards_div{  
         justify-content:center ;
     }
 }

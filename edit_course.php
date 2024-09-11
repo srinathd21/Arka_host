@@ -46,6 +46,12 @@ if (isset($_GET['id'])) {
 </head>
 
 <body>
+    <?php include 'db_link.php'; ?>
+
+    <?php
+    $qur = "SELECT category FROM course_category";
+    $ans = $conn->query($qur);
+    ?>
     <div class="container">
         <h2 class="text-center mt-4">Edit Course</h2>
         <form action="update_course.php" method="post" enctype="multipart/form-data">
@@ -62,12 +68,13 @@ if (isset($_GET['id'])) {
                     <div>
                         <label for="category">Category</label>
                         <select class="form-control" id="cars" name="category">
-                            <option value="Software" <?php echo $category == 'Software' ? 'selected' : ''; ?>>Software
-                            </option>
-                            <option value="Ui/Ux" <?php echo $category == 'Ui/Ux' ? 'selected' : ''; ?>>Ui/Ux</option>
-                            <option value="Network" <?php echo $category == 'Network' ? 'selected' : ''; ?>>Network
-                            </option>
-                            <option value="Basics" <?php echo $category == 'Basics' ? 'selected' : ''; ?>>Basics</option>
+                            <?php
+                            if ($ans->num_rows > 0) {
+                                while ($row = $ans->fetch_assoc()) {
+                                    echo "<option value='{$row['category']}'>{$row['category']}</option>";
+                                }
+                            }
+                            ?>
                         </select>
                     </div>
 

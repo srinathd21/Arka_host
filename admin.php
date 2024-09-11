@@ -13,10 +13,26 @@
 </head>
 
 <body>
+    <?php include 'db_link.php'; ?>
 
+    <?php 
+    $qur = "SELECT category FROM course_category";
+    $ans = $conn->query($qur);
+    ?>
     <div class="container">
         <h2 class="text-center mt-4">Add Course</h2>
-        <form action="add_course.php" method="post" enctype="multipart/form-data">
+        <div class="new_category_div">
+            <a onclick="cat_btn_close()">X</a>
+            <form action="add_category.php" method="POST">
+                <label for="new_category">Add new Category:</label><br>
+                <input class="form-control  mt-2" type="text" id="new_category" name="cat_name" required>
+                <div class="text-center mt-4">
+                <button type="submit" class="btn btn-primary px-4">Add</button>
+                </div>
+            </form>
+        </div>
+        <form class="form1" action="add_course.php" method="post" enctype="multipart/form-data">
+
             <div class="cards">
                 <div class="card_1">
                     <div>
@@ -27,12 +43,17 @@
                     <div>
                         <label for="category">Category</label>
                         <select class="form-control" id="cars" name="cars">
-                            <option value="none">Select</option>
-                            <option value="Software">Software</option>
-                            <option value="Ui/Ux">Ui/Ux</option>
-                            <option value="Network">Network</option>
-                            <option value="Basics">Basics</option>
+                            <option value=""></option>
+                            <?php 
+                            if ($ans->num_rows >0){
+                                while($row = $ans->fetch_assoc()){
+                                    echo "<option value='{$row['category']}'>{$row['category']}</option>";
+                                }
+                            }
+                            ?>
+
                         </select>
+                        <a id="ct_on_btn" onclick="cat_on_btn()" class="btn btn-info m-2">Add new</a>
                     </div>
 
                     <div>
@@ -86,6 +107,17 @@
         <br><br>
         <a href="course_list.php">All Courses</a>
     </div>
+
+    <script>
+        var add_category = document.querySelector(".new_category_div");
+
+        function cat_on_btn(){
+            add_category.style.height = "180px";
+        }
+        function cat_btn_close(){
+            add_category.style.height = "0px";
+        }
+    </script>
 
 </body>
 

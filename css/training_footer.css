@@ -1,0 +1,25 @@
+#training_footer{
+    margin-top: 50px;
+}
+.foot_logo_img img{
+    width: 80px;
+    margin-bottom: 20px;
+}
+.arka_social_meadia a i{
+    color: white;
+    font-size: 25px;
+    margin-right: 15px;
+
+}
+.training_footer hr{
+    background-color: rgb(255, 255, 255) !important;
+    margin: 15px 0px;
+}
+@media screen and (max-width:992px){
+    #training_footer{
+        padding-bottom: 60px !important;
+    }
+    .cr_txt{
+        text-align: center;
+    }
+}
