@@ -47,29 +47,55 @@
     $qur = "SELECT category FROM course_category";
     $ans = $conn->query($qur);
     ?>
- 
+
     <div class="container">
         <div class="mt-4 mb-3">
             <h3>View all courses</h3>
-
-            <hr>
         </div>
+    </div>
+    <hr>
+
+    <div class="course_scroll_div">
+        <div class="scroll-container-wrapper">
+            <button class="scroll-button left">&#8249;</button>
+            <div class="scroll-container">
+                <?php
+                if ($ans->num_rows > 0) {
+                    while ($crs = $ans->fetch_assoc()) {
+                        echo "<a id='scroll_item_btn' class='scroll-item' href='#{$crs['category']}' >{$crs['category']}</a>";
+                    }
+                }
+                ?>
+            </div>
+            <button class="scroll-button right">&#8250;</button>
+        </div>
+
+
+    </div>
+
+
+    <div class="container">
+        <?php
+        $qur = "SELECT category FROM course_category";
+        $ans = $conn->query($qur);
+        ?>
         <div class="course_container">
             <div class="course_name">
                 <?php
                 if ($ans->num_rows > 0) {
-                    while ($crow = $ans->fetch_assoc()) {
-                        echo "<h3 class='mb-3'>{$crow['category']}</h3>";
+                    while ($crs = $ans->fetch_assoc()) {
+                        echo "<span id='{$crs['category']}' style='display:block; margin-bottom:94px;' '></span>";
+                        echo "<h3 class='mb-3'>{$crs['category']}</h3>";
 
                         echo "<div id='course_cards_div' class='mb-4'>";
                         $sql = "SELECT * FROM course_form";
                         $result = $conn->query($sql);
                         if ($result->num_rows > 0) {
-                           
+
                             // Loop through the result set
                             while ($row = $result->fetch_assoc()) {
-        
-                                if ($row["category"] == $crow['category']) {
+
+                                if ($row["category"] == $crs['category']) {
                                     echo "<a href='' class='course_cards'>";
 
                                     echo "<div class='course_title'>";
@@ -87,16 +113,16 @@
 
                                     echo "</a>";
                                 }
-                                
+
                             }
-                            
+
                         } else {
                             echo "<tr><td colspan='5'>No data found</td></tr>";
                         }
 
                         echo "</div>";
 
-                       
+
 
                     }
                 }
@@ -106,7 +132,22 @@
         </div>
 
     </div>
-    
+
+    <script>
+        const scrollContainer = document.querySelector('.scroll-container');
+        const leftButton = document.querySelector('.scroll-button.left');
+        const rightButton = document.querySelector('.scroll-button.right');
+
+        leftButton.addEventListener('click', () => {
+            scrollContainer.scrollLeft -= 350; // Adjust scroll distance as needed
+        });
+
+        rightButton.addEventListener('click', () => {
+            scrollContainer.scrollLeft += 350; // Adjust scroll distance as needed
+        });
+    </script>
+
+
     <?php include "training_footer.php"; ?>
 
     <?php include "supports.php"; ?>

@@ -64,9 +64,10 @@ body{
 #course_cards_div{
     display: flex;
     flex-wrap: wrap;
-    background-color: rgb(238, 238, 238,0.3);
+    background-color: rgba(219, 219, 219, 0.2);
     padding: 15px;
     border-radius: 15px;
+    
 }
 .course_name{
     margin: 20px 0px 10px 0px;
@@ -105,12 +106,110 @@ body{
     color: #427a7a;
     margin-right: 10px;
 }
+/* Container holding the scrollable items */
 
+.course_scroll_div{
+    position: sticky;
+    top: 0;
+    padding: 0px 50px;
+    overflow: hidden;
+}
+.scroll-container-wrapper {
+    
+    background-color: rgba(200, 200, 200);
+    padding: 5px 40px;
+    width: 100%; /* Adjust width as needed */
+    overflow: hidden; /* Hide the overflowing content */
+    border-radius: 8px;
+}
+
+.scroll-container {
+    display: flex;
+    overflow-x: auto; /* Enables horizontal scrolling */
+    white-space: nowrap; /* Prevents items from wrapping to the next line */
+    scroll-behavior: smooth; /* Smooth scrolling effect */
+    padding: 10px;
+}
+
+/* Individual items */
+.scroll-item {
+    min-width: 150px; /* Minimum width for each item */
+    margin-right: 20px;
+    text-decoration: none;
+    color: black;
+    background-color: rgb(0, 0, 0);
+    padding: 10px;
+    text-align: center;
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Hide scrollbar */
+.scroll-container::-webkit-scrollbar {
+    display: none;
+}
+.scroll-container {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+/* Left and Right buttons */
+.scroll-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10; /* Ensure buttons are above other content */
+    border-radius: 50%;
+    font-size: 18px;
+    width: 40px; /* Ensure button size is sufficient */
+    height: 40px; /* Ensure button size is sufficient */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.scroll-button.left {
+    left: 2px; /* Positioning left button inside the container */
+}
+
+.scroll-button.right {
+    right: 2px; /* Positioning right button inside the container */
+}
+
+/* Optional: Show buttons when hovering over the container */
+.scroll-container-wrapper:hover .scroll-button {
+    display: flex;
+}
 
 @media screen and (max-width: 992px) {
 
     .cover_overlay {
         display: none;
+    }
+    .scroll-button.left{
+        left: -100px;
+    }
+    .scroll-button.right{
+        right: -100px;
+    }
+    .scroll-container-wrapper{
+        padding: 5px;
+    }
+    .scroll-item {
+        min-width: 130px; /* Minimum width for each item */
+        margin-right: 10px;
+        padding: 10px 5px;
+        
+    }
+    .course_scroll_div{
+        padding: 0px;
     }
 
 }
