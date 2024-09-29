@@ -2,110 +2,73 @@ body{
     background-color: rgb(248, 248, 248);
 }
 
-.cover_img_mob {
+.coursebtnDiv{
+    background-color: #15ba9c;
+    padding: 30px;
+}
+/* Custom Dropdown Styles */
+.custom-dropdown {
+    position: relative;
+    width: 500px;
+    left: 50%;
+    transform: translate(-50%);
+    
+}
+
+.custom-dropdown-selected {
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    border-radius: 30px;
+    padding: 15px;
+}
+
+.custom-dropdown-list {
     display: none;
+    position: relative;
+    margin-top: 10px;
+    background-color: white;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 7px rgba(89, 87, 87, 0.3);
 }
 
-.cover_overlay {
-    position: absolute;
-    top: 6vw;
-    left: 100px;
+.custom-dropdown-list.show {
+    display: block;
 }
 
-.cover_overlay h1 {
-    font-size: 4vw;
+.dropdown-item {
+    padding: 15px;
+    cursor: pointer;
 }
 
-.cover_overlay p {
-    font-size: 1.3vw;
+.dropdown-item:hover {
+    background-color: #ddd;
+}
+
+/* Scrollable container styles */
+.course_scroll_div {
     margin-top: 20px;
 }
 
-.cover_overlay_link {
-    position: absolute;
-    text-decoration: none;
-    color: black;
-    display: inline-block;
-    font-size: 1.2vw;
-    font-weight: 500;
-    margin-left: 20px;
-    margin-top: 1vw;
-}
-
-.cover_overlay_circle {
-    display: inline-block;
-    margin-left: 50px;
-    height: 3.4vw;
-    width: 3.4vw;
-    border-radius: 50%;
-    background-color: #71e2ba;
-}
-
-.fa-arrow-right {
-    position: relative;
-    top: 3px;
-    left: 5px;
-
-
-}
-
-.explore_link {
-    text-decoration: none;
-    color: gray;
-    font-weight: 600;
-    transition: .2s ease-out;
-}
-
-.explore_link:hover {
-    word-spacing: 2px;
-    letter-spacing: .5px;
-}
-
-#course_cards_div{
+.scroll-container-wrapper {
     display: flex;
-    flex-wrap: wrap;
-    background-color: rgba(219, 219, 219, 0.2);
-    padding: 15px;
-    border-radius: 15px;
-    
-}
-.course_name{
-    margin: 20px 0px 10px 0px;
-}
-.course_cards{
-    text-decoration: none;
-    color: black;
-    display:block;
-    height: 300px;
-    width: 295px;
-    background-color: white;
-    border-radius: 10px;
-    margin: 10px;
-    box-shadow: rgba(127, 127, 127, 0.6) 5px 10px 20px -3px, rgba(0, 0, 0, 0.3) 0px 4px 6px -2px;
-    transition: .3s linear;
-}
-.course_title {
-    height: 50%;
-    padding: 25px;
-    color: gray;
+    align-items: center;
 }
 
-.course_title span i {
-    margin-right: 10px;
-}
-.course_details {
-    background: rgb(173, 223, 207);
-    background: linear-gradient(90deg, rgba(173, 223, 207, 1) 0%, rgba(135, 195, 175, 1) 100%);
-    height: 50%;
-    padding: 25px;
-    border-radius: 0px 0px 10px 10px;
-    line-height: 40px;
+.scroll-container {
+    overflow-x: scroll;
+    white-space: nowrap;
+    width: 100%;
 }
 
-.course_details span i {
-    color: #427a7a;
-    margin-right: 10px;
+.scroll-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
 }
+
 /* Container holding the scrollable items */
 
 .course_scroll_div{
@@ -115,34 +78,33 @@ body{
     overflow: hidden;
 }
 .scroll-container-wrapper {
-    
-    background-color: rgba(200, 200, 200);
+    background-color: rgb(241, 241, 241);
     padding: 5px 40px;
-    width: 100%; /* Adjust width as needed */
-    overflow: hidden; /* Hide the overflowing content */
+    width: 100%; 
+    overflow: hidden; 
     border-radius: 8px;
+    min-height: 70px;
 }
 
 .scroll-container {
     display: flex;
-    overflow-x: auto; /* Enables horizontal scrolling */
-    white-space: nowrap; /* Prevents items from wrapping to the next line */
-    scroll-behavior: smooth; /* Smooth scrolling effect */
+    overflow-x: auto; 
+    white-space: nowrap; 
+    scroll-behavior: smooth; 
     padding: 10px;
 }
 
 /* Individual items */
 .scroll-item {
-    min-width: 150px; /* Minimum width for each item */
     margin-right: 20px;
     text-decoration: none;
     color: black;
-    background-color: rgb(0, 0, 0);
-    padding: 10px;
+    background-color: white;
+    padding: 10px 30px;
     text-align: center;
-    color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(104, 104, 104, 0.3);
+    cursor: pointer;
 }
 
 /* Hide scrollbar */
@@ -159,16 +121,16 @@ body{
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(122, 122, 122, 0.5);
     color: white;
     border: none;
     padding: 10px;
     cursor: pointer;
-    z-index: 10; /* Ensure buttons are above other content */
+    z-index: 10;
     border-radius: 50%;
     font-size: 18px;
-    width: 40px; /* Ensure button size is sufficient */
-    height: 40px; /* Ensure button size is sufficient */
+    width: 40px;
+    height: 40px; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -176,23 +138,25 @@ body{
 }
 
 .scroll-button.left {
-    left: 2px; /* Positioning left button inside the container */
+    left: 2px; 
 }
 
 .scroll-button.right {
-    right: 2px; /* Positioning right button inside the container */
+    right: 2px; 
 }
 
-/* Optional: Show buttons when hovering over the container */
 .scroll-container-wrapper:hover .scroll-button {
     display: flex;
 }
 
-@media screen and (max-width: 992px) {
+.course_details_sec1,.course_details_sec2{
+    border: 1px solid red;
+    margin-bottom: 20px;
+    padding: 30px;
+    border-radius: 10px;
+}
 
-    .cover_overlay {
-        display: none;
-    }
+@media screen and (max-width: 992px) {
     .scroll-button.left{
         left: -100px;
     }
@@ -201,20 +165,18 @@ body{
     }
     .scroll-container-wrapper{
         padding: 5px;
+        background-color: transparent;
     }
     .scroll-item {
-        min-width: 130px; /* Minimum width for each item */
         margin-right: 10px;
-        padding: 10px 5px;
+        padding: 10px 35px;
         
     }
     .course_scroll_div{
         padding: 0px;
     }
-
-}
-@media screen and (max-width:1200px){
-    #course_cards_div{  
-        justify-content:center ;
+    .custom-dropdown {
+        width: 80%; 
     }
+
 }

@@ -66,16 +66,15 @@
                     <button id="crs_right_btn" onclick="onSwipeLeft()">></button>
                     <div class="all_courses">
 
-
                         <div class="all_courses_title">
                             <h2>Learn industry skills in less than 6 months</h2>
 
-                            <a href="all_course.php" class="explore_link" style="">Explore all courses<i
+                            <a href="all_course.php?category=Software&title=Python" class="explore_link" style="">Explore all courses<i
                                     class="fa-solid fa-arrow-right"></i></a>
                         </div>
 
                         <div class="all_courses_container ">
-                            <a class="all_courses_list " href="">
+                            <a class="all_courses_list " href="all_course.php?category=Software&title=Python">
                                 <div class="course_title">
                                     <h2 class="text-black">Python</h2>
                                     <p>Extensive syllabus</p>
@@ -90,7 +89,7 @@
 
 
 
-                            <a class="all_courses_list" href="">
+                            <a class="all_courses_list" href="all_course.php?category=Software&title=java">
                                 <div class="course_title">
                                     <h2 class="text-black">Java</h2>
                                     <p>Extensive syllabus</p>
@@ -103,7 +102,7 @@
                                 </div>
                             </a>
 
-                            <a class="all_courses_list" href="">
+                            <a class="all_courses_list" href="all_course.php?category=Ui/Ux&title=Graphic%20Design">
                                 <div class="course_title">
                                     <h2 class="text-black">Graphic Design</h2>
                                     <p>Extensive syllabus</p>
@@ -116,20 +115,7 @@
                                 </div>
                             </a>
 
-                            <a class="all_courses_list" href="">
-                                <div class="course_title">
-                                    <h2 class="text-black">Front End</h2>
-                                    <p>Extensive syllabus</p>
-
-                                    <span><i class="fa-solid fa-book-open"></i>Specialized certificate</span>
-                                </div>
-                                <div class="course_details">
-                                    <span><i class="fa-regular fa-calendar-days"></i>200 Hours</span><br>
-                                    <span><i class="fa-regular fa-circle-check"></i>Certification program</span>
-                                </div>
-                            </a>
-
-                            <a class="all_courses_list" href="">
+                            <a class="all_courses_list" href="all_course.php?category=Software&title=Back%20End">
                                 <div class="course_title">
                                     <h2 class="text-black">Back End</h2>
                                     <p>Extensive syllabus</p>
@@ -142,7 +128,7 @@
                                 </div>
                             </a>
 
-                            <a class="all_courses_list" href="">
+                            <a class="all_courses_list" href="all_course.php?category=Software&title=PHP">
                                 <div class="course_title">
                                     <h2 class="text-black">PHP</h2>
                                     <p>Extensive syllabus</p>
