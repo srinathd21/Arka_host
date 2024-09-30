@@ -7,7 +7,7 @@
     <title>All | Courses</title>
 
     <?php include "links.php"; ?>
-    <link rel="stylesheet" href="css/all_course.css">
+    <link rel="stylesheet" href="css/all_course.1.css">
 </head>
 
 <body>
