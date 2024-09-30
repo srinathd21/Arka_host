@@ -28,10 +28,37 @@
     $qur = "SELECT * FROM course_category";
     $ans = $conn->query($qur);
     ?>
+    <div style="position:relative;" class="">
+        <img class="cover_img_pc" src="img/Arka-Cover-1920x600-Individual.avif" width="100%" alt="">
+
+        <div class="cover_overlay">
+            <h1>Industry-focused <br>
+                learning</h1>
+            <p>Learn from real-world industry projects, connect with industry professionals,<br>
+                apply your knowledge to practical tasks.</p>
+
+            <div>
+                <span class="cover_overlay_circle"> <a class="cover_overlay_link" href="">Find your way <i
+                            class="fa-solid fa-arrow-right"></i></a></span>
+            </div>
+        </div>
+        <img class="cover_img_mob" src="img/Arka-Cover-mob.avif" width="100%" alt="">
+    </div>
+
+    <div class="container p-4">
+        <h1>Title</h1>
+        <p class="p-1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo, laboriosam eius recusandae repellat
+            repellendus vitae autem quisquam velit magni voluptatibus sed ea doloremque perspiciatis corporis ut vel
+            dolorum soluta rerum porro, cumque inventore suscipit.laboriosam quos fugiat, nulla,
+            quas labore tempore repellat dicta quia sit nihil. Veritatis illum neque minima error sapiente minus
+            asperiores modi!</p>
+    </div>
 
     <div class="coursebtnDiv">
         <!-- Custom Dropdown Wrapper -->
+        <i class="fa-solid fa-chevron-down selectedOptionArrow"></i>
         <div class="custom-dropdown" id="customDropdown">
+
             <div class="custom-dropdown-selected" id="selectedOption">Select Course Category</div>
             <div class="custom-dropdown-list" id="dropdownList">
                 <?php
@@ -46,12 +73,12 @@
         </div>
     </div>
 
-    <hr>
-
     <div class="course_scroll_div">
         <div class="scroll-container-wrapper">
             <button class="scroll-button left">&#8249;</button>
-            <div id="allCourseList" class="scroll-container"></div>
+            <div id="allCourseList" class="scroll-container">
+
+            </div>
             <button class="scroll-button right">&#8250;</button>
         </div>
     </div>
@@ -72,13 +99,27 @@
         </div>
     </div>
 
+
+    <script>
+        const selectedOption = document.getElementById("selectedOption");
+        const scrollDiv = document.querySelector(".course_scroll_div");
+        const selectedOptionArrow = document.querySelector(".selectedOptionArrow");
+
+        selectedOption.addEventListener("click", function () {
+            scrollDiv.style.zIndex = "-1";
+            selectedOptionArrow.style.transform = "rotate(180deg)";  // Change background color
+        });
+
+
+    </script>
+
     <!-- Course titles fetch scripts -->
     <script>
         const urlParams = new URLSearchParams(window.location.search);
 
         // To get specific values from the URL
-        const category = urlParams.get('category');  
-        const title = urlParams.get('title');       
+        const category = urlParams.get('category');
+        const title = urlParams.get('title');
 
 
         document.addEventListener("DOMContentLoaded", function () {
@@ -123,6 +164,12 @@
         // Close the dropdown if clicked outside
         window.onclick = function (event) {
             if (!event.target.matches('.custom-dropdown-selected')) {
+                const scrollDiv = document.querySelector(".course_scroll_div");
+                scrollDiv.style.zIndex = "1";
+
+                const selectedOptionArrow = document.querySelector(".selectedOptionArrow");
+                selectedOptionArrow.style.transform = "rotate(0deg)";
+
                 var dropdowns = document.getElementsByClassName("custom-dropdown-list");
                 for (var i = 0; i < dropdowns.length; i++) {
                     var openDropdown = dropdowns[i];
