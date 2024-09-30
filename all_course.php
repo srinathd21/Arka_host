@@ -28,32 +28,7 @@
     $qur = "SELECT * FROM course_category";
     $ans = $conn->query($qur);
     ?>
-    <div style="position:relative;" class="">
-        <img class="cover_img_pc" src="img/Arka-Cover-1920x600-Individual.avif" width="100%" alt="">
-
-        <div class="cover_overlay">
-            <h1>Industry-focused <br>
-                learning</h1>
-            <p>Learn from real-world industry projects, connect with industry professionals,<br>
-                apply your knowledge to practical tasks.</p>
-
-            <div>
-                <span class="cover_overlay_circle"> <a class="cover_overlay_link" href="">Find your way <i
-                            class="fa-solid fa-arrow-right"></i></a></span>
-            </div>
-        </div>
-        <img class="cover_img_mob" src="img/Arka-Cover-mob.avif" width="100%" alt="">
-    </div>
-
-    <div class="container p-4">
-        <h1>Title</h1>
-        <p class="p-1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo, laboriosam eius recusandae repellat
-            repellendus vitae autem quisquam velit magni voluptatibus sed ea doloremque perspiciatis corporis ut vel
-            dolorum soluta rerum porro, cumque inventore suscipit.laboriosam quos fugiat, nulla,
-            quas labore tempore repellat dicta quia sit nihil. Veritatis illum neque minima error sapiente minus
-            asperiores modi!</p>
-    </div>
-
+    
     <div class="coursebtnDiv">
         <!-- Custom Dropdown Wrapper -->
         <i class="fa-solid fa-chevron-down selectedOptionArrow"></i>

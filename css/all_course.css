@@ -45,8 +45,6 @@ body{
     position: relative;
     top: 3px;
     left: 5px;
-
-
 }
 
 .explore_link {
@@ -63,7 +61,7 @@ body{
 
 .coursebtnDiv{
     background-color: #15ba9c;
-    padding: 30px;
+    padding: 20px;
     position: relative;
     
 }
@@ -118,7 +116,7 @@ body{
 
 /* Scrollable container styles */
 .course_scroll_div {
-    margin-top: 20px;
+    margin-top: 0px;
 }
 
 .scroll-container-wrapper {
@@ -249,16 +247,12 @@ body{
         padding: 0px;
     }
     .custom-dropdown {
-        width: 82%; 
+        width: 100%; 
     }
     .selectedOptionArrow{
-        right: 21%;
+        right: 15%;
     }
     .custom-dropdown-selected {
         padding: 11px 15px;
     }
-    .cover_overlay {
-        display: none;
-    }
-
 }
