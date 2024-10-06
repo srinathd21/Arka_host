@@ -28,186 +28,73 @@
     $qur = "SELECT * FROM course_category";
     $ans = $conn->query($qur);
     ?>
-    
-    <div class="coursebtnDiv">
-        <!-- Custom Dropdown Wrapper -->
-        <i class="fa-solid fa-chevron-down selectedOptionArrow"></i>
-        <div class="custom-dropdown" id="customDropdown">
 
-            <div class="custom-dropdown-selected" id="selectedOption">Select Course Category</div>
-            <div class="custom-dropdown-list" id="dropdownList">
-                <?php
-                // Populate the custom dropdown with course categories
-                if ($ans->num_rows > 0) {
-                    while ($row = $ans->fetch_assoc()) {
-                        echo "<div class='dropdown-item' data-value='" . $row['category'] . "'>" . $row['category'] . "</div>";
-                    }
+
+    <div>
+        <div>
+            <img class="course_top_img" src="img/cours_top_mob.png" alt="">
+        </div>
+    </div>
+
+    <div class="text-center mt-3 container">
+        <span class="course_grd_text">Explore Our Courses and Unlock <br>
+            Your Potential</span>
+
+        <p class="mt-4 crs_para">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil error magni ratione
+            dolore in est qui id vero
+            unde quae, aspernatur impedit temporibus voluptate officiis quod nulla illum veritatis tempore maiores
+            molestiae consectetur ipsa earum! Animi possimus cumque voluptatem ipsum? Deserunt rerum ipsam dicta
+            corporis maxime voluptate velit fugiat veniam.</p>
+    </div>
+
+
+
+    <div class="container mt-5">
+        <div class="mb-3">
+            <?php
+            $course_catagory_name = isset($_GET['category']) ? $_GET['category'] : 'Software';
+            echo "<h3>{$course_catagory_name} Courses</h3>";
+            ?>
+        </div>
+        <div id="course_cards_div">
+
+            <?php
+
+            $sql = "SELECT * FROM course_form WHERE category = ?";
+            $stmt = $conn->prepare($sql);
+            $stmt->bind_param("s", $course_catagory_name);
+            $stmt->execute();
+            $result = $stmt->get_result();
+            if ($result->num_rows > 0) {
+
+                // Loop through the result set
+                while ($row = $result->fetch_assoc()) {
+                    echo "<a href='' class='course_cards'>";
+
+                    echo "<div class='course_title'>";
+
+                    echo "<h4 class='text-black'>" . $row["title"] . "</h4>";
+                    echo "<p>Extensive syllabus</p>";
+                    echo '<span><i class="fa-solid fa-book-open"></i>Specialized certificate</span>';
+
+                    echo "</div>";
+
+                    echo '<div class="course_details">
+                                    <span><i class="fa-regular fa-calendar-days"></i>' . $row["hours"] . 'Hours</span><br>
+                                    <span><i class="fa-regular fa-circle-check"></i>Certification program</span>
+                                </div>';
+
+                    echo "</a>";
                 }
-                ?>
-            </div>
+
+            } else {
+                echo "<tr><td colspan='5'>No data found</td></tr>";
+            }
+
+            echo "</div>";
+            ?>
         </div>
     </div>
-
-    <div class="course_scroll_div">
-        <div class="scroll-container-wrapper">
-            <button class="scroll-button left">&#8249;</button>
-            <div id="allCourseList" class="scroll-container">
-
-            </div>
-            <button class="scroll-button right">&#8250;</button>
-        </div>
-    </div>
-
-    <!-- course details box -->
-    <div class="course_details_div container mt-2">
-        <div id="course_details_sec1" class="course_details_sec1">
-
-        </div>
-
-        <div class="course_details_sec2">
-            <h1>Benefits</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur pariatur quae libero ratione aperiam
-                fuga porro reprehenderit sunt doloribus. Asperiores sunt assumenda officia aut in perferendis, velit
-                sequi tempora minima voluptatem accusamus et illum aliquam. Illum eaque voluptas ipsa aut saepe
-                reiciendis. Voluptate nostrum cumque aliquid pariatur neque vitae earum.
-            </p>
-        </div>
-    </div>
-
-
-    <script>
-        const selectedOption = document.getElementById("selectedOption");
-        const scrollDiv = document.querySelector(".course_scroll_div");
-        const selectedOptionArrow = document.querySelector(".selectedOptionArrow");
-
-        selectedOption.addEventListener("click", function () {
-            scrollDiv.style.zIndex = "-1";
-            selectedOptionArrow.style.transform = "rotate(180deg)";  // Change background color
-        });
-
-
-    </script>
-
-    <!-- Course titles fetch scripts -->
-    <script>
-        const urlParams = new URLSearchParams(window.location.search);
-
-        // To get specific values from the URL
-        const category = urlParams.get('category');
-        const title = urlParams.get('title');
-
-
-        document.addEventListener("DOMContentLoaded", function () {
-            // Fetch the course list as soon as the page is loaded
-            fetchallCourseList(category);
-            firstloadcrsTitle(title);
-        });
-
-        document.getElementById("selectedOption").addEventListener("click", function () {
-            document.getElementById("dropdownList").classList.toggle("show");
-        });
-
-        // Function to fetch course details based on dropdown selection
-        function fetchallCourseList(courseCategory) {
-            if (courseCategory) {
-                var xhr = new XMLHttpRequest();
-                xhr.open("GET", "ajax_course.php?category=" + courseCategory, true);
-                xhr.onreadystatechange = function () {
-                    if (xhr.readyState == 4 && xhr.status == 200) {
-                        document.getElementById("allCourseList").innerHTML = xhr.responseText;
-                    }
-                };
-                xhr.send();
-            } else {
-                document.getElementById("allCourseList").innerHTML = ""; // Clear details if no course category selected
-            }
-        }
-
-        // Handle dropdown item click
-        document.querySelectorAll(".dropdown-item").forEach(item => {
-            item.addEventListener("click", function () {
-                var selectedValue = this.getAttribute("data-value");
-                var selectedText = this.innerText;
-                document.getElementById("selectedOption").innerText = selectedText;
-                document.getElementById("dropdownList").classList.remove("show");
-
-                // Call the function to fetch and display courses
-                fetchallCourseList(selectedValue);
-            });
-        });
-
-        // Close the dropdown if clicked outside
-        window.onclick = function (event) {
-            if (!event.target.matches('.custom-dropdown-selected')) {
-                const scrollDiv = document.querySelector(".course_scroll_div");
-                scrollDiv.style.zIndex = "1";
-
-                const selectedOptionArrow = document.querySelector(".selectedOptionArrow");
-                selectedOptionArrow.style.transform = "rotate(0deg)";
-
-                var dropdowns = document.getElementsByClassName("custom-dropdown-list");
-                for (var i = 0; i < dropdowns.length; i++) {
-                    var openDropdown = dropdowns[i];
-                    if (openDropdown.classList.contains('show')) {
-                        openDropdown.classList.remove('show');
-                    }
-                }
-            }
-        };
-
-        // Course details fetch scripts
-
-        function firstloadcrsTitle(title) {
-            var courseTitle = title
-
-            if (courseTitle) {
-                var xhr = new XMLHttpRequest();
-                xhr.open("GET", "ajax_course.php?course_title=" + courseTitle, true);
-                xhr.onreadystatechange = function () {
-                    if (xhr.readyState == 4 && xhr.status == 200) {
-                        document.getElementById("course_details_sec1").innerHTML = xhr.responseText;
-                    }
-                };
-                xhr.send();
-            } else {
-                document.getElementById("course_details_sec1").innerHTML = ""; // Clear details if no course category selected
-            }
-        }
-
-        function fetchallCourseDeatails(event) {
-            var courseTitle = event.srcElement.innerText
-
-            if (courseTitle) {
-                var xhr = new XMLHttpRequest();
-                xhr.open("GET", "ajax_course.php?course_title=" + courseTitle, true);
-                xhr.onreadystatechange = function () {
-                    if (xhr.readyState == 4 && xhr.status == 200) {
-                        document.getElementById("course_details_sec1").innerHTML = xhr.responseText;
-                    }
-                };
-                xhr.send();
-            } else {
-                document.getElementById("course_details_sec1").innerHTML = ""; // Clear details if no course category selected
-            }
-        }
-    </script>
-
-
-
-    <script>
-        const scrollContainer = document.querySelector('.scroll-container');
-        const leftButton = document.querySelector('.scroll-button.left');
-        const rightButton = document.querySelector('.scroll-button.right');
-
-        leftButton.addEventListener('click', () => {
-            scrollContainer.scrollLeft -= 350; // Adjust scroll distance as needed
-        });
-
-        rightButton.addEventListener('click', () => {
-            scrollContainer.scrollLeft += 350; // Adjust scroll distance as needed
-        });
-    </script>
-
 
     <?php include "training_footer.php"; ?>
 

@@ -15,7 +15,7 @@
 <body>
     <?php include 'db_link.php'; ?>
 
-    <?php 
+    <?php
     $qur = "SELECT category FROM course_category";
     $ans = $conn->query($qur);
     ?>
@@ -27,7 +27,7 @@
                 <label for="new_category">Add new Category:</label><br>
                 <input class="form-control  mt-2" type="text" id="new_category" name="cat_name" required>
                 <div class="text-center mt-4">
-                <button type="submit" class="btn btn-primary px-4">Add</button>
+                    <button type="submit" class="btn btn-primary px-4">Add</button>
                 </div>
             </form>
         </div>
@@ -44,9 +44,9 @@
                         <label for="category">Category</label>
                         <select class="form-control" id="cars" name="cars">
                             <option value=""></option>
-                            <?php 
-                            if ($ans->num_rows >0){
-                                while($row = $ans->fetch_assoc()){
+                            <?php
+                            if ($ans->num_rows > 0) {
+                                while ($row = $ans->fetch_assoc()) {
                                     echo "<option value='{$row['category']}'>{$row['category']}</option>";
                                 }
                             }
@@ -111,10 +111,10 @@
     <script>
         var add_category = document.querySelector(".new_category_div");
 
-        function cat_on_btn(){
+        function cat_on_btn() {
             add_category.style.height = "180px";
         }
-        function cat_btn_close(){
+        function cat_btn_close() {
             add_category.style.height = "0px";
         }
     </script>

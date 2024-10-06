@@ -22,7 +22,7 @@
 
     <?php include 'training_nav.php'; ?>
 
-    <?php include 'top_banner.php'; ?>
+    <?php //include 'top_banner.php'; ?>
 
 
     <div style="position:relative;" class="">

@@ -1,259 +1,76 @@
-body{
+body {
     background-color: #f5f2f5;
 }
 
-.cover_img_mob {
-    display: none;
+.course_top_img {
+    width: 100%;
+    height: 500px;
 }
-
-.cover_overlay {
-    position: absolute;
-    top: 6vw;
-    left: 100px;
-}
-
-.cover_overlay h1 {
-    font-size: 4vw;
-}
-
-.cover_overlay p {
-    font-size: 1.3vw;
-    margin-top: 20px;
-}
-
-.cover_overlay_link {
-    position: absolute;
-    text-decoration: none;
-    color: black;
-    display: inline-block;
-    font-size: 1.2vw;
-    font-weight: 500;
-    margin-left: 20px;
-    margin-top: 1vw;
-}
-
-.cover_overlay_circle {
-    display: inline-block;
-    margin-left: 50px;
-    height: 3.4vw;
-    width: 3.4vw;
-    border-radius: 50%;
-    background-color: #71e2ba;
-}
-
-.fa-arrow-right {
-    position: relative;
-    top: 3px;
-    left: 5px;
-}
-
-.explore_link {
-    text-decoration: none;
-    color: gray;
+.course_grd_text {
+    font-size: 30px;
     font-weight: 600;
-    transition: .2s ease-out;
+    background: linear-gradient(22deg, rgba(223, 0, 0, 1) 40%, rgba(112, 0, 216, 1) 98%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.crs_para{
+    color: rgb(88, 88, 88);
 }
 
-.explore_link:hover {
-    word-spacing: 2px;
-    letter-spacing: .5px;
-}
-
-.coursebtnDiv{
-    background-color: #15ba9c;
-    padding: 20px;
-    position: relative;
-    
-}
-/* Custom Dropdown Styles */
-.custom-dropdown {
-    position: relative;
-    width: 35%;
-    left: 50%;
-    transform: translate(-50%);
+#course_cards_div{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgba(219, 219, 219, 0.2);
+    padding: 15px;
+    border-radius: 15px;
     
 }
 
-.custom-dropdown-selected {
-    background-color: #f1f1f1;
-    border: 1px solid #ccc;
-    cursor: pointer;
-    border-radius: 30px;
-    padding: 15px;
-    position: relative;
-    text-align: center;
-}
-.selectedOptionArrow{
-    position: absolute;
-    right: 35%;
-    font-size: 14px;
-    color: #15ba9c;
-    top: 44%;
-    z-index: 1;
-}
-.custom-dropdown-list {
-    display: none;
-    position: absolute;
-    margin-top: 10px;
-    background-color: white;
-    width: 100%;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px 7px rgba(89, 87, 87, 0.3);
-}
-
-.custom-dropdown-list.show {
-    display: block;
-}
-
-.dropdown-item {
-    padding: 15px;
-    cursor: pointer;
-}
-
-.dropdown-item:hover {
-    background-color: #ddd;
-}
-
-/* Scrollable container styles */
-.course_scroll_div {
-    margin-top: 0px;
-}
-
-.scroll-container-wrapper {
-    display: flex;
-    align-items: center;
-}
-
-.scroll-container {
-    overflow-x: scroll;
-    white-space: nowrap;
-    width: 100%;
-}
-
-.scroll-button {
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-}
-
-
-/* Container holding the scrollable items */
-
-.course_scroll_div{
-    position: sticky;
-    top: 0;
-    padding: 0px 50px;
-    overflow: hidden;
-}
-.scroll-container-wrapper {
-    background-color: rgb(241, 241, 241);
-    padding: 5px 40px;
-    width: 100%; 
-    overflow: hidden; 
-    border-radius: 8px;
-    min-height: 70px;
-   
-}
-
-.scroll-container {
-    display: flex;
-    overflow-x: auto; 
-    white-space: nowrap; 
-    scroll-behavior: smooth; 
-    padding: 10px;
-}
-
-/* Individual items */
-.scroll-item {
-    margin-right: 20px;
+.course_cards{
     text-decoration: none;
     color: black;
+    display:block;
+    height: 300px;
+    width: 295px;
     background-color: white;
-    padding: 10px 30px;
-    text-align: center;
-    border-radius: 20px;
-    box-shadow: 3px 0px 3px rgba(135, 135, 135, 0.3);
-    cursor: pointer;
+    border-radius: 10px;
+    margin: 10px;
+    box-shadow: rgba(127, 127, 127, 0.6) 5px 10px 20px -3px, rgba(0, 0, 0, 0.3) 0px 4px 6px -2px;
+    transition: .3s linear;
+}
+.course_title {
+    height: 50%;
+    padding: 25px;
+    color: gray;
 }
 
-/* Hide scrollbar */
-.scroll-container::-webkit-scrollbar {
-    display: none;
+.course_title span i {
+    margin-right: 10px;
 }
-.scroll-container {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
-}
-
-/* Left and Right buttons */
-.scroll-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(122, 122, 122, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    z-index: 10;
-    border-radius: 50%;
-    font-size: 18px;
-    width: 40px;
-    height: 40px; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
+.course_details {
+    background: rgb(173, 223, 207);
+    background: linear-gradient(90deg, rgba(173, 223, 207, 1) 0%, rgba(135, 195, 175, 1) 100%);
+    height: 50%;
+    padding: 25px;
+    border-radius: 0px 0px 10px 10px;
+    line-height: 40px;
 }
 
-.scroll-button.left {
-    left: 20px; 
+.course_details span i {
+    color: #427a7a;
+    margin-right: 10px;
 }
-
-.scroll-button.right {
-    right: 20px; 
-}
-
-.scroll-container-wrapper:hover .scroll-button {
-    display: flex;
-}
-
-.course_details_sec1,.course_details_sec2{
-    border: 1px solid #faa7a8;
-    margin-bottom: 20px;
-    background-color: white;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 1px 1px 5px rgb(158, 158, 158,0.8) ;
-}
-
 @media screen and (max-width: 992px) {
-    .scroll-button.left{
-        left: -100px;
+    .course_top_img {
+        height: auto;
     }
-    .scroll-button.right{
-        right: -100px;
+    .course_grd_text {
+        font-size: 23px;
+
     }
-    .scroll-container-wrapper{
-        padding: 5px;
-        background-color: transparent;
-    }
-    .scroll-item {
-        margin-right: 10px;
-        padding: 10px 35px;
-        
-    }
-    .course_scroll_div{
-        padding: 0px;
-    }
-    .custom-dropdown {
-        width: 100%; 
-    }
-    .selectedOptionArrow{
-        right: 15%;
-    }
-    .custom-dropdown-selected {
-        padding: 11px 15px;
+}
+@media screen and (max-width:1200px){
+    #course_cards_div{  
+        justify-content:center ;
     }
 }
