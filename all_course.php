@@ -37,10 +37,10 @@
     </div>
 
     <div class="text-center mt-3 container">
-        <span class="course_grd_text">Explore Our Courses and Unlock <br>
+        <span class="course_grd_text" data-aos="fade-right" data-aos-duration="1300">Explore Our Courses and Unlock <br>
             Your Potential</span>
 
-        <p class="mt-4 crs_para">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil error magni ratione
+        <p class="mt-4 crs_para" data-aos="fade-left" data-delay="100">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil error magni ratione
             dolore in est qui id vero
             unde quae, aspernatur impedit temporibus voluptate officiis quod nulla illum veritatis tempore maiores
             molestiae consectetur ipsa earum! Animi possimus cumque voluptatem ipsum? Deserunt rerum ipsam dicta
@@ -69,7 +69,7 @@
 
                 // Loop through the result set
                 while ($row = $result->fetch_assoc()) {
-                    echo "<a href='' class='course_cards'>";
+                    echo "<a href='' class='course_cards' data-aos-delay='200' data-aos='fade-right'>";
 
                     echo "<div class='course_title'>";
 
@@ -95,6 +95,12 @@
             ?>
         </div>
     </div>
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        AOS.init();
+    </script>
 
     <?php include "training_footer.php"; ?>
 

@@ -1,5 +1,5 @@
 body {
-    background-color: #f5f2f5;
+    background-color: #eefef9;
 }
 
 .course_top_img {
@@ -37,6 +37,9 @@ body {
     margin: 10px;
     box-shadow: rgba(127, 127, 127, 0.6) 5px 10px 20px -3px, rgba(0, 0, 0, 0.3) 0px 4px 6px -2px;
     transition: .3s linear;
+}
+.course_cards:hover{
+    transform: scale(1.1);
 }
 .course_title {
     height: 50%;
