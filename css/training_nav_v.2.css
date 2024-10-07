@@ -108,13 +108,30 @@ nav {
     cursor: pointer;
     position: relative;
 }
-.course_dropbtn i{
+.course_dropbtn img{
     position: absolute;
+    width: 12px;
     right: 20px;
-    top: 16px;
-    font-size: 8px;
-    color: rgb(255, 255, 255);
+    top: 13px;
     transition: 0.2s;
+}
+
+.course_mob_btn{
+    display: none;
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 40px 5px 20px;
+    border-radius: 50px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+}
+.course_mob_btn img{
+    width: 12px;
+    position: absolute;
+    top: 11px;
+    right: 17px;
 }
 
 .course_dropdown {
@@ -141,14 +158,15 @@ nav {
 }
 
 .course_dropdown-content a:hover {
-    background-color: #f1f1f1
+    background-color: #49ba4d;
+    color: white;
 }
 
 .course_dropdown:hover .course_dropdown-content {
     display: block;
 }
-.course_dropdown:hover .course_dropbtn i{
-    transform: rotate(270deg);
+.course_dropdown:hover .course_dropbtn img{
+    transform: rotate(180deg);
 }
 
 #course_dropdown_mob{
@@ -160,12 +178,11 @@ nav {
 .catgr_link_btn{
     position: relative;
 }
-.catgr_link_btn i{
+.catgr_link_btn img{
     position: absolute;
     right: 20px;
     top: 18px;
-    font-size: 10px;
-    color: #58bc98;
+    width: 8px;
 }
 .catgr_dropdown_content{
     display: none;
@@ -184,9 +201,6 @@ nav {
 }
 .catgr_link:hover .catgr_dropdown_content{
     display: block;
-}
-.catgr_link:hover .catgr_link_btn i{
-    color: black;
 }
 
 .nav_links>div{
@@ -233,6 +247,70 @@ nav {
     margin-left: 20px;
 }
 
+.course_catgr_side_nav{
+    border: 2px solid rgb(186, 186, 186);
+    background-color: white;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 70px;
+    z-index: 2;
+    transform: translateX(100%);
+    transition: 0.2s;
+}
+.catgr_side_nav_title{
+    font-size: 30px;
+    font-weight: 600;
+    background: linear-gradient(22deg, rgba(223, 0, 0, 1) 10%, rgba(112, 0, 216, 1) 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 15px;
+}
+
+.catgr_side_nav_back_btn{
+    border: none;
+    background-color: white;
+    position: absolute;
+    top: 25px;
+    right: 35px;
+    font-weight: 600;
+}
+.catgr_side_nav_back_btn img{
+    width: 15px;
+    position: relative;
+    top: -2px;
+    left: -5px;
+}
+
+.catgr_side_dropdown{
+    display: flex;
+    flex-direction: column;
+}
+.catgr_drop_btn, .side_nav_sub_catgr a{
+    display: block;
+    border: 1px solid rgb(10, 196, 112);
+    margin: 10px 15px;
+    padding: 13px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+.side_nav_sub_catgr a{
+    margin: 20px 15px;
+}
+.side_nav_sub_catgr{
+    position: absolute;
+    top: 0px;
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    transform: translateX(100%);
+    transition: 0.2s;
+}
+.catgr_side_dropdown:hover .side_nav_sub_catgr{
+    transform: translateX(0%);
+}
 
 @media screen and (max-width: 992px) {
     nav {
@@ -255,7 +333,7 @@ nav {
     .logo_img{
         width: 70px;
         position: absolute;
-        top: 20px;
+        top: 18px;
         left: 25%;
         transform: translateX(-25%);
     }
@@ -279,13 +357,18 @@ nav {
         border-radius: 50px;
         font-size: 13px;
     }
-    .course_dropbtn i{
-        font-size: 8px;
-        top: 13px;
+    .course_dropbtn img{
+        right: 15px;
+        top: 9px;
     }
     .catgr_dropdown_content{
         top: 5px;
         right: -200px;
         
+    }
+    .course_mob_btn{
+        display: block;
+        position: relative;
+        top: -3px;
     }
 }
