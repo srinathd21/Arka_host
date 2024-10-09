@@ -69,7 +69,7 @@
 
                 // Loop through the result set
                 while ($row = $result->fetch_assoc()) {
-                    echo "<a href='' class='course_cards' data-aos-delay='200' data-aos='fade-right'>";
+                    echo "<a href='course_details.php?category={$course_catagory_name}&title={$row["title"]}' id='course_cards' class='course_cards' data-aos='fade-right'>";
 
                     echo "<div class='course_title'>";
 

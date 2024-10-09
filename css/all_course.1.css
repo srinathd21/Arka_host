@@ -26,7 +26,7 @@ body {
     
 }
 
-.course_cards{
+#course_cards{
     text-decoration: none;
     color: black;
     display:block;
@@ -36,10 +36,10 @@ body {
     border-radius: 10px;
     margin: 10px;
     box-shadow: rgba(127, 127, 127, 0.6) 5px 10px 20px -3px, rgba(0, 0, 0, 0.3) 0px 4px 6px -2px;
-    transition: .3s linear;
+    transition: .3s;
 }
-.course_cards:hover{
-    transform: scale(1.1);
+#course_cards:hover{
+    transform: translateY(-15px);
 }
 .course_title {
     height: 50%;

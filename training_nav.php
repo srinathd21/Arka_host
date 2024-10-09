@@ -45,7 +45,7 @@ $ans = $conn->query($qur);
 
                             if ($result->num_rows > 0) {
                                 while ($course_details = $result->fetch_assoc()) {
-                                    echo "<a href=''>{$course_details['title']}</a>";
+                                    echo "<a href='course_details.php?category={$row['category']}&title={$course_details['title']}'>{$course_details['title']}</a>";
                                 }
                             } else {
                                 echo "No course_details found.";
