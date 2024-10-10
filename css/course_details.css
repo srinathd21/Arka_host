@@ -143,6 +143,7 @@ body{
     padding: 18px 0px 5px 20px;
     margin: 15px 0px;
     border-radius: 5px;
+    box-shadow: 2px 2px 7px rgb(171, 171, 171,0.5)
 }
 .benefits_txt div img{
     width: 20px;
@@ -156,26 +157,35 @@ body{
 .benefits_txt div:nth-child(2){
     background-color: #e7ffeb;
     position: relative;
-    left: -10px;
+    left: -30px;
 }
 .benefits_txt div:nth-child(3){
     background-color: #e7f8ff;
     position: relative;
-    left: -20px;
+    left: -50px;
 }
 .benefits_txt div:nth-child(4){
     background-color: #f7eafe;
     position: relative;
-    left: -30px;
+    left: -70px;
 }
 .crs_aboutus{
-    padding: 20px;
-    background-color: #6ec5ef;
+    padding: 40px 10px;
+    background: linear-gradient(22deg ,#5dd4df, #6ec5ef) ;
     color: white;
-    border-radius: 100px 0px 100px 0px;
+    border-radius: 150px 3px 150px 3px;
+    margin: 50px auto;
+}
+.aboutus_img{
+    display: inline;
+    padding: 80px 0px 0px
 }
 .aboutus_img img{
-    width: 80%;
+    width: 60%;
+    border-radius: 1px 50px 1px 50px;
+}
+.crs_about_txt{
+    padding: 8% 0px 0px 10%;
 }
 @media screen and (max-width: 992px) {
     .crs_title{
@@ -196,7 +206,7 @@ body{
     }
 
     .course_cost div span{
-        font-size: 15px !important;
+        font-size: 13px !important;
     }
 
     .crs_img_card{
@@ -241,5 +251,27 @@ body{
     }
     .benefits_txt div{
         left: 0px !important;
+    }
+    .crs_aboutus{
+        text-align: center;
+        position: relative;
+        height: 690px;
+    }
+    .aboutus_img{
+        display: inline;
+        padding: 30px 0px 0px
+    }
+    .aboutus_img img{
+        width: 60%;
+    }
+    .crs_about_txt{
+        padding: 0px 5%;
+        position: absolute;
+        bottom: 10%;
+    }
+}
+@media screen and (max-width: 767px) {
+    .aboutus_img img{
+        width: 75%;
     }
 }

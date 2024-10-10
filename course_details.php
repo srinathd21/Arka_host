@@ -138,17 +138,17 @@
 
     <div class="container crs_aboutus ">
         <div class="text-center">
-            <h4>About Us</h4>
+            <h3>About Us</h3>
         </div>
 
         <div class="row">
-            <div class="col-lg-6 col-md-12">
+            <div class="col-lg-6 col-md-12 crs_about_txt ">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim quae laudantium aspernatur illo
                     explicabo ea velit commodi nulla consectetur harum. Ea exercitationem quis assumenda cum rem
                     nesciunt quaerat suscipit voluptatibus iure enim placeat, quas, minima quasi nemo cumque error
                     perspiciatis eaque vero, rerum dolore labore voluptatum ipsam accusamus! Facere, quaerat!</p>
             </div>
-            <div class="col-lg-6 col-md-12 aboutus_img">
+            <div class="col-lg-6 col-md-12 text-center aboutus_img">
                 <img src="img/aboutus.png" alt="">
             </div>
         </div>
