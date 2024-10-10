@@ -74,7 +74,7 @@
                         </div>
 
                         <div class="all_courses_container ">
-                            <a class="all_courses_list " href="all_course.php?category=Software&title=Python">
+                            <a class="all_courses_list " href="course_details.php?category=Software&title=Python">
                                 <div class="course_title">
                                     <h2 class="text-black">Python</h2>
                                     <p>Extensive syllabus</p>
@@ -89,7 +89,7 @@
 
 
 
-                            <a class="all_courses_list" href="all_course.php?category=Software&title=java">
+                            <a class="all_courses_list" href="course_details.php?category=Software&title=java">
                                 <div class="course_title">
                                     <h2 class="text-black">Java</h2>
                                     <p>Extensive syllabus</p>
@@ -102,9 +102,9 @@
                                 </div>
                             </a>
 
-                            <a class="all_courses_list" href="all_course.php?category=Ui/Ux&title=Graphic%20Design">
+                            <a class="all_courses_list" href="course_details.php?category=Ui/Ux&title=Full%20Stack">
                                 <div class="course_title">
-                                    <h2 class="text-black">Graphic Design</h2>
+                                    <h2 class="text-black">Full Stack</h2>
                                     <p>Extensive syllabus</p>
 
                                     <span><i class="fa-solid fa-book-open"></i>Specialized certificate</span>
@@ -115,7 +115,7 @@
                                 </div>
                             </a>
 
-                            <a class="all_courses_list" href="all_course.php?category=Software&title=Back%20End">
+                            <a class="all_courses_list" href="course_details.php?category=Software&title=Back%20End">
                                 <div class="course_title">
                                     <h2 class="text-black">Back End</h2>
                                     <p>Extensive syllabus</p>
@@ -128,7 +128,7 @@
                                 </div>
                             </a>
 
-                            <a class="all_courses_list" href="all_course.php?category=Software&title=PHP">
+                            <a class="all_courses_list" href="course_details.php?category=Software&title=PHP">
                                 <div class="course_title">
                                     <h2 class="text-black">PHP</h2>
                                     <p>Extensive syllabus</p>
@@ -156,7 +156,7 @@
             <h2>Trending courses</h2>
         </div>
         <div class="trand_courses_container ">
-            <a class="trend_courses_list " href="">
+            <a class="trend_courses_list" href="course_details.php?category=Software&title=Data%20Science">
                 <div class="course_title">
                     <h2 class="text-black">Data Science</h2>
                     <p>Extensive syllabus</p>
@@ -171,7 +171,7 @@
 
 
 
-            <a class="trend_courses_list" href="">
+            <a class="trend_courses_list" href="course_details.php?category=Software&title=Full%20Stack">
                 <div class="course_title">
                     <h2 class="text-black">Full Stack</h2>
                     <p>Extensive syllabus</p>
@@ -184,7 +184,7 @@
                 </div>
             </a>
 
-            <a class="trend_courses_list" href="">
+            <a class="trend_courses_list" href="course_details.php?category=Software&title=Ai/Ml">
                 <div class="course_title">
                     <h2 class="text-black">Ai/Ml</h2>
                     <p>Extensive syllabus</p>

@@ -3,10 +3,13 @@ body{
 }
 
 #grd_text{
-    display: block;
+    display: inline-block;
     font-size: 17px;
     font-weight: 600;
-    background: linear-gradient(22deg, rgba(223, 0, 0, 1) 7%, rgba(112, 0, 216, 1) 98%);
+    /* background:  linear-gradient(90deg, rgba(29,205,254,1) 16%, rgba(52,245,197,1) 62%);
+    background:  linear-gradient(90deg, #45d38f 30%, #95fa18 62%)
+    */
+    background:  linear-gradient(90deg, #45d38f 30%, #95fa18 62%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -21,6 +24,8 @@ body{
     background-color: white;
     border-radius: 15px;
     display: flex;
+    box-shadow: 2px 2px 7px rgb(168, 168, 168,0.5);
+    
 }
 .crs_card_left{
     padding: 18px 30px;
@@ -49,7 +54,7 @@ body{
     justify-content: space-around;
 }
 .course_cost div h4{
-    color: #b8b8b8;
+    color: #444444;
 }
 .crs_crad_btn button{
     width: 280px;
@@ -127,6 +132,7 @@ body{
     border-radius: 10px;
     padding: 20px;
     margin-top: 20px;
+    overflow: hidden;
 }
 .benefits_text{
     font-size: 35px !important;
@@ -195,6 +201,10 @@ body{
         padding: 18px;
         width: 100%;
     }
+
+    .crs_crad_btn_mob button{
+        padding: 10px ;
+    }
   
     .course_cost div{
         margin-right: 25px;
@@ -249,13 +259,16 @@ body{
     .institute_words div h5{
         font-size: 13px;
     }
+
     .benefits_txt div{
         left: 0px !important;
+        padding: 10px 10px 0px;
     }
     .crs_aboutus{
         text-align: center;
         position: relative;
         height: 690px;
+        margin-top: 10px;
     }
     .aboutus_img{
         display: inline;

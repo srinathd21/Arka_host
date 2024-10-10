@@ -15,9 +15,9 @@ $ans = $conn->query($qur);
             <i class="fa-solid fa-bars" style="color: #000000;"></i>
         </button>
 
-        <div class="logo_img ">
+        <a href="training.php" class="logo_img ">
             <img src="img/Arka_logo.png" alt="">
-        </div>
+        </a>
 
 
         <div class="srch_input">

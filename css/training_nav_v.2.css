@@ -102,7 +102,7 @@ nav {
     background-color: #4CAF50;
     color: white;
     padding: 7px 50px 7px 20px;
-    border-radius: 50px;
+    border-radius: 5px;
     font-size: 16px;
     border: none;
     cursor: pointer;
@@ -121,7 +121,7 @@ nav {
     background-color: #4CAF50;
     color: white;
     padding: 5px 40px 5px 20px;
-    border-radius: 50px;
+    border-radius: 4px;
     font-size: 16px;
     border: none;
     cursor: pointer;

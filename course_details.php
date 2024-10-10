@@ -16,7 +16,7 @@
     <?php include "training_nav.php"; ?>
 
     <div class="container">
-        <div class="course_details_card">
+        <div class="course_details_card" data-aos="fade-down" data-aos-duration="1500">
             <?php
             $crs_category = $_GET['category'];
             $crs_title = $_GET['title'];
@@ -82,9 +82,10 @@
 
     </div>
 
-    <div class="container text-center mt-4">
+    <div class="container text-center mt-4" data-aos="zoom-in-down" data-aos-duration="900">
         <span id="grd_text" class="slogan_txt">Topic</span>
-        <div class="institute_words">
+        <br>
+        <div class="institute_words" >
             <div class="">
                 <img src="img/chart-line-solid.svg" alt="">
                 <h3>57%</h3>
@@ -111,24 +112,24 @@
     <div class="container crs_benefits ">
         <span id="grd_text" class="benefits_text">Benefits</span>
         <div class="row">
-            <div class="benefits_img_box col-lg-6 col-md-12">
+            <div class="benefits_img_box col-lg-6 col-md-12" data-aos="fade-right" data-aos-duration="1400">
                 <img src="img/benefits_img.jpg" alt="">
             </div>
 
             <div class="benefits_txt col-lg-6 col-md-12">
-                <div>
+                <div data-aos="fade-left" data-aos-duration="1000">
                     <img src="img/thumbs-up-regular.svg" alt="">
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
                 </div>
-                <div>
+                <div data-aos="fade-left" data-aos-duration="1000" data-aos-delay="50">
                     <img src="img/thumbs-up-regular.svg" alt="">
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
                 </div>
-                <div>
+                <div data-aos="fade-left" data-aos-duration="1000"  data-aos-delay="100">
                     <img src="img/thumbs-up-regular.svg" alt="">
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
                 </div>
-                <div>
+                <div data-aos="fade-left" data-aos-duration="1000"  data-aos-delay="150"> 
                     <img src="img/thumbs-up-regular.svg" alt="">
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
                 </div>
@@ -136,7 +137,7 @@
         </div>
     </div>
 
-    <div class="container crs_aboutus ">
+    <div class="container crs_aboutus " data-aos="zoom-in" data-aos-duration="1000">
         <div class="text-center">
             <h3>About Us</h3>
         </div>
@@ -154,6 +155,12 @@
         </div>
 
     </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+    AOS.init();
+</script>
 
     <?php include "training_footer.php"; ?>
 
