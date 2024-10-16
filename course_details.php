@@ -18,9 +18,12 @@
     <div class="container">
         <div class="course_details_card" data-aos="fade-down" data-aos-duration="1500">
             <?php
+            include "db_link.php"; // Include your database connection
+
             $crs_category = $_GET['category'];
             $crs_title = $_GET['title'];
 
+            // Fetch the course details including the image path and file path
             $sql = "SELECT * FROM course_form WHERE title = ?";
             $stmt = $conn->prepare($sql);
             $stmt->bind_param("s", $crs_title);
@@ -29,63 +32,60 @@
 
             if ($result->num_rows > 0) {
                 while ($course_details = $result->fetch_assoc()) {
-                    //{$course_details['description']}
+                    // Fetching the course details
+                    $img_path = $course_details['img_path'];
+                    $file_path = $course_details['file_path'];
+
                     echo "<div class='crs_card_left'>";
                     echo "<span id='grd_text' class='crs_title'>$crs_title</span>";
-                    echo "<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima illo voluptates vitae facilis, veniam non
-        recusandae, rerum dolorem rerum adipisci est voluptatem in optio officia illo rem perspiciatis omnis
-        itaque accusamus. Optio aliquid laboriosam magnam recusandae ipsam!</p>";
+                    echo "<p>{$course_details['description']}</p>";
 
+                    // Display the uploaded image
                     echo '<div class="crs_img_card_mob">
-                    <img src="img/crs_img.png" class="img-fluid" alt="">
-                </div>';
+                            <img src="' . $img_path . '" class="img-fluid" alt="Course Image">
+                        </div>';
 
+                    // Displaying course cost and other details
                     echo "<div class='course_cost'>
-                    <div>
-                    <h4>Type</h4>
-                    <span id='grd_text'>{$crs_category}</span>
-                    </div>
-
-                    <div>
-                    <h4>Duration</h4>
-                    <span id='grd_text'>{$course_details['hours']} hours</span>
-                    </div>
-
-                    <div>
-                    <h4>Fees</h4>
-                    <span id='grd_text'>Rs: {$course_details['cost']}</span>
-                    </div>
-                    </div>";
+                            <div>
+                                <h4>Type</h4>
+                                <span id='grd_text'>{$crs_category}</span>
+                            </div>
+                            <div>
+                                <h4>Duration</h4>
+                                <span id='grd_text'>{$course_details['hours']} hours</span>
+                            </div>
+                            <div>
+                                <h4>Fees</h4>
+                                <span id='grd_text'>Rs: {$course_details['cost']}</span>
+                            </div>
+                        </div>";
 
                     echo '<div class="crs_crad_btn_mob text-center">
-            <button class="crs_apply_btn_mob">Apply Now</button>
-            <button class="crs_downlode_btn_mob">Downlode Syllabus</button>
-        </div>';
-
+                            <button class="crs_apply_btn_mob">Apply Now</button>
+                            <a href="' . $file_path . '" download class="crs_downlode_btn_mob">Download Syllabus</a>
+                        </div>';
                     echo "</div>";
                 }
             } else {
-                echo "No course_details found.";
+                echo "No course details found.";
             }
             ?>
             <div class="crs_img_card">
-                <img src="img/crs_img.png" class="img-fluid" alt="">
+                <img src="<?php echo $img_path; ?>" class="img-fluid" alt="Course Image">
             </div>
-
         </div>
 
         <div class="crs_crad_btn text-center">
             <button class="crs_apply_btn">Apply Now</button>
-            <button class="crs_downlode_btn">Downlode Syllabus</button>
+            <a href="<?php echo $file_path; ?>" download class="crs_downlode_btn">Download Syllabus</a>
         </div>
-
-
     </div>
 
     <div class="container text-center mt-4" data-aos="zoom-in-down" data-aos-duration="900">
-        <span id="grd_text" class="slogan_txt">Topic</span>
+        <span id="grd_text" class="slogan_txt">Highlights</span>
         <br>
-        <div class="institute_words" >
+        <div class="institute_words">
             <div class="">
                 <img src="img/chart-line-solid.svg" alt="">
                 <h3>57%</h3>
@@ -150,21 +150,19 @@
                     perspiciatis eaque vero, rerum dolore labore voluptatum ipsam accusamus! Facere, quaerat!</p>
             </div>
             <div class="col-lg-6 col-md-12 text-center aboutus_img">
-                <img src="img/aboutus.png" alt="">
+                <img src="img/aboutus.png" alt="About Us">
             </div>
         </div>
-
     </div>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-<script>
-    AOS.init();
-</script>
+    <script>
+        AOS.init();
+    </script>
 
     <?php include "training_footer.php"; ?>
-
-<?php include "supports.php"; ?>
+    <?php include "supports.php"; ?>
 
 </body>
 

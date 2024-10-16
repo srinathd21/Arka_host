@@ -10,12 +10,12 @@ $ans = $conn->query($qur);
 
 <div class="nav">
     <nav class="container">
-        <button class="btn d-lg-none mx-3" style="margin-top: -5px ;" type="button" data-bs-toggle="offcanvas"
+        <button class="btn d-lg-none" style="position:relative; left:-10px;" type="button" data-bs-toggle="offcanvas"
             data-bs-target="#demo">
             <i class="fa-solid fa-bars" style="color: #000000;"></i>
         </button>
 
-        <a href="training.php" class="logo_img ">
+        <a href="index.php" class="logo_img ">
             <img src="img/Arka_logo.png" alt="">
         </a>
 
@@ -88,7 +88,7 @@ $ans = $conn->query($qur);
                 </div>
 
                 <div>
-                    <a id="top_nav_link_mob" href="training.php">For Training</a>
+                    <a id="top_nav_link_mob" href="index.php">For Training</a>
                 </div>
 
                 <ul class="nav_link_mob">
@@ -96,10 +96,11 @@ $ans = $conn->query($qur);
                 </ul>
             </div>
         </div>
-        <div style="display:inline-flex; margin-left:-100px;">
+        <div id="nav_last_btn" style="display:inline-flex;">
             <button class="course_mob_btn" onclick="opensidenav()">Course <img src="icons/angle-down-solid.svg" alt=""></button>
-            <a href=""><span class="profile_icon_mob"><i style="font-size:17px; color:gray;"
-                        class="fa-regular fa-user"></i></span> </li></a>
+            <a href="https://www.google.com/maps/place/Arka+Networkz+System/@12.7360388,77.8222739,17z/data=!3m1!4b1!4m6!3m5!1s0x3bae7185e99a9cb5:0x3520348054405036!8m2!3d12.7360336!4d77.8248488!16s%2Fg%2F11t1ds8dv0?authuser=0&entry=ttu"
+                    target="_blank"> <i class="fa-solid fa-location-dot"
+                        style="font-size: 15px;margin-top:7.6px;display:inline-block; color: rgb(0, 0, 0);"></i></a>
         </div>
 
     </nav>
@@ -108,11 +109,11 @@ $ans = $conn->query($qur);
 
 <div class="course_catgr_side_nav">
     <div>
-        <h1 class="catgr_side_nav_title">Category</h1>
+        <h1 class="catgr_side_nav_title">Domain</h1>
 
         <div>
             <button onclick="sidenavBack()" class="catgr_side_nav_back_btn"><img src="icons/arrow-left-solid.svg"
-                    alt="">Back</button>
+                    alt=""></button>
         </div>
     </div>
 
@@ -129,7 +130,10 @@ $ans = $conn->query($qur);
             while ($row = $ans->fetch_assoc()) {
 
                 echo "<div class='catgr_side_dropdown'>";
-                echo "<span class='catgr_drop_btn' onclick='loadSubCourse(event)'>{$row['category']}</span>";
+                echo "<span class='catgr_drop_btn' onclick='loadSubCourse(event)'>{$row['category']}</span>
+                <img src='img/angle-right-solid-black.svg'>
+                ";
+            
                 echo "</div>";
             }
         }

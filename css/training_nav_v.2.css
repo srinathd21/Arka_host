@@ -115,23 +115,27 @@ nav {
     top: 13px;
     transition: 0.2s;
 }
-
+#nav_last_btn >a{
+    display: none;
+}
 .course_mob_btn{
     display: none;
-    background-color: #4CAF50;
+    background-color: #00ad42;
     color: white;
-    padding: 5px 40px 5px 20px;
-    border-radius: 4px;
-    font-size: 16px;
+    padding: 3px 30px 5px 15px;
+    font-size: 15px;
     border: none;
+    border-radius: 3px;
     cursor: pointer;
     position: relative;
+    left: -25px;
 }
+
 .course_mob_btn img{
     width: 12px;
     position: absolute;
-    top: 11px;
-    right: 17px;
+    top: 8px;
+    right: 10px;
 }
 
 .course_dropdown {
@@ -142,7 +146,7 @@ nav {
 .course_dropdown-content {
     display:none ;
     position: absolute;
-    top: 40px;
+    top: 38px;
     left: -55px;
     background-color: #f9f9f9;
     min-width: 250px;
@@ -259,20 +263,21 @@ nav {
     transition: 0.2s;
 }
 .catgr_side_nav_title{
-    font-size: 30px;
+    font-size: 20px;
     font-weight: 600;
     background: linear-gradient(22deg, rgba(223, 0, 0, 1) 10%, rgba(112, 0, 216, 1) 50%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    padding: 15px;
+    padding: 15px 0px 0px 20px;
 }
 
 .catgr_side_nav_back_btn{
     border: none;
     background-color: white;
     position: absolute;
-    top: 25px;
-    right: 35px;
+    top: 15px;
+    right: 15px;
+    font-size: 15px;
     font-weight: 600;
 }
 .catgr_side_nav_back_btn img{
@@ -285,19 +290,25 @@ nav {
 .catgr_side_dropdown{
     display: flex;
     flex-direction: column;
+    position: relative;
+}
+.catgr_side_dropdown >img{
+    width: 7px;
+    position: absolute;
+    right: 25px;
+    top: 21px;
 }
 .catgr_drop_btn, .side_nav_sub_catgr a{
     display: block;
-    border: 1px solid rgb(10, 196, 112);
-    margin: 10px 15px;
-    padding: 13px 10px;
-    border-radius: 5px;
+    border-bottom: 0.1px solid rgb(209, 209, 209,0.6);
+    margin: 0px 15px;
+    padding: 15px 5px;
     text-decoration: none;
-    color: black;
-    font-size: 20px;
+    color: rgb(58, 58, 58);
+    font-size: 15px;
 }
 .side_nav_sub_catgr a{
-    margin: 20px 15px;
+    margin: 0px 15px;
 }
 .side_nav_sub_catgr{
     position: absolute;
@@ -323,7 +334,7 @@ nav {
     }
 
     .cover_img_mob,
-    .profile_icon_mob {
+    .profile_icon_mob,#nav_last_btn >a {
         display: block;
     }
 
@@ -331,11 +342,11 @@ nav {
         display: block;
     }
     .logo_img{
-        width: 70px;
+        width: 75px;
         position: absolute;
-        top: 18px;
-        left: 25%;
-        transform: translateX(-25%);
+        top: 18.5px;
+        left: 15%;
+        transform: translateX(-20%);
     }
     .logo_img_mob img {
         width: 80px;
@@ -369,6 +380,6 @@ nav {
     .course_mob_btn{
         display: block;
         position: relative;
-        top: -3px;
+        top: 0px;
     }
 }

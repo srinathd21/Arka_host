@@ -68,5 +68,35 @@
                 </div>
             </div>
         </div>
+
+        <div class="card">
+            <div class="card-header">
+                <a class="collapsed" data-bs-toggle="collapse" href="#collapseFour">
+                    Collapsible Group Item #4<i class="fa-solid fa-chevron-down"></i>
+                </a>
+            </div>
+            <div id="collapseFour" class="collapse" data-bs-parent="#accordion">
+                <div class="card-body">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                    laboris nisi ut aliquip ex ea commodo consequat.
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <a class="collapsed" data-bs-toggle="collapse" href="#collapseFive">
+                    Collapsible Group Item #5<i class="fa-solid fa-chevron-down"></i>
+                </a>
+            </div>
+            <div id="collapseFive" class="collapse" data-bs-parent="#accordion">
+                <div class="card-body">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                    laboris nisi ut aliquip ex ea commodo consequat.
+                </div>
+            </div>
+        </div>
     </div>
 </div>

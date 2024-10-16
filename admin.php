@@ -9,7 +9,7 @@
     <?php include 'links.php'; ?>
 
     <!--  css -->
-    <link rel="stylesheet" href="css/adcors.css">
+    <link rel="stylesheet" href="css/admin.css">
 </head>
 
 <body>
@@ -25,9 +25,9 @@
             <a onclick="cat_btn_close()">X</a>
             <form action="add_category.php" method="POST">
                 <label for="new_category">Add new Category:</label><br>
-                <input class="form-control  mt-2" type="text" id="new_category" name="cat_name" required>
+                <input class="form-control mt-2" type="text" id="new_category" name="cat_name" required>
                 <div class="text-center mt-4">
-                    <button type="submit" class="btn btn-primary px-4">Add</button>
+                    <button type="submit" class="btn btn-success px-4">Add</button>
                 </div>
             </form>
         </div>
@@ -51,9 +51,8 @@
                                 }
                             }
                             ?>
-
                         </select>
-                        <a id="ct_on_btn" onclick="cat_on_btn()" class="btn btn-info m-2">Add new</a>
+                        <a id="ct_on_btn" onclick="cat_on_btn()" class="btn btn-primary m-2">+ Add new</a>
                     </div>
 
                     <div>
@@ -69,8 +68,13 @@
 
                 <div class="card_2">
                     <div>
-                        <label for="file_link">File Link:</label><br>
-                        <input class="form-control" type="text" id="file_link" name="file_link" required>
+                        <label for="file_link">Upload Course File:</label><br>
+                        <input class="form-control" type="file" id="file_link" name="file_link" required>
+                    </div>
+
+                    <div>
+                        <label for="course_img">Upload Course Image:</label><br>
+                        <input class="form-control" type="file" id="course_img" name="course_img" required>
                     </div>
 
                     <div>
@@ -99,13 +103,13 @@
                 <input class="btn btn-danger" type="reset" value="Reset">
             </div>
 
-            <div class="text-center mt-3">
-                <input class="btn btn-success" type="submit" value="Submit">
+            <div class="text-center">
+                <input class="btn btn-success px-5 py-2" type="submit" value="Submit">
             </div>
         </form>
 
         <br><br>
-        <a href="course_list.php">All Courses</a>
+        <a href="course_list.php" class="allcrs">View all Courses</a>
     </div>
 
     <script>

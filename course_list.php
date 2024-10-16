@@ -5,14 +5,15 @@
     <div>
         <a href="admin.php" class="btn btn-success m-3">Add Course</a>
     </div>
-    <table class="table border">
-        <tr>
+    <table class="table border table-hover table-bordered">
+        <tr class="table-primary">
             <th>ID</th>
             <th>Title</th>
             <th>Category</th>
             <th>Hours</th>
             <th>Cost</th>
             <th>File Path</th>
+            <th>Image Path</th>
             <th>Description</th>
             <th>Trending</th>
             <th>Offer</th>
@@ -37,6 +38,7 @@
                 echo "<td>". $row["hours"]. "</td>";
                 echo "<td>". $row["cost"]. "</td>";
                 echo "<td>". $row["file_path"]. "</td>";
+                echo "<td>". $row["img_path"]. "</td>";
                 echo "<td>". $row["description"]. "</td>";
                 echo "<td>". $row["trending"]. "</td>";
                 echo "<td>". $row["offer"]. "</td>";

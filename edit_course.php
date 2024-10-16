@@ -20,6 +20,7 @@ if (isset($_GET['id'])) {
         $hours = $course['hours'];
         $cost = $course['cost'];
         $file_link = $course['file_path'];
+        $img_path = $course['img_path']; // Added for image path
         $description = $course['description'];
         $trending = $course['trending'] == 'Yes' ? 'checked' : '';
         $offer = $course['offer'] == 'Yes' ? 'checked' : '';
@@ -32,6 +33,7 @@ if (isset($_GET['id'])) {
     echo "No ID provided.";
     exit();
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -42,7 +44,7 @@ if (isset($_GET['id'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Course</title>
     <?php include 'links.php'; ?>
-    <link rel="stylesheet" href="css/adcors.css">
+    <link rel="stylesheet" href="css/admin.css">
 </head>
 
 <body>
@@ -54,7 +56,8 @@ if (isset($_GET['id'])) {
     ?>
     <div class="container">
         <h2 class="text-center mt-4">Edit Course</h2>
-        <form action="update_course.php" method="post" enctype="multipart/form-data">
+        <a href="course_list.php" class="allcrs">Back</a>
+        <form class="fomr1" action="update_course.php" method="post" enctype="multipart/form-data">
             <input type="hidden" name="id" value="<?php echo $id; ?>">
 
             <div class="cards">
@@ -71,7 +74,7 @@ if (isset($_GET['id'])) {
                             <?php
                             if ($ans->num_rows > 0) {
                                 while ($row = $ans->fetch_assoc()) {
-                                    echo "<option value='{$row['category']}'>{$row['category']}</option>";
+                                    echo "<option value='{$row['category']}'" . ($row['category'] == $category ? ' selected' : '') . ">{$row['category']}</option>";
                                 }
                             }
                             ?>
@@ -89,15 +92,16 @@ if (isset($_GET['id'])) {
                         <input class="form-control" type="number" id="cost" name="cost" step="0.01"
                             value="<?php echo $cost; ?>" required>
                     </div>
-
-
                 </div>
                 <div class="card_2">
+                    <div>
+                        <label for="file_link">Course File (Current: <?php echo basename($file_link); ?>):</label><br>
+                        <input class="form-control" type="file" id="file_link" name="file_link">
+                    </div>
 
                     <div>
-                        <label for="file_link">File Link:</label><br>
-                        <input class="form-control" type="text" id="file_link" name="file_link"
-                            value="<?php echo $file_link; ?>" required>
+                        <label for="course_img">Course Image (Current: <?php echo basename($img_path); ?>):</label><br>
+                        <input class="form-control" type="file" id="course_img" name="course_img">
                     </div>
 
                     <div>
@@ -105,6 +109,7 @@ if (isset($_GET['id'])) {
                         <textarea class="form-control" name="description"
                             id="description"><?php echo $description; ?></textarea>
                     </div>
+
 
                     <div>
                         <label for="Trending"> Trending</label>
@@ -121,11 +126,10 @@ if (isset($_GET['id'])) {
                         <input type="checkbox" id="Special" name="Special" value="Special" <?php echo $special; ?>>
                     </div>
                 </div>
-
             </div>
 
-            <div class="text-center mt-5">
-                <input class="btn btn-success" type="submit" value="Update">
+            <div class="text-center mt-1">
+                <input class="btn btn-info px-5 py-2" type="submit" value="Update">
             </div>
         </form>
     </div>
