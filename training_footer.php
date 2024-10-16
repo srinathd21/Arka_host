@@ -39,7 +39,7 @@
             <div class="col-lg-3 col-md-6 col-12 foot_work_hrs">
                 <div class="mb-4">
                     <h5>Working Hours</h5>
-                    <div>
+                    <div class="pt-3">
                         <p>Mon - Fri: 9:30Am - 8:00Pm</p>
                         <p>Sat - Sun: 9:30Am - 8:00Pm</p>
                     </div>
@@ -48,9 +48,8 @@
                 <div>
                     <h5>Get In Touch</h5>
 
-                    <div class="foot_supports_links">
+                    <div class="foot_supports_links pt-2">
                         <a href="tel:+919488434411" class=""><i class="fa-solid fa-phone"></i>+91 94884 34411</a>
-                        <br>
                         <a href="mailto:support@arka.org.in" class=""><i
                                 class="fa-regular fa-envelope-open"></i>support@arka.org.in</a>
                     </div>
@@ -58,9 +57,9 @@
 
             </div>
 
-            <div class="col-lg-3 col-md-6 col-12 foot_getin_tch">
+            <div class="col-lg-3 col-md-6 col-12 mt-3 foot_getin_tch">
                 <h5>Address</h5>
-                <div>
+                <div class="pt-2">
                     <p>Bank of Baroda upstairs,</p>
                     <p>Vasavi Nagar, No 7-C,</p>
                     <p>Sai Ganesha Arcade,</p>

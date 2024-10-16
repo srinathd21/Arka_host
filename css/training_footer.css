@@ -6,23 +6,26 @@
 .foot_logo_img img{
     width: 100px;
 }
+p{
+    font-size: 14px;
+}
 .foot_links ul,.foot_cours ul{
     list-style: none;
     padding: 0px;
-    list-style: none;
+    line-height: 15px;
 }
 ul a{
     text-decoration: none;
-    display: block;
+    display: inline-block;
     margin-top: 7px;
     color: rgb(28, 28, 28);
+    font-size: 14px;
 }
 .foot_work_hrs,.foot_getin_tch{
-
-    line-height: 7px;
+    line-height: 5px;
 }
 div h5{
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     font-weight: bold;
 }
 .foot_social_media{
@@ -38,10 +41,12 @@ div h5{
     color: black;
     font-size: 20px;
 }
+
 .foot_supports_links a{
-    display: inline-block;
+    display: block;
     text-decoration: none;
-    margin-bottom: 15px;
+    margin-bottom: 8px;
+    font-size: 14px;
     color: rgb(28, 28, 28);
 }
 .foot_supports_links a i{
@@ -53,6 +58,6 @@ div h5{
         margin-bottom: 30px;
     }
     .row >div{
-        margin-bottom: 15px;
+        margin-bottom: -5px;
     }
 }

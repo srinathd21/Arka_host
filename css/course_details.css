@@ -4,14 +4,10 @@ body{
 
 #grd_text{
     display: inline-block;
-    font-size: 17px;
-    font-weight: 600;
-    /* background:  linear-gradient(90deg, rgba(29,205,254,1) 16%, rgba(52,245,197,1) 62%);
-    background:  linear-gradient(90deg, #45d38f 30%, #95fa18 62%)
-    */
-    background-color: #018001;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    font-size: 16px;
+    font-weight: 400;
+    color: #018001;
+    
 }
 .crs_title{
     font-size: 40px !important;
@@ -152,7 +148,7 @@ body{
 .benefits_text{
     font-size: 35px !important;
     margin-bottom: 30px;
-    background-color: #018001;
+    color: #018001;
 }   
 .benefits_img_box img{
     width: 90%;
