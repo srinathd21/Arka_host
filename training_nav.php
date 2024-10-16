@@ -84,7 +84,7 @@ $ans = $conn->query($qur);
 
             <div class="">
                 <div>
-                    <a id="top_nav_link_mob" href="index.php">For Business</a>
+                    <a id="top_nav_link_mob" href="business.php">For Business</a>
                 </div>
 
                 <div>

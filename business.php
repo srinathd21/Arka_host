@@ -100,11 +100,11 @@
 
             <div class="">
                 <div>
-                    <a id="top_nav_link_mob" href="index.php">For Business</a>
+                    <a id="top_nav_link_mob" href="business.php">For Business</a>
                 </div>
 
                 <div>
-                    <a id="top_nav_link_mob" href="training.php">For Training</a>
+                    <a id="top_nav_link_mob" href="index.php">For Training</a>
                 </div>
 
                 <div>
