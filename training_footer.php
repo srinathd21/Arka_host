@@ -80,3 +80,6 @@
 
     </div>
 </div>
+
+ <!--  Font Awesome  -->
+ <script src="https://kit.fontawesome.com/8b7cdef8f0.js" crossorigin="anonymous"></script>

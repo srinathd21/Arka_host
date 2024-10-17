@@ -84,6 +84,11 @@ $ans = $conn->query($qur);
 
             <div class="">
                 <div>
+                    <a class="admin_signin_btn" href="">Sign in<span class="profile_icon"><i
+                                style="font-size:17px; color:gray;" class="fa-regular fa-user"></i></span>
+                    </a>
+                </div>
+                <div>
                     <a id="top_nav_link_mob" href="business.php">For Business</a>
                 </div>
 
@@ -97,10 +102,11 @@ $ans = $conn->query($qur);
             </div>
         </div>
         <div id="nav_last_btn" style="display:inline-flex;">
-            <button class="course_mob_btn" onclick="opensidenav()">Course <img src="icons/angle-down-solid.svg" alt=""></button>
+            <button class="course_mob_btn" onclick="opensidenav()">Course <img src="icons/angle-down-solid.svg"
+                    alt=""></button>
             <a href="https://www.google.com/maps/place/Arka+Networkz+System/@12.7360388,77.8222739,17z/data=!3m1!4b1!4m6!3m5!1s0x3bae7185e99a9cb5:0x3520348054405036!8m2!3d12.7360336!4d77.8248488!16s%2Fg%2F11t1ds8dv0?authuser=0&entry=ttu"
-                    target="_blank"> <i class="fa-solid fa-location-dot"
-                        style="font-size: 15px;margin-top:7.6px;display:inline-block; color: rgb(0, 0, 0);"></i></a>
+                target="_blank"> <i class="fa-solid fa-location-dot"
+                    style="font-size: 15px;margin-top:7.6px;display:inline-block; color: rgb(0, 0, 0);"></i></a>
         </div>
 
     </nav>
@@ -133,7 +139,7 @@ $ans = $conn->query($qur);
                 echo "<span class='catgr_drop_btn' onclick='loadSubCourse(event)'>{$row['category']}</span>
                 <img src='img/angle-right-solid-black.svg'>
                 ";
-            
+
                 echo "</div>";
             }
         }
@@ -163,25 +169,25 @@ $ans = $conn->query($qur);
     }
 
     function loadSubCourse(categoryName) {
-            const courseNav = document.querySelector('.side_nav_sub_catgr');
-            const courseContent = document.getElementById('subCourseDiv');
+        const courseNav = document.querySelector('.side_nav_sub_catgr');
+        const courseContent = document.getElementById('subCourseDiv');
 
-            console.log(categoryName.target.innerText)
-            // Show the second nav
-            courseNav.style.transform = 'translateX(0%)';
+        console.log(categoryName.target.innerText)
+        // Show the second nav
+        courseNav.style.transform = 'translateX(0%)';
 
-            // Use AJAX to fetch the courses for the selected category
-            const xhr = new XMLHttpRequest();
-            xhr.open("GET", "side_subCourse.php?category_id=" + categoryName.target.innerText, true);
-            xhr.onreadystatechange = function() {
-                if (xhr.readyState === 4 && xhr.status === 200) {
-                    courseContent.innerHTML = xhr.responseText; // Update the course list with the response
-                }
-            };
-            xhr.send();
-        }
-    
-        function innerSideNav() {
-            subsidenav.style.transform = 'translateX(100%)'; // Hide the second nav
-        }
+        // Use AJAX to fetch the courses for the selected category
+        const xhr = new XMLHttpRequest();
+        xhr.open("GET", "side_subCourse.php?category_id=" + categoryName.target.innerText, true);
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                courseContent.innerHTML = xhr.responseText; // Update the course list with the response
+            }
+        };
+        xhr.send();
+    }
+
+    function innerSideNav() {
+        subsidenav.style.transform = 'translateX(100%)'; // Hide the second nav
+    }
 </script>

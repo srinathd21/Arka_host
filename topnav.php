@@ -1,9 +1,4 @@
 <style>
-  *{
-    margin:0px;
-    padding: 0px;
-    font-family: "Segoe UI", Arial, sans-serif;
-  }
   .top_nav{
   background-color: black;
   color: white;

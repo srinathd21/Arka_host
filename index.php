@@ -12,9 +12,6 @@
 
     <!-- css -->
     <link rel="stylesheet" href="css/training_v.0.9.css">
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
 </head>
 
 <body>
@@ -363,9 +360,11 @@
     <?php include 'supports.php'; ?>
 
     <?php include "training_footer.php"; ?>
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
     <script src="js/training.js"></script>
+
+     <!--  Font Awesome  -->
+     <script src="https://kit.fontawesome.com/8b7cdef8f0.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

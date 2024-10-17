@@ -23,13 +23,6 @@
     <!-- CSS -->
     <link rel="stylesheet" href="css/index.v.2.css">
 
-    <style>
-        * {
-            font-family: "Segoe UI", Arial, sans-serif;
-            
-        }
-    </style>
-
 </head>
 
 <body>
