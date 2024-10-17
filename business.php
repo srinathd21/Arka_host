@@ -23,6 +23,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="css/index.v.2.css">
 
+
 </head>
 
 <body>
@@ -67,7 +68,7 @@
                 </div>
             </div>
 
-            <div class="d-flex mx-3">
+            <div class="d-flex mx-3" style="margin-top:-6px;">
                 <a href="tel:+919488434411" style="margin-right: 30px;"><i class="fa-solid fa-phone"
                         style="color: rgb(0, 0, 0); font-size: 13px;"></i></a>
 
@@ -845,6 +846,8 @@
     AOS.init();
 </script>
 
+ <!--  Font Awesome  -->
+ <script src="https://kit.fontawesome.com/8b7cdef8f0.js" crossorigin="anonymous"></script>
 
 
 

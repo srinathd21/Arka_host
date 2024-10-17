@@ -175,7 +175,7 @@ h4 {
   .logo{
     width: 80px;
     position: absolute;
-    top: 17px;
+    top: 14px;
     left: 50%;
     transform: translateX(-50%);
   }
