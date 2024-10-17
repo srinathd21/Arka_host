@@ -288,7 +288,7 @@ body {
     .crs_aboutus{
         text-align: center;
         position: relative;
-        height: 690px;
+        height: 670px;
         margin-top: 10px;
     }
     .aboutus_img{
@@ -301,11 +301,21 @@ body {
     .crs_about_txt{
         padding: 0px 5%;
         position: absolute;
-        bottom: 10%;
+        bottom: 8%;
     }
 }
 @media screen and (max-width: 767px) {
     .aboutus_img img{
-        width: 75%;
+        width: 80%;
+    }
+}
+@media screen and (max-width: 490px) {
+    .crs_aboutus{
+        height: 610px;
+
+    }
+    .crs_about_txt{
+        
+        bottom: 9%;
     }
 }
