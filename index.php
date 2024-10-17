@@ -60,8 +60,7 @@
 
     <div class="container ">
         <div id="card_slider">
-            <button id="crs_left_btn" onclick="onSwipeRight()">
-                < </button>
+            <button id="crs_left_btn" onclick="onSwipeRight()">< </button>
                     <button id="crs_right_btn" onclick="onSwipeLeft()">></button>
                     <div class="all_courses">
 
