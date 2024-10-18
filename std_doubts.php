@@ -22,7 +22,7 @@
 
     #accordion a i {
         position: absolute;
-        right: 10px;
+        right: 0px;
         top: 13px;
         color: #6e6e6e !important;
         font-size: 10px;
