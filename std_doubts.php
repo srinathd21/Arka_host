@@ -1,5 +1,5 @@
 <style>
-    #accordion>div{
+    #accordion>div {
         margin-bottom: 15px;
     }
 
@@ -12,7 +12,8 @@
         font-size: 20px;
         color: #323130 !important;
     }
-    #accordion a i{
+
+    #accordion a i {
         position: absolute;
         right: 20px;
         top: 15px;
@@ -29,42 +30,42 @@
         <div class="card">
             <div class="card-header">
                 <a class="" data-bs-toggle="collapse" href="#collapseOne">
-                    Collapsible Group Item #1<i class="fa-solid fa-chevron-down"></i>
+                    What services does Arka Technologies provide?<i class="fa-solid fa-chevron-down"></i>
                 </a>
             </div>
             <div id="collapseOne" class="collapse" data-bs-parent="#accordion">
                 <div class="card-body">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                    laboris nisi ut aliquip ex ea commodo consequat.
+                    We offer IT training, internships, inplant training, and software development services. You can
+                    learn advance
+                    technologies in programming, cloud computing, and more. We also help businesses with website
+                    development, app
+                    customization, and IT solutions.
                 </div>
             </div>
         </div>
         <div class="card">
             <div class="card-header">
                 <a class="collapsed" data-bs-toggle="collapse" href="#collapseTwo">
-                    Collapsible Group Item #2<i class="fa-solid fa-chevron-down"></i>
+                Who can join your training programs?<i class="fa-solid fa-chevron-down"></i>
                 </a>
             </div>
             <div id="collapseTwo" class="collapse" data-bs-parent="#accordion">
                 <div class="card-body">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                    laboris nisi ut aliquip ex ea commodo consequat.
+                Anyone interested in learning technology can join. We offer courses for students, working professionals, and even
+                school kids from 6th to 12th grade.
                 </div>
             </div>
         </div>
         <div class="card">
             <div class="card-header">
                 <a class="collapsed" data-bs-toggle="collapse" href="#collapseThree">
-                    Collapsible Group Item #3<i class="fa-solid fa-chevron-down"></i>
+                Do you provide job placement assistance after training?<i class="fa-solid fa-chevron-down"></i>
                 </a>
             </div>
             <div id="collapseThree" class="collapse" data-bs-parent="#accordion">
                 <div class="card-body">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                    laboris nisi ut aliquip ex ea commodo consequat.
+                Yes, we help students with job placement after they complete the course. Many of our students have been placed in
+                top companies.
                 </div>
             </div>
         </div>
@@ -72,14 +73,13 @@
         <div class="card">
             <div class="card-header">
                 <a class="collapsed" data-bs-toggle="collapse" href="#collapseFour">
-                    Collapsible Group Item #4<i class="fa-solid fa-chevron-down"></i>
+                What is the fee structure for your courses?<i class="fa-solid fa-chevron-down"></i>
                 </a>
             </div>
             <div id="collapseFour" class="collapse" data-bs-parent="#accordion">
                 <div class="card-body">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                    laboris nisi ut aliquip ex ea commodo consequat.
+                Our fees vary depending on the course. You can contact us or visit our website for the latest fee details. We aim to
+                offer quality training at affordable prices.
                 </div>
             </div>
         </div>
@@ -87,14 +87,28 @@
         <div class="card">
             <div class="card-header">
                 <a class="collapsed" data-bs-toggle="collapse" href="#collapseFive">
-                    Collapsible Group Item #5<i class="fa-solid fa-chevron-down"></i>
+                Is the training practical or theoretical?<i class="fa-solid fa-chevron-down"></i>
                 </a>
             </div>
             <div id="collapseFive" class="collapse" data-bs-parent="#accordion">
                 <div class="card-body">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                    laboris nisi ut aliquip ex ea commodo consequat.
+                Our training is mostly hands-on. We focus on practical learning so you can apply the skills directly in real-world
+                projects.
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <a class="collapsed" data-bs-toggle="collapse" href="#collapseSix">
+                Where is your office located, and how do I contact you?<i class="fa-solid fa-chevron-down"></i>
+                </a>
+            </div>
+            <div id="collapseSix" class="collapse" data-bs-parent="#accordion">
+                <div class="card-body">
+                We are located in Hosur<a style="text-decoration:underline; display:inline; color:#004bee !important;" href="https://www.google.com/maps/place/Arka+Networkz+System/@12.7360388,77.8222739,17z/data=!3m1!4b1!4m6!3m5!1s0x3bae7185e99a9cb5:0x3520348054405036!8m2!3d12.7360336!4d77.8248488!16s%2Fg%2F11t1ds8dv0?authuser=0&entry=ttu"
+                target="_blank">click</a>here. You can visit our office, call us, or reach out via our website for more details. We
+are happy to help!
                 </div>
             </div>
         </div>

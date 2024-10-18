@@ -57,7 +57,7 @@
 
             </div>
 
-            <div class="col-lg-3 col-md-6 col-12 mt-3 foot_getin_tch">
+            <div class="col-lg-3 col-md-6 col-12 foot_getin_tch">
                 <h5>Address</h5>
                 <div class="pt-2">
                     <p>Bank of Baroda upstairs,</p>
