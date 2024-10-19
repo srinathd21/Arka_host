@@ -56,7 +56,7 @@ div h5{
 }
 @media screen and (max-width:992px){
     p,.foot_supports_links a,ul a{
-        font-size: 12px;
+        font-size: 11.2px;
     }
     .footer_container{
         margin-bottom: 30px;
