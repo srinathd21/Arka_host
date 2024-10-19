@@ -84,8 +84,8 @@ $ans = $conn->query($qur);
 
             <div class="">
                 <div>
-                    <a class="admin_signin_btn" href="">Sign in<span class="profile_icon"><i
-                                style="font-size:17px; color:gray;" class="fa-regular fa-user"></i></span>
+                    <a class="admin_signin_btn" href=""><span class="profile_icon"><i
+                    style="font-size:17px; color:gray;" class="fa-regular fa-user"></i></span>Sign in
                     </a>
                 </div>
                 <div>

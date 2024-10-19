@@ -1,7 +1,8 @@
 <style>
     .card-header a {
         font-size: 15px !important;
-       
+        font-weight: 600;
+        font-style: italic;
     }
     .card{
         width: 60vw;
