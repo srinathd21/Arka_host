@@ -51,8 +51,8 @@
                 <div class="mb-4">
                     <h5>Working Hours</h5>
                     <div class="pt-3">
-                        <p>Mon - Fri: 9:30Am - 8:00Pm</p>
-                        <p>Sat - Sun: 9:30Am - 8:00Pm</p>
+                        <p>Mon-Fri: 9:30Am - 8:00Pm</p>
+                        <p>Sat-Sun: 9:30Am - 8:00Pm</p>
                     </div>
                 </div>
 
