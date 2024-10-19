@@ -265,7 +265,9 @@ h2,h3,h5{
 #supports_txt {
     color: white !important;
 }
-
+p[class='supports_txt'] {
+    font-size: 13px !important;
+}
 .supports_links :nth-child(1) {
     margin-right: 5px;
 }

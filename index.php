@@ -338,11 +338,11 @@
     </div>
 
     <!--    supports      -->
-    <div class="bg-black p-2 pb-5 supports">
+    <div class="bg-black pb-5 supports">
         <div class="container text-center text-white bg-black pt-4">
             <div>
                 <h1 id="supports_txt">Support@<span style="color:green !important;">arka</span></h1>
-                <p style="font-size:15px;" id="supports_txt">We are available between 08:00 AM and 08:00 PM</p>
+                <p style="font-size:15px;" class="supports_txt">We are available between 08:00 AM and 08:00 PM</p>
             </div>
 
             <div class="supports_links">
