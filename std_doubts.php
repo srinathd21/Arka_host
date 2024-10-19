@@ -1,10 +1,22 @@
 <style>
     .card-header a {
         font-size: 15px !important;
+       
+    }
+    .card{
+        width: 60vw;
+        border: none;
+        border-left: 3px solid #23bca0;
+        background-color: rgb(238, 254, 249,0.1);
+        border-radius: 10px;
+
+    }
+    .card-header{
+        border-radius: 10px !important,0px;
     }
 
     #accordion>div {
-        margin-bottom: 15px;
+        margin: 0px auto 15px;
     }
 
     #accordion a {
@@ -23,9 +35,19 @@
     #accordion a i {
         position: absolute;
         right: 0px;
-        top: 13px;
-        color: #6e6e6e !important;
-        font-size: 10px;
+        top: 11px;
+        color: green !important;
+        font-size: 13px;
+        font-weight: 600;
+    }
+.rotate-icon.active {
+    transform: rotate(180deg);
+}
+
+    @media screen and (max-width: 992px){
+        .card{
+            width: 100%;
+        }
     }
 </style>
 <!-- Students Doubts  -->
@@ -37,7 +59,7 @@
         <div class="card">
             <div class="card-header">
                 <a class="" data-bs-toggle="collapse" href="#collapseOne">
-                    What services does Arka Technologies provide?<i class="fa-solid fa-chevron-down"></i>
+                    What services does Arka Technologies provide?<i class="fa-solid fa-chevron-down rotate-icon"></i>
                 </a>
             </div>
             <div id="collapseOne" class="collapse" data-bs-parent="#accordion">
@@ -53,7 +75,7 @@
         <div class="card">
             <div class="card-header">
                 <a class="collapsed" data-bs-toggle="collapse" href="#collapseTwo">
-                    Who can join your training programs?<i class="fa-solid fa-chevron-down"></i>
+                    Who can join your training programs?<i class="fa-solid fa-chevron-down rotate-icon"></i>
                 </a>
             </div>
             <div id="collapseTwo" class="collapse" data-bs-parent="#accordion">
@@ -67,7 +89,7 @@
         <div class="card">
             <div class="card-header">
                 <a class="collapsed" data-bs-toggle="collapse" href="#collapseThree">
-                    Do you provide job placement assistance after training?<i class="fa-solid fa-chevron-down"></i>
+                    Do you provide job placement assistance after training?<i class="fa-solid fa-chevron-down rotate-icon"></i>
                 </a>
             </div>
             <div id="collapseThree" class="collapse" data-bs-parent="#accordion">
@@ -82,7 +104,7 @@
         <div class="card">
             <div class="card-header">
                 <a class="collapsed" data-bs-toggle="collapse" href="#collapseFour">
-                    What is the fee structure for your courses?<i class="fa-solid fa-chevron-down"></i>
+                    What is the fee structure for your courses?<i class="fa-solid fa-chevron-down rotate-icon"></i>
                 </a>
             </div>
             <div id="collapseFour" class="collapse" data-bs-parent="#accordion">
@@ -97,7 +119,7 @@
         <div class="card">
             <div class="card-header">
                 <a class="collapsed" data-bs-toggle="collapse" href="#collapseFive">
-                    Is the training practical or theoretical?<i class="fa-solid fa-chevron-down"></i>
+                    Is the training practical or theoretical?<i class="fa-solid fa-chevron-down rotate-icon"></i>
                 </a>
             </div>
             <div id="collapseFive" class="collapse" data-bs-parent="#accordion">
@@ -112,7 +134,7 @@
         <div class="card">
             <div class="card-header">
                 <a class="collapsed" data-bs-toggle="collapse" href="#collapseSix">
-                    Where is your office located, and how do I contact you?<i class="fa-solid fa-chevron-down"></i>
+                    Where is your office located, and how do I contact you?<i class="fa-solid fa-chevron-down rotate-icon"></i>
                 </a>
             </div>
             <div id="collapseSix" class="collapse" data-bs-parent="#accordion">
@@ -128,3 +150,19 @@
         </div>
     </div>
 </div>
+<script>
+    document.querySelectorAll('[data-bs-toggle="collapse"]').forEach(function (element) {
+    element.addEventListener('click', function () {
+        let icon = this.querySelector('.rotate-icon');
+        let targetCollapse = document.querySelector(this.getAttribute('href'));
+
+        targetCollapse.addEventListener('shown.bs.collapse', function () {
+            icon.classList.add('active');
+        });
+        targetCollapse.addEventListener('hidden.bs.collapse', function () {
+            icon.classList.remove('active');
+        });
+    });
+});
+
+</script>

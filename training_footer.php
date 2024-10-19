@@ -7,7 +7,7 @@
         </div>
 
         <div class="row mb-4">
-            <div class="col-lg-3 col-md-6 col-12 foot_links">
+            <div class="col-lg-3 col-md-6 col-6 foot_links">
                 <h5>Links</h5>
                 <ul>
                     <li><a href="index.php">Home</a></li>
@@ -15,7 +15,7 @@
                     <li><a href="all_course.php?category=Software&title=Python">Cources</a></li>
                 </ul>
             </div>
-            <div class="col-lg-3 col-md-6 col-12 foot_cours">
+            <div class="col-lg-3 col-md-6 col-6 foot_cours">
                 <div>
                     <h5>Trending Course</h5>
                     <ul>
@@ -25,6 +25,17 @@
 
                     </ul>
                 </div>
+                <div class="offer_div">
+                    <h5>Offer Course</h5>
+                    <ul>
+                        <li><a href="course_details.php?category=Software&title=Python">Python</a></li>
+                        <li><a href="course_details.php?category=Software&title=java">Java</a></li>
+                        <li><a href="course_details.php?category=Software&title=Front%20End">Front End</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="col-lg-3 col-md-6 col-6 foot_cours_mob">
                 <div>
                     <h5>Offer Course</h5>
                     <ul>
@@ -36,7 +47,7 @@
 
             </div>
 
-            <div class="col-lg-3 col-md-6 col-12 foot_work_hrs">
+            <div class="col-lg-3 col-md-6 col-6 foot_work_hrs">
                 <div class="mb-4">
                     <h5>Working Hours</h5>
                     <div class="pt-3">
@@ -45,7 +56,7 @@
                     </div>
                 </div>
 
-                <div>
+                <div class="get_in">
                     <h5>Get In Touch</h5>
 
                     <div class="foot_supports_links pt-2">
@@ -57,7 +68,19 @@
 
             </div>
 
-            <div class="col-lg-3 col-md-6 col-12 foot_getin_tch">
+            <div class="col-lg-3 col-md-6 col-6 foot_work_hrs_mob">
+                <div>
+                    <h5>Get In Touch</h5>
+
+                    <div class="foot_supports_links pt-2">
+                        <a href="tel:+919488434411" class=""><i class="fa-solid fa-phone"></i>+91 94884 34411</a>
+                        <a href="mailto:support@arka.org.in" class=""><i
+                                class="fa-regular fa-envelope-open"></i>support@arka.org.in</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-6 foot_getin_tch">
                 <h5>Address</h5>
                 <div class="pt-2">
                     <p>Bank of Baroda upstairs,</p>
@@ -66,20 +89,21 @@
                     <p>Hosur, Tamil Nadu,</p>
                     <p>635109.</p>
                 </div>
-                <div class="foot_social_media">
-                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                </div>
+
             </div>
         </div>
         <div class="text-center">
+            <div class="foot_social_media mb-4">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
             <p style="font-weight:600;">© 2024, Arka's Network Pvt. Ltd.</p>
         </div>
 
     </div>
 </div>
 
- <!--  Font Awesome  -->
- <script src="https://kit.fontawesome.com/8b7cdef8f0.js" crossorigin="anonymous"></script>
+<!--  Font Awesome  -->
+<script src="https://kit.fontawesome.com/8b7cdef8f0.js" crossorigin="anonymous"></script>

@@ -214,6 +214,9 @@ body {
 .crs_about_txt{
     padding: 8% 0px 0px 10%;
 }
+.crs_about_txt p{
+    font-size: 18px;
+}
 @media screen and (max-width: 992px) {
     .crs_title{
         font-size: 30px !important;
@@ -302,6 +305,9 @@ body {
         padding: 0px 5%;
         position: absolute;
         bottom: 8%;
+    }
+    .crs_about_txt p{
+        font-size: 14px;
     }
 }
 @media screen and (max-width: 767px) {

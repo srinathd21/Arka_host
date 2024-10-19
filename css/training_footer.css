@@ -1,5 +1,4 @@
 
-    
 .footer_container{
     background: linear-gradient(5deg, #ffffff, #4db8a4);
     padding: 10px 0px;
@@ -8,10 +7,10 @@
 .foot_logo_img img{
     width: 100px;
 }
-p{
-    font-size: 14px;
+p,.foot_supports_links a,ul a{
+    font-size: 15px;
 }
-.foot_links ul,.foot_cours ul{
+.foot_links ul,.foot_cours ul, .foot_cours_mob ul{
     list-style: none;
     padding: 0px;
     line-height: 15px;
@@ -21,7 +20,6 @@ ul a{
     display: inline-block;
     margin-top: 7px;
     color: rgb(28, 28, 28);
-    font-size: 14px;
 }
 .foot_work_hrs,.foot_getin_tch{
     line-height: 5px;
@@ -41,25 +39,35 @@ div h5{
 }
 .foot_social_media a i{
     color: black;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .foot_supports_links a{
     display: block;
     text-decoration: none;
     margin-bottom: 8px;
-    font-size: 14px;
     color: rgb(28, 28, 28);
 }
 .foot_supports_links a i{
     margin-right: 10px;
 }
+.foot_cours_mob, .foot_work_hrs_mob{
+    display: none;
+}
 @media screen and (max-width:992px){
+    p,.foot_supports_links a,ul a{
+        font-size: 12px;
+    }
     .footer_container{
-        text-align: center;
         margin-bottom: 30px;
     }
     .row >div{
-        margin-bottom: -5px;
+        margin-bottom: 5px;
+    }
+    .foot_cours_mob, .foot_work_hrs_mob{
+        display: block;
+    }
+    .get_in,.offer_div{
+        display: none;
     }
 }
