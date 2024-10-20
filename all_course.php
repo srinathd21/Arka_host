@@ -73,7 +73,7 @@
 
                     echo "<div class='course_title'>";
 
-                    echo "<h4 class='text-black'>" . $row["title"] . "</h4>";
+                    echo "<h4 class=''>" . $row["title"] . "</h4>";
                     echo "<p>Extensive syllabus</p>";
                     echo '<span><i class="fa-solid fa-book-open"></i>Specialized certificate</span>';
 

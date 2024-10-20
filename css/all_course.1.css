@@ -10,6 +10,11 @@ body {
     font-weight: 300;
     font-style: normal;
 }
+h2,h3,h4,h5{
+    font-style: normal;
+    font-weight: 500;
+    color: rgb(52, 52, 52) !important;
+}
 
 
 .course_top_img {

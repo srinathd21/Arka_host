@@ -1,0 +1,136 @@
+.popup_banner{
+    display: none;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(214, 214, 214, 0.9);
+    position: fixed;
+    top: 0px;
+    z-index: 10;
+}
+.banner_getdata{
+    display: ;
+}
+.banner_content{
+    width: 350px;
+    margin: 130px auto;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+
+}
+.popbanner_title{
+    padding: 25px;
+}
+.banner_close_btn{
+    position: absolute;
+    z-index: 2;
+    right: 10px;
+    top: 10px;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: none;
+}
+.bannerinputs{
+    position: relative;
+    height: 355px;
+}
+
+.bannerinputs label{
+    display: block;
+    margin-left: 20px;
+    font-size: 13px;
+    color: rgb(132, 132, 132);
+}
+.bannerinputs input{
+    border: none;
+    border-bottom: 1px solid rgb(224, 224, 224);
+    width: 100%;
+    margin-bottom: 15px;
+    padding-left: 20px;
+}
+.bannerinputs input:focus{
+    outline: none;
+    border-bottom: 1px solid rgb(154, 154, 154);
+}
+.popupSendbtn{
+    border: none;
+    background-color: white;
+    color: #4023f8;
+    font-size: 11px;
+    position: absolute;
+    right: 5px;
+    bottom: 10px;
+    font-weight: 600;
+}
+.popupSendbtn>span{
+    background-color: #4023f8;
+    height: 35px;
+    width: 35px;
+    display: inline-block;
+    border-radius: 50%;
+}
+#lettericon{
+    font-size: 20px;
+    color: white !important;
+    position: relative;
+    top: 2px;
+    font-weight: 100;
+}
+
+.bannermsg{
+    display: none;
+    position: relative;
+    height: 420px;
+    background-color: #009d57;
+    color: white;
+}
+.bannermsg>div:nth-child(1){
+    width: 100%;
+    height: 50%;
+    border-bottom: 1px solid black;
+    padding: 60px 0px 0px 30px;
+}
+.bannermsg h1{
+    font-size: 50px;
+}
+.bannermsg>div:nth-child(2){
+    width: 100%;
+    height: 50%;
+    padding: 20px 0px 0px 30px;
+    position: relative;
+}
+.bannermsg p{
+    font-size: 20px;
+}
+.popupNextbtn{
+    position: absolute;
+    right: 5px;
+    bottom: 10px;
+    font-size: 12px;
+    border: none;
+    background: transparent;
+    color: white;
+}
+.popupNextbtn>span{
+    background-color: rgba(5, 84, 76, 0.5);
+    height: 35px;
+    width: 35px;
+    display: inline-block;
+    border-radius: 50%;
+}
+#arrowicon{
+    font-size: 20px;
+    color: white !important;
+    position: relative;
+    top: 1px;
+    font-weight: 100;
+}
+@media screen and (max-width:775px) {
+    .banner_content{
+        width: 80%;
+    }
+  
+    
+}

@@ -1,8 +1,8 @@
 
 .footer_container{
-    background: linear-gradient(5deg, #ffffff, #4db8a4);
+    background-color:rgba(248, 248, 248, 0.4) ;
     padding: 10px 0px;
-    color: rgb(28, 28, 28);
+    color: rgb(52, 52, 52);
 }
 .foot_logo_img img{
     width: 100px;
@@ -19,28 +19,40 @@ ul a{
     text-decoration: none;
     display: inline-block;
     margin-top: 7px;
-    color: rgb(28, 28, 28);
+    color: rgb(52, 52, 52);
 }
 .foot_work_hrs,.foot_getin_tch{
     line-height: 5px;
 }
 div h5{
-    margin-bottom: 5px;
     font-weight: bold;
     font-size: 15px;
 }
+div h5{
+    margin-bottom: 2px;
+}
+.getin h5 h5,.foot_getin_tch h5,.foot_work_hrs h5{
+        margin-bottom: 15px;
+    }
 .foot_social_media{
     margin-top: 30px;
 }
 .foot_social_media a{
-    background-color: rgba(50, 50, 50, 0.2);
-    padding: 10px 13px 9px;
+    display: inline-block;
+    background-color: rgba(108, 108, 108, 0.2);
+    height: 50px;
+    width: 50px;
     border-radius: 50%;
     margin-right: 5px;
 }
 .foot_social_media a i{
-    color: black;
-    font-size: 18px;
+    color: rgb(52, 52, 52);
+    font-size: 20px;
+    position: relative;
+    top: 15px;
+}
+.foot_social_media a:hover{
+    background-color: rgba(59, 59, 59, 0.2);
 }
 
 .foot_supports_links a{
@@ -63,7 +75,13 @@ div h5{
         margin-bottom: 30px;
     }
     .row >div{
-        margin-bottom: 5px;
+        margin-bottom: 3px;
+    }
+    div h5{
+        margin-bottom: -1px;
+    }
+    .foot_work_hrs h5,.foot_work_hrs_mob h5,.foot_getin_tch h5{
+        margin-bottom: 10px;
     }
     .foot_cours_mob, .foot_work_hrs_mob{
         display: block;

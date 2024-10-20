@@ -11,8 +11,9 @@ body {
     font-style: normal;
 }
 h2,h3,h5{
-    font-style: italic;
+    font-style: normal;
     font-weight: 500;
+    color: rgb(52, 52, 52) !important;
 }
 
 .cover_img_mob {
@@ -37,7 +38,7 @@ h2,h3,h5{
 .cover_overlay_link {
     position: absolute;
     text-decoration: none;
-    color: black;
+    color: rgb(52, 52, 52);
     display: inline-block;
     font-size: 1.2vw;
     font-weight: 500;
@@ -109,11 +110,6 @@ h2,h3,h5{
 }
 
 /*    card slider styles   */
-
-.all_courses_title {
-    padding-left: 5vw;
-}
-
 .all_courses_title a {
     display: inline-block;
 }
@@ -144,7 +140,7 @@ h2,h3,h5{
 
 .all_courses_list {
     text-decoration: none;
-    color: black;
+    color: rgb(52, 52, 52);
     display: inline-block;
     height: 300px;
     width: 300px;
@@ -191,7 +187,7 @@ h2,h3,h5{
 
 .trend_courses_list {
     text-decoration: none;
-    color: black;
+    color: rgb(52, 52, 52);
     display: inline-block;
     height: 300px;
     width: 290px;
@@ -210,6 +206,9 @@ h2,h3,h5{
     height: 50%;
     padding: 25px;
     color: gray;
+}
+.course_title h2{
+    color: rgb(52, 52, 52) !important;
 }
 
 .course_title span i {
@@ -283,7 +282,7 @@ p[class='supports_txt'] {
 
 .supports_links a i {
     background-color: white;
-    color: black;
+    color: rgb(52, 52, 52);
     padding: 10px;
     border-radius: 50%;
     margin-right: 10px;
@@ -345,7 +344,7 @@ p[class='supports_txt'] {
     }
 
     .testimonial {
-        height: 560px !important;
+        height: 480px !important;
     }
 }
 

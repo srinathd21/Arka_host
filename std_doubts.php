@@ -2,7 +2,8 @@
     .card-header a {
         font-size: 15px !important;
         font-weight: 600;
-        font-style: italic;
+        font-style: normal;
+        color: rgb(52, 52, 52);
     }
     .card{
         width: 60vw;
@@ -10,6 +11,7 @@
         border-left: 3px solid #23bca0;
         background-color: rgb(238, 254, 249,0.1);
         border-radius: 10px;
+        color: rgb(52, 52, 52);
 
     }
     .card-header{
@@ -37,7 +39,7 @@
         position: absolute;
         right: 0px;
         top: 11px;
-        color: green !important;
+        color: #23bca0 !important;
         font-size: 13px;
         font-weight: 600;
     }
@@ -49,11 +51,15 @@
         .card{
             width: 100%;
         }
+        #accordion a i {
+
+        right: -10px;
+    }
     }
 </style>
 <!-- Students Doubts  -->
 <div class="container mt-5 mb-5">
-    <div class="mb-5">
+    <div class="mb-4">
         <h3>Frequently Asked Questions</h3>
     </div>
     <div id="accordion">

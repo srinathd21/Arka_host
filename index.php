@@ -21,7 +21,7 @@
 
     <?php include 'training_nav.php'; ?>
 
-    <?php //include 'top_banner.php'; ?>
+    <?php include 'popup_banner.php'; ?>
 
 
     <div style="position:relative;" class="">
@@ -74,7 +74,7 @@
                         <div class="all_courses_container ">
                             <a class="all_courses_list " href="course_details.php?category=Software&title=Python">
                                 <div class="course_title">
-                                    <h2 class="text-black">Python</h2>
+                                    <h2 class="">Python</h2>
                                     <p>Extensive syllabus</p>
 
                                     <span><i class="fa-solid fa-book-open"></i>Specialized certificate</span>
@@ -89,7 +89,7 @@
 
                             <a class="all_courses_list" href="course_details.php?category=Software&title=java">
                                 <div class="course_title">
-                                    <h2 class="text-black">Java</h2>
+                                    <h2 class="">Java</h2>
                                     <p>Extensive syllabus</p>
 
                                     <span><i class="fa-solid fa-book-open"></i>Specialized certificate</span>
@@ -102,7 +102,7 @@
 
                             <a class="all_courses_list" href="course_details.php?category=Ui/Ux&title=Full%20Stack">
                                 <div class="course_title">
-                                    <h2 class="text-black">Full Stack</h2>
+                                    <h2 class="">Full Stack</h2>
                                     <p>Extensive syllabus</p>
 
                                     <span><i class="fa-solid fa-book-open"></i>Specialized certificate</span>
@@ -115,7 +115,7 @@
 
                             <a class="all_courses_list" href="course_details.php?category=Software&title=Back%20End">
                                 <div class="course_title">
-                                    <h2 class="text-black">Back End</h2>
+                                    <h2 class="">Back End</h2>
                                     <p>Extensive syllabus</p>
 
                                     <span><i class="fa-solid fa-book-open"></i>Specialized certificate</span>
@@ -128,7 +128,7 @@
 
                             <a class="all_courses_list" href="course_details.php?category=Software&title=PHP">
                                 <div class="course_title">
-                                    <h2 class="text-black">PHP</h2>
+                                    <h2 class="">PHP</h2>
                                     <p>Extensive syllabus</p>
 
                                     <span><i class="fa-solid fa-book-open"></i>Specialized certificate</span>
@@ -163,7 +163,7 @@
                 while ($row = $ans->fetch_assoc()) {
                     echo '<a class="trend_courses_list" href="course_details.php?category=' . $row["category"] . '&title=' . $row["title"] . '">
                 <div class="course_title">
-                    <h2 class="text-black">' . $row["title"] . '</h2>
+                    <h2 class="">' . $row["title"] . '</h2>
                     <p>Extensive syllabus</p>
 
                     <span><i class="fa-solid fa-book-open"></i>Specialized certificate</span>
@@ -184,7 +184,7 @@
     <div class="container trend_courses_container_mob">
         <!-- Carousel -->
         <!-- testimoniyal mobile view -->
-        <div id="demo_trend" class="carousel slide mt-5" data-bs-ride="carousel">
+        <div id="demo_trend" class="carousel slide mt-3" data-bs-ride="carousel">
 
             <!-- Indicators/dots -->
             <!-- <div class="carousel-indicators">
@@ -205,7 +205,7 @@
                         $active = '';
                         echo '<a class="trend_courses_list" href="course_details.php?category=' . $row["category"] . '&title=' . $row["title"] . '">
                         <div class="course_title">
-                            <h2 class="text-black">' . $row["title"] . '</h2>
+                            <h2 class="">' . $row["title"] . '</h2>
                             <p>Extensive syllabus</p>
 
                             <span><i class="fa-solid fa-book-open"></i>Specialized certificate</span>
@@ -243,14 +243,14 @@
     <div class="testimonial" style="">
         <div class="container">
 
-            <div class="text-center" style="margin-top:100px;">
+            <div class="text-center" style="margin-top:60px;">
                 <span class="testimonial_txt">Hear from our <span style="color:#009245;">students</span></span>
             </div>
 
             <!-- Carousel -->
 
             <!-- testimoniyal mobile view -->
-            <div id="demo_testi" class="carousel slide mt-5" style="height:400px" data-bs-ride="carousel">
+            <div id="demo_testi" class="carousel slide mt-5" style="height:370px" data-bs-ride="carousel">
 
                 <!-- Indicators/dots -->
                 <!-- <div class="carousel-indicators">

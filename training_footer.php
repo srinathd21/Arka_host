@@ -50,7 +50,7 @@
             <div class="col-lg-3 col-md-6 col-6 foot_work_hrs">
                 <div class="mb-4">
                     <h5>Working Hours</h5>
-                    <div class="pt-3">
+                    <div class="">
                         <p>Mon-Fri: 9:30Am - 8:00Pm</p>
                         <p>Sat-Sun: 9:30Am - 8:00Pm</p>
                     </div>
@@ -59,7 +59,7 @@
                 <div class="get_in">
                     <h5>Get In Touch</h5>
 
-                    <div class="foot_supports_links pt-2">
+                    <div class="foot_supports_links">
                         <a href="tel:+919488434411" class=""><i class="fa-solid fa-phone"></i>+91 94884 34411</a>
                         <a href="mailto:support@arka.org.in" class=""><i
                                 class="fa-regular fa-envelope-open"></i>support@arka.org.in</a>
@@ -72,7 +72,7 @@
                 <div>
                     <h5>Get In Touch</h5>
 
-                    <div class="foot_supports_links pt-2">
+                    <div class="foot_supports_links">
                         <a href="tel:+919488434411" class=""><i class="fa-solid fa-phone"></i>+91 94884 34411</a>
                         <a href="mailto:support@arka.org.in" class=""><i
                                 class="fa-regular fa-envelope-open"></i>support@arka.org.in</a>
@@ -82,7 +82,7 @@
 
             <div class="col-lg-3 col-md-6 col-6 foot_getin_tch">
                 <h5>Address</h5>
-                <div class="pt-2">
+                <div class="">
                     <p>Bank of Baroda upstairs,</p>
                     <p>Vasavi Nagar, No 7-C,</p>
                     <p>Sai Ganesha Arcade,</p>
@@ -93,7 +93,7 @@
             </div>
         </div>
         <div class="text-center">
-            <div class="foot_social_media mb-4">
+            <div class="foot_social_media mb-3">
                 <a href="#"><i class="fa-brands fa-facebook"></i></a>
                 <a href="#"><i class="fa-brands fa-twitter"></i></a>
                 <a href="#"><i class="fa-brands fa-instagram"></i></a>

@@ -178,14 +178,15 @@ nav {
     font-size: 15px;
 }
 
-.profile_icon {
+.profile_icon,.profile_icon_mob {
     display: inline-block;
     padding: 5px 10px;
-    margin-right: px;
     border-radius: 50%;
     border: 1px solid gray;
+}
+.profile_icon_mob{
     position: relative;
-    right: 13px;
+    left: -11px;
 }
 
 .nav_link_mob {
@@ -209,13 +210,6 @@ nav {
     display: inline-block;
     margin-top: 5px;
     font-size: 17px;
-}
-
-.profile_icon_mob {
-    display: none;
-    position: relative;
-    top: 3.5px;
-    margin-right: 20px;
 }
 
 .course_catgr_side_nav{
@@ -299,8 +293,7 @@ nav {
         display: none;
     }
 
-    .cover_img_mob,
-    .profile_icon_mob,#nav_last_btn >a {
+    .cover_img_mob,#nav_last_btn >a {
         display: block;
     }
     .logo_img{
