@@ -19,7 +19,7 @@
                 <input type="text" name="course" id="course">
 
                 <div>
-                    <button onclick="opentq()" class="popupSendbtn">SEND <span><span id="lettericon">&#9993;</span></span></button>
+                    <button onclick="opentq()" class="popupSendbtn">SEND <span><i class="fa-solid fa-envelope" id="lettericon"></i></span></button>
                 </div>
             </div>
         </div>

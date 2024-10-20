@@ -178,7 +178,7 @@
                 <input type="text" name="course" id="course">
 
                 <div>
-                    <button onclick="opentq()" class="popupSendbtn">SEND <span><span id="lettericon">&#9993;</span></span></button>
+                    <button onclick="opentq()" class="popupSendbtn">SEND <span><i class="fa-solid fa-envelope" id="lettericon"></i></span></button>
                 </div>
             </div>
         </div>
@@ -190,7 +190,7 @@
                 <p>We'll be in touch <br> Shortly!</p>
 
                 <div>
-                    <button onclick="banner_close()" class="popupNextbtn">Next <span><span id="arrowicon">&rarr;</span></span></button>
+                    <button onclick="banner_close()" class="popupNextbtn">Next <span><i id="arrowicon" class="fa-solid fa-arrow-right"></i></span></button>
                 </div>
             </div>
         </div>
