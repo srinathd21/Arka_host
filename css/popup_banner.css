@@ -1,5 +1,5 @@
 .popup_banner{
-    display: none;
+    display: ;
     height: 100%;
     width: 100%;
     background-color: rgba(214, 214, 214, 0.9);
@@ -69,7 +69,8 @@
     display: inline-block;
     border-radius: 50%;
     position: relative;
-    top: -6px;
+    top: -7px;
+    margin-left: 5px;
 }
 #lettericon{
     display: inline-block;

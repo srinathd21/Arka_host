@@ -1,8 +1,7 @@
 
 .footer_container{
-    background-color:rgba(248, 248, 248, 0.4) ;
+    background-color:#f8f8f866 ;
     padding: 10px 0px;
-    color: rgb(52, 52, 52);
 }
 .foot_logo_img img{
     width: 100px;
@@ -15,11 +14,16 @@ p,.foot_supports_links a,ul a{
     padding: 0px;
     line-height: 15px;
 }
+.footer_container p{
+    color: #7a8b94;
+}
+.footer_container a{
+    color: #7a8b94 !important;
+}
 ul a{
     text-decoration: none;
     display: inline-block;
     margin-top: 7px;
-    color: rgb(52, 52, 52);
 }
 .foot_work_hrs,.foot_getin_tch{
     line-height: 5px;
@@ -27,6 +31,7 @@ ul a{
 div h5{
     font-weight: bold;
     font-size: 15px;
+    color: #3c4852 !important;
 }
 div h5{
     margin-bottom: 2px;
