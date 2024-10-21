@@ -1,123 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Double Side Nav Example</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
 </head>
-
 <body>
+    
     <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
+        .hexagon {
+    width: 100px;
+    height: 55px;
+    background-color: #3498db;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+.hexagon-responsive {
+    width: 100px;
+    height: 57.74px;
+    background-color: #3498db;
+    position: relative;
+    margin: 28.87px 0; /* Optional, to center vertically */
+}
 
-        .side-nav {
-            position: fixed;
-            left: 0;
-            top: 0;
-            width: 250px;
-            height: 100%;
-            background-color: #333;
-            color: white;
-            padding: 20px;
-            transition: transform 0.3s ease;
-            transform: translateX(0);
-        }
+.hexagon-responsive:before, .hexagon-responsive:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+}
 
-        .side-nav ul {
-            list-style: none;
-            padding: 0;
-        }
+.hexagon-responsive:before {
+    bottom: 100%;
+    border-bottom: 28.87px solid #3498db;
+}
 
-        .side-nav ul li {
-            padding: 15px;
-            margin: 10px 0;
-            background-color: #444;
-            cursor: pointer;
-        }
+.hexagon-responsive:after {
+    top: 100%;
+    border-top: 28.87px solid #3498db;
+}
+.hexagon-border {
+    width: 100px;
+    height: 55px;
+    position: relative;
+    margin: 60px;
+}
 
-        .side-nav ul li:hover {
-            background-color: #555;
-        }
+.hexagon-border:before, .hexagon-border:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    border-left: 5px solid red;
+    border-right: 5px solid red;
+}
 
-        /* Second Navigation, initially hidden */
-        .second-nav {
-            transform: translateX(-100%);
-            background-color: #444;
-        }
+.hexagon-border:before {
+    bottom: 100%;
+    border-bottom: 28px solid #4ddb34;
+}
 
-        button {
-            padding: 10px;
-            margin-bottom: 10px;
-            background-color: #555;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
+.hexagon-border:after {
+    top: 100%;
+    width: 0;
+    border-top: 28px solid #db34b7;
+}
 
-        button:hover {
-            background-color: #666;
-        }
+.hexagon-border {
+    background-color: #db8a34;
+}
+
+
     </style>
-    <!-- First Side Navigation (Categories) -->
-    <div class="side-nav" id="categoryNav">
-        <h2>Categories</h2>
-        <ul>
-            <li onclick="openCourses('software')">Software</li>
-            <li onclick="openCourses('hardware')">Hardware</li>
-            <li onclick="openCourses('networking')">Networking</li>
-        </ul>
-    </div>
+    <div class="hexagon"></div>
 
-    <!-- Second Side Navigation (Courses) -->
-    <div class="side-nav second-nav" id="courseNav">
-        <h2>Courses</h2>
-        <button onclick="closeCourseNav()">Back to Categories</button>
-        <div id="courseContent">
-            <!-- Courses will appear here based on selected category -->
-        </div>
-    </div>
+    <div class="hexagon-responsive"></div>
+    <div class="hexagon-border"></div>
 
-    <script>
-        // Function to open the second nav and load relevant courses
-        function openCourses(category) {
-            const courseNav = document.getElementById('courseNav');
-            const courseContent = document.getElementById('courseContent');
 
-            // Show the second nav
-            courseNav.style.transform = 'translateX(250px)'; // Move the second nav into view
-
-            // Populate courses based on the selected category
-            let courses = '';
-
-            switch (category) {
-                case 'software':
-                    courses = '<ul><li>Python Programming</li><li>Java Development</li><li>Web Development</li></ul>';
-                    break;
-                case 'hardware':
-                    courses = '<ul><li>Embedded Systems</li><li>Computer Architecture</li><li>Microprocessors</li></ul>';
-                    break;
-                case 'networking':
-                    courses = '<ul><li>CCNA</li><li>Network Security</li><li>Firewall Management</li></ul>';
-                    break;
-                default:
-                    courses = 'No courses available for this category.';
-                    break;
-            }
-
-            courseContent.innerHTML = courses; // Update the course list
-        }
-
-        // Function to close the second nav and return to categories
-        function closeCourseNav() {
-            const courseNav = document.getElementById('courseNav');
-            courseNav.style.transform = 'translateX(-100%)'; // Hide the second nav
-        }
-
-    </script>
 </body>
-
 </html>

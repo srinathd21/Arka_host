@@ -3,6 +3,9 @@
     background-color:#f8f8f866 ;
     padding: 10px 0px;
 }
+.footer_container .row{
+    padding-left: 20px;
+}
 .foot_logo_img img{
     width: 100px;
 }
@@ -29,7 +32,7 @@ ul a{
     line-height: 5px;
 }
 div h5{
-    font-weight: bold;
+    font-weight: 500;
     font-size: 15px;
     color: #3c4852 !important;
 }
