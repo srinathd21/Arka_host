@@ -7,7 +7,7 @@
     <title>Course | Syllabus</title>
     <?php include "links.php"; ?>
 
-    <link rel="stylesheet" href="css/course_detail.css">
+    <link rel="stylesheet" href="css/course_details.css">
 
     <link rel="stylesheet" href="css/popup_banner.css">
 </head>
