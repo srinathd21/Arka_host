@@ -68,8 +68,8 @@
 
                 <div class="card_2">
                     <div>
-                        <label for="file_link">Upload Course File:</label><br>
-                        <input class="form-control" type="file" id="file_link" name="file_link" required>
+                        <label for="syllabus">Syllabus:</label><br>
+                        <textarea class="form-control" type="te" id="syllabus" name="syllabus" required></textarea>
                     </div>
 
                     <div>

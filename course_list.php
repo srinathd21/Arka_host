@@ -12,7 +12,7 @@
             <th>Category</th>
             <th>Hours</th>
             <th>Cost</th>
-            <th>File Path</th>
+            <th>Syllabus</th>
             <th>Image Path</th>
             <th>Description</th>
             <th>Trending</th>
@@ -37,7 +37,7 @@
                 echo "<td>". $row["category"]. "</td>";
                 echo "<td>". $row["hours"]. "</td>";
                 echo "<td>". $row["cost"]. "</td>";
-                echo "<td>". $row["file_path"]. "</td>";
+                echo "<td>". $row["syllabus"]. "</td>";
                 echo "<td>". $row["img_path"]. "</td>";
                 echo "<td>". $row["description"]. "</td>";
                 echo "<td>". $row["trending"]. "</td>";

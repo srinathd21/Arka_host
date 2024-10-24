@@ -19,7 +19,7 @@ if (isset($_GET['id'])) {
         $category = $course['category'];
         $hours = $course['hours'];
         $cost = $course['cost'];
-        $file_link = $course['file_path'];
+        $syllabus = $course['syllabus'];
         $img_path = $course['img_path']; // Added for image path
         $description = $course['description'];
         $trending = $course['trending'] == 'Yes' ? 'checked' : '';
@@ -95,8 +95,8 @@ if (isset($_GET['id'])) {
                 </div>
                 <div class="card_2">
                     <div>
-                        <label for="file_link">Course File (Current: <?php echo basename($file_link); ?>):</label><br>
-                        <input class="form-control" type="file" id="file_link" name="file_link">
+                        <label for="syllabus">Syllabus:</label><br>
+                        <textarea class="form-control" id="syllabus" name="syllabus" required><?php echo $syllabus; ?></textarea>
                     </div>
 
                     <div>

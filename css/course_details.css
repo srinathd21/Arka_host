@@ -108,11 +108,84 @@ body {
     border: none;
     color: white;
 }
+.crs_syllabus_model{
+    margin: 0px auto;
+    position: relative;
+}
+.crs_syllabus_model li{
+    color: rgb(80, 80, 80);
+    list-style: none;
+    font-size: 16px;
+}
+.crs_syllabus_model li::before{
+    content: '';
+    height: 8px;
+    display: inline-block;
+    width: 8px;
+    border-radius: 50%;
+    background-color: #00af00;
+    margin-left: -17px;
+    margin-right: 20px;
+    position: relative;
+    top:-1.5px;
+
+}
+.lineicon{
+    display: inline-block;
+    height: 17px;
+    border: 1px solid rgb(88, 88, 88,0.9);
+    margin-top: 3px;
+    margin-left: -14px;
+}
+.lineicon:last-child{
+    visibility: hidden;
+}
+
 .institute_words{
     margin: 0px auto;
     display: inline-flex;
     flex-wrap: wrap;
     justify-content: center;
+}
+.syllabuaContainer{
+    overflow:hidden ;
+    position: relative;
+}
+.syllabus_mob{
+    background-color: #ffffff;
+    height: 650px;
+    width: 100vw;
+    position: absolute;
+    bottom: 0px;
+    transform: translateY(645px);
+    z-index: 5;
+    transition:.5s ;
+    border-radius: 30px 30px 0px 0px;
+    padding: 20px;
+    position: fixed;
+    top: 75px;
+}
+.syllabus_mob p{
+    color: rgb(52, 52, 52) !important;
+    font-size: 18px;
+    font-weight: 300;
+}
+.syllabus_mob button{
+    position: absolute;
+    right: 20px;
+    border: none;
+    background: transparent;
+    font-size: 20px;
+}
+.syllabus_content{
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    top: 10px;
+    transform: translateX(-50%);
+    overflow-y: auto;
+    height: 560px;
+    width: 90%;
 }
 .slogan_txt{
     font-size: 30px !important;
@@ -216,6 +289,13 @@ body {
 }
 .crs_about_txt p{
     font-size: 18px;
+}
+
+
+@media screen and (min-width: 992px) {
+    .syllabus_mob{
+        display: none;
+    }
 }
 @media screen and (max-width: 992px) {
     .crs_title{

@@ -17,11 +17,11 @@
     <?php include "topnav.php"; ?>
     <?php include "training_nav.php"; ?>
 
-    <div class="container">
+    <div class="container" id="first_container">
         <div class="course_details_card" data-aos="fade-down" data-aos-duration="1500">
             <?php
             include "db_link.php"; // Include your database connection
-
+            
             $crs_category = $_GET['category'];
             $crs_title = $_GET['title'];
 
@@ -36,7 +36,6 @@
                 while ($course_details = $result->fetch_assoc()) {
                     // Fetching the course details
                     $img_path = $course_details['img_path'];
-                    $file_path = $course_details['file_path'];
 
                     echo "<div class='crs_card_left'>";
                     echo "<span id='grd_text' class='crs_title'>$crs_title</span>";
@@ -65,24 +64,115 @@
 
                     echo '<div class="crs_crad_btn_mob text-center">
                             <button onclick="popupform()" class="crs_apply_btn_mob">Apply Now</button>
-                            <a href="' . $file_path . '" download class="crs_downlode_btn_mob">Download Syllabus</a>
+                            <button onclick="opensyllabus()" class="crs_downlode_btn_mob">View Syllabus</button>
                         </div>';
                     echo "</div>";
                 }
             } else {
                 echo "No course details found.";
             }
+
             ?>
             <div class="crs_img_card">
                 <img src="<?php echo $img_path; ?>" class="img-fluid" alt="Course Image">
             </div>
+
+
         </div>
 
         <div class="crs_crad_btn text-center">
             <button onclick="popupform()" class="crs_apply_btn">Apply Now</button>
-            <a href="<?php echo $file_path; ?>" download class="crs_downlode_btn">Download Syllabus</a>
+            <button class="crs_downlode_btn" data-bs-toggle="modal" data-bs-target="#myModal">View Syllabus</button>
+        </div>
+
+        <!--  Syllabus Mmodel Box -->
+        <!-- The Modal -->
+        <div class="modal" id="myModal">
+            <div class="modal-dialog modal-fullscreen-md-down">
+                <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title"><?php echo $crs_title; ?> Syllabus</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+
+                        <ul class="crs_syllabus_model">
+                            <?php
+                            $sql = "SELECT syllabus FROM course_form WHERE title = ?";
+                            $stmt = $conn->prepare($sql);
+                            $stmt->bind_param("s", $crs_title);
+                            $stmt->execute();
+
+                            $result = $stmt->get_result();
+
+                            if ($result->num_rows > 0) {
+
+                                $row = $result->fetch_assoc();
+                                $data = $row['syllabus'];
+
+                                // Split the data by commas into an array
+                                $dataArray = explode(",", $data);
+                                foreach ($dataArray as $item) {
+                                    echo "<li>" . htmlspecialchars(trim($item)) . "</li>";
+                                    echo '<span class="lineicon"></span>';
+                                }
+                            } else {
+                                echo "No data found";
+                            }
+                            ?>
+
+                        </ul>
+
+
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+
+    <div class="syllabuaContainer">
+        <div class="syllabus_mob">
+        <button onclick="Closesyllabus()">X</button>
+        <h2 class="mt-1"><?php echo $crs_title ;?></h2>
+        <p>Curriculum</p>
+            <div class="syllabus_content">
+                
+                <ul class="crs_syllabus_model">
+                    <?php
+                    $sql = "SELECT syllabus FROM course_form WHERE title = ?";
+                    $stmt = $conn->prepare($sql);
+                    $stmt->bind_param("s", $crs_title);
+                    $stmt->execute();
+
+                    $result = $stmt->get_result();
+
+                    if ($result->num_rows > 0) {
+
+                        $row = $result->fetch_assoc();
+                        $data = $row['syllabus'];
+
+                        // Split the data by commas into an array
+                        $dataArray = explode(",", $data);
+                        foreach ($dataArray as $item) {
+                            echo "<li>" . htmlspecialchars(trim($item)) . "</li>";
+                            echo '<span class="lineicon"></span>';
+                        }
+                    } else {
+                        echo "No data found";
+                    }
+                    ?>
+
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+
 
     <div class="container text-center mt-4" data-aos="zoom-in-down" data-aos-duration="900">
         <span id="grd_text" class="slogan_txt">Highlights</span>
@@ -127,11 +217,11 @@
                     <img src="img/thumbs-up-regular.svg" alt="">
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
                 </div>
-                <div data-aos="fade-left" data-aos-duration="1000"  data-aos-delay="100">
+                <div data-aos="fade-left" data-aos-duration="1000" data-aos-delay="100">
                     <img src="img/thumbs-up-regular.svg" alt="">
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
                 </div>
-                <div data-aos="fade-left" data-aos-duration="1000"  data-aos-delay="150"> 
+                <div data-aos="fade-left" data-aos-duration="1000" data-aos-delay="150">
                     <img src="img/thumbs-up-regular.svg" alt="">
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
                 </div>
@@ -157,75 +247,88 @@
         </div>
     </div>
 
-    
 
-<div class="popup_banner">
-    <div class="banner_content">
-        <button class="banner_close_btn" onclick="banner_close()">X</button>
-        <div class="banner_getdata">
-            <div class="popbanner_title">
-                <h3>Get in touch</h3>
-            </div>
 
-            <div class="bannerinputs">
-                <label for="name">Name</label>
-                <input type="text" name="name" id="name">
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email">
-                <label for="contact">Contact</label>
-                <input type="tel" name="contact" id="contact">
-                <label for="course">Course</label>
-                <input type="text" name="course" id="course">
+    <div class="popup_banner">
+        <div class="banner_content">
+            <button class="banner_close_btn" onclick="banner_close()">X</button>
+            <div class="banner_getdata">
+                <div class="popbanner_title">
+                    <h3>Get in touch</h3>
+                </div>
 
-                <div>
-                    <button onclick="opentq()" class="popupSendbtn">SEND <span><i class="fa-solid fa-envelope" id="lettericon"></i></span></button>
+                <div class="bannerinputs">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email">
+                    <label for="contact">Contact</label>
+                    <input type="tel" name="contact" id="contact">
+                    <label for="course">Course</label>
+                    <input type="text" name="course" id="course">
+
+                    <div>
+                        <button onclick="opentq()" class="popupSendbtn">SEND <span><i class="fa-solid fa-envelope"
+                                    id="lettericon"></i></span></button>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="bannermsg">
-            <div>
-                <h1>Thank <br>You.</h1>
-            </div>
-            <div>
-                <p>We'll be in touch <br> Shortly!</p>
-
+            <div class="bannermsg">
                 <div>
-                    <button onclick="banner_close()" class="popupNextbtn">Next <span><i id="arrowicon" class="fa-solid fa-arrow-right"></i></span></button>
+                    <h1>Thank <br>You.</h1>
+                </div>
+                <div>
+                    <p>We'll be in touch <br> Shortly!</p>
+
+                    <div>
+                        <button onclick="banner_close()" class="popupNextbtn">Next <span><i id="arrowicon"
+                                    class="fa-solid fa-arrow-right"></i></span></button>
+                    </div>
                 </div>
             </div>
-        </div>
 
+        </div>
     </div>
-</div>
 
-<script>
-    let top_banner_div = document.querySelector('.popup_banner')
+    <script>
+        let top_banner_div = document.querySelector('.popup_banner')
 
-    function banner_close() {
-        top_banner_div.style.display = 'none'
-        localStorage.setItem('adShown', 'true');
-    }
+        function banner_close() {
+            top_banner_div.style.display = 'none'
+            localStorage.setItem('adShown', 'true');
+        }
 
-    function popupform() {
-        document.querySelector('.popup_banner').style.display = 'block';
-    }
+        function popupform() {
+            document.querySelector('.popup_banner').style.display = 'block';
+        }
 
 
-    let inptbox =document.querySelector(".banner_getdata")
-    let msgbox =document.querySelector(".bannermsg")
+        let inptbox = document.querySelector(".banner_getdata")
+        let msgbox = document.querySelector(".bannermsg")
 
-    function opentq(){
-        inptbox.style.display='none';
-        msgbox.style.display='block';
-    }
+        function opentq() {
+            inptbox.style.display = 'none';
+            msgbox.style.display = 'block';
+        }
 
-    setTimeout(showAd, 5000);
+        setTimeout(showAd, 5000);
 
-    // Check if the ad has been shown before
-    // if (!localStorage.getItem('adShown')) {
-    //     setTimeout(showAd, 5000);
-    // }
-</script>
+
+        function opensyllabus() {
+            let syllabusdiv = document.querySelector('.syllabus_mob')
+            syllabusdiv.style.transform = 'translateY(0px)';
+        }
+
+        function Closesyllabus() {
+            let syllabusdiv = document.querySelector('.syllabus_mob')
+            syllabusdiv.style.transform = 'translateY(645px)';
+        }
+
+        // Check if the ad has been shown before
+        // if (!localStorage.getItem('adShown')) {
+        //     setTimeout(showAd, 5000);
+        // }
+    </script>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
