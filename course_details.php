@@ -317,11 +317,13 @@
         function opensyllabus() {
             let syllabusdiv = document.querySelector('.syllabus_mob')
             syllabusdiv.style.transform = 'translateY(0px)';
+            syllabusdiv.style.position = 'fixed';
         }
 
         function Closesyllabus() {
             let syllabusdiv = document.querySelector('.syllabus_mob')
             syllabusdiv.style.transform = 'translateY(645px)';
+            syllabusdiv.style.position = 'static';
         }
 
         // Check if the ad has been shown before
