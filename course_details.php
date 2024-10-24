@@ -7,7 +7,7 @@
     <title>Course | Syllabus</title>
     <?php include "links.php"; ?>
 
-    <link rel="stylesheet" href="css/course_details.css">
+    <link rel="stylesheet" href="css/course_detail.css">
 
     <link rel="stylesheet" href="css/popup_banner.css">
 </head>
@@ -136,7 +136,7 @@
 
     <div class="syllabuaContainer">
         <div class="syllabus_mob">
-        <button onclick="Closesyllabus()">X</button>
+        <button onclick="Closesyllabus()"><i class="fa-solid fa-x"></i></button>
         <div class="syllabuscontent">
         <h2 class="mt-1"><?php echo $crs_title ;?></h2>
         <p>Curriculum</p>
