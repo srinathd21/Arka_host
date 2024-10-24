@@ -137,8 +137,10 @@
     <div class="syllabuaContainer">
         <div class="syllabus_mob">
         <button onclick="Closesyllabus()">X</button>
+        <div class="syllabuscontent">
         <h2 class="mt-1"><?php echo $crs_title ;?></h2>
         <p>Curriculum</p>
+        </div>
             <div class="syllabus_content">
                 
                 <ul class="crs_syllabus_model">
