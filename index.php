@@ -21,7 +21,7 @@
 
     <?php include 'training_nav.php'; ?>
 
-    <?php //include 'popup_banner.php'; ?>
+    <?php include 'popup_banner.php'; ?>
 
 
     <div style="position:relative;" class="">

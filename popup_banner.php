@@ -15,11 +15,8 @@
                 <input type="email" name="email" id="email">
                 <label for="contact">Contact</label>
                 <input type="tel" name="contact" id="contact">
-                <label for="course">Course</label>
-                <input type="text" name="course" id="course">
-
                 <div>
-                    <button onclick="opentq()" class="popupSendbtn">SEND <span><i class="fa-solid fa-envelope" id="lettericon"></i></span></button>
+                    <button onclick="opentq()" class="popupSendbtn">Next</button>
                 </div>
             </div>
         </div>
@@ -29,10 +26,6 @@
             </div>
             <div>
                 <p>We'll be in touch <br> Shortly!</p>
-
-                <div>
-                    <button onclick="banner_close()" class="popupNextbtn">Next <span><span id="arrowicon">&rarr;</span></span></button>
-                </div>
             </div>
         </div>
 
@@ -57,6 +50,11 @@
     function opentq(){
         inptbox.style.display='none';
         msgbox.style.display='block';
+
+        function closeTq(){
+            document.querySelector('.popup_banner').style.display = 'none';
+        }
+    setTimeout(closeTq, 3000); 
     }
 
     setTimeout(showAd, 5000);

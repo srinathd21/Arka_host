@@ -93,7 +93,9 @@
 
                     <!-- Modal Header -->
                     <div class="modal-header">
-                        <h4 class="modal-title"><?php echo $crs_title; ?> Syllabus</h4>
+                        <h2 class="modal-title"><?php echo $crs_title; ?><br><span>Curriculum</span></h2>
+
+
                         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                     </div>
 
@@ -136,13 +138,13 @@
 
     <div class="syllabuaContainer">
         <div class="syllabus_mob">
-        <button onclick="Closesyllabus()"><i class="fa-solid fa-x"></i></button>
-        <div class="syllabuscontent">
-        <h2 class="mt-1"><?php echo $crs_title ;?></h2>
-        <p>Curriculum</p>
-        </div>
+            <button onclick="Closesyllabus()"><i class="fa-solid fa-x"></i></button>
+            <div class="syllabuscontent">
+                <h2 class="mt-1"><?php echo $crs_title; ?></h2>
+                <p>Curriculum</p>
+            </div>
             <div class="syllabus_content">
-                
+
                 <ul class="crs_syllabus_model">
                     <?php
                     $sql = "SELECT syllabus FROM course_form WHERE title = ?";
@@ -266,12 +268,9 @@
                     <input type="email" name="email" id="email">
                     <label for="contact">Contact</label>
                     <input type="tel" name="contact" id="contact">
-                    <label for="course">Course</label>
-                    <input type="text" name="course" id="course">
 
                     <div>
-                        <button onclick="opentq()" class="popupSendbtn">SEND <span><i class="fa-solid fa-envelope"
-                                    id="lettericon"></i></span></button>
+                        <button onclick="opentq()" class="popupSendbtn">NEXT</button>
                     </div>
                 </div>
             </div>
@@ -281,11 +280,6 @@
                 </div>
                 <div>
                     <p>We'll be in touch <br> Shortly!</p>
-
-                    <div>
-                        <button onclick="banner_close()" class="popupNextbtn">Next <span><i id="arrowicon"
-                                    class="fa-solid fa-arrow-right"></i></span></button>
-                    </div>
                 </div>
             </div>
 
@@ -311,6 +305,13 @@
         function opentq() {
             inptbox.style.display = 'none';
             msgbox.style.display = 'block';
+            function closeTq() {
+                msgbox.style.display='none';
+            inptbox.style.display='block';
+            document.querySelector('.popup_banner').style.display = 'none';
+                
+            }
+            setTimeout(closeTq, 3000);
         }
 
         setTimeout(showAd, 5000);

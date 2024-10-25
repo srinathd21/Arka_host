@@ -108,11 +108,39 @@ body {
     border: none;
     color: white;
 }
+#myModal{
+    border-radius: 10px;
+}
+.modal-header{
+    padding: 30px;
+    background-color: #f5f5f5;
+    border: none;
+}
+.modal-header button{
+    position: relative;
+    top: -20px;
+}
+.modal-content{
+    background-color: #f5f5f5;
+    border: none;
+}
+.modal-title {
+    line-height: 25px;
+}
+.modal-title span{
+    display: inline-block;
+    font-size: 15px;
+    color: rgb(52, 52, 52);
+}
+.modal-body{
+    border-radius: 30px 30px 10px 10px;
+    background-color: white;
+}
 .crs_syllabus_model{
     display: inline-block;
     position: relative;
-    left: 15%;
-    top: 30px;
+    left: 10%;
+    top: 10px;
 
 }
 .crs_syllabus_model li{
