@@ -22,7 +22,12 @@ $ans = $conn->query($qur);
 
         <div class="srch_input">
             <input class="srch_input_1" type="text" placeholder="Search">
-            <button><i class="fa-solid fa-magnifying-glass" style="color: #ffffff !important;"></i></button>
+            <button id="serachbtn" onclick="searchfetch()"><i class="fa-solid fa-magnifying-glass"
+                    style="color: #ffffff !important;"></i></button>
+
+            <div class="searchresultdiv">
+                <a href="">Search..</a>
+            </div>
         </div>
 
         <div class="nav_links">
@@ -85,7 +90,7 @@ $ans = $conn->query($qur);
             <div class="">
                 <div>
                     <a class="admin_signin_btn" href=""><span class="profile_icon_mob"><i
-                    style="font-size:17px; color:gray;" class="fa-regular fa-user"></i></span>Sign in
+                                style="font-size:17px; color:gray;" class="fa-regular fa-user"></i></span>Sign in
                     </a>
                 </div>
                 <div>
@@ -185,6 +190,44 @@ $ans = $conn->query($qur);
             }
         };
         xhr.send();
+    }
+
+    // Search functionality
+    var searchbox = document.querySelector('.searchresultdiv');
+    var searchval = document.querySelector('.srch_input_1');
+    var searchButton = document.getElementById('serachbtn');
+
+    searchval.addEventListener('keydown', function (e) {
+        searchbox.style.display = 'block';
+        searchfetch(e.target.value);
+    });
+
+    document.addEventListener('click', function (e) {
+        if (!searchval.contains(e.target) && !searchButton.contains(e.target)) {
+            searchbox.style.display = 'none';
+        }
+    });
+
+
+
+    function searchfetch(searchName) {
+        searchbox.style.display = 'block';
+        const searchval = document.querySelector('.srch_input_1');
+        console.log(searchval.value);
+        if (searchval.value) {
+            searchName = searchval.value
+        }
+
+
+        const xhr = new XMLHttpRequest();
+        xhr.open("GET", "searchresult.php?search_val=" + searchName, true);
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                searchbox.innerHTML = xhr.responseText; // Update the course list with the response
+            }
+        };
+        xhr.send();
+
     }
 
     function innerSideNav() {
