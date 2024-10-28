@@ -233,22 +233,6 @@ $ans = $conn->query($qur);
         searchbox.style.display = 'none';
     }
 
-    function checkScreenWidth() {
-        var searchbox = document.querySelector('.srch_input')
-        if (window.innerWidth > 992) {
-            searchbox.style.display = 'block';
-        } else {
-            searchbox.style.display = 'none';
-        }
-    }
-
-    checkScreenWidth();
-
-    window.addEventListener('resize', checkScreenWidth);
-
-
-
-
     function searchfetch(searchName) {
         searchbox.style.display = 'block';
         const searchval = document.querySelector('.srch_input_1');

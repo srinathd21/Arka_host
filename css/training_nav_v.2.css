@@ -323,6 +323,11 @@ nav {
 .catgr_side_dropdown:hover .side_nav_sub_catgr{
     transform: translateX(0%);
 }
+@media screen and (min-width: 992px) {
+    .srch_input{
+        display: block !important;
+    }
+}
 @media screen and (max-width: 992px) {
     nav {
         justify-content: space-between;
