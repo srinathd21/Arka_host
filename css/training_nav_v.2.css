@@ -366,6 +366,7 @@ nav {
     .srch_input_1{
         width: 100%;
         border-radius: 7px;
+        box-shadow: 1px 1px 5px rgb(106, 106, 106);
     }  
 
     .course_dropdown-content {
