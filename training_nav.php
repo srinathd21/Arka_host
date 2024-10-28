@@ -106,12 +106,20 @@ $ans = $conn->query($qur);
                 </ul>
             </div>
         </div>
-        <div id="nav_last_btn" style="display:inline-flex;">
-            <button class="course_mob_btn" onclick="opensidenav()">Course <img src="icons/angle-down-solid.svg"
-                    alt=""></button>
-            <a href="https://www.google.com/maps/place/Arka+Networkz+System/@12.7360388,77.8222739,17z/data=!3m1!4b1!4m6!3m5!1s0x3bae7185e99a9cb5:0x3520348054405036!8m2!3d12.7360336!4d77.8248488!16s%2Fg%2F11t1ds8dv0?authuser=0&entry=ttu"
-                target="_blank"> <i class="fa-solid fa-location-dot"
-                    style="font-size: 15px;margin-top:7.6px;display:inline-block; color: rgb(0, 0, 0);"></i></a>
+        <div id="nav_last_btn" style="">
+            <div>
+                <i id="open_serachbtn_mob" onclick="OpenMobSearch()" class="fa-solid fa-magnifying-glass"></i>
+                <i id="close_serachbtn_mob" onclick="CloseMobSearch()" class="fa-solid fa-x"></i>
+            </div>
+            <div>
+                <button class="course_mob_btn" onclick="opensidenav()">Course <img src="icons/angle-down-solid.svg"
+                        alt=""></button>
+            </div>
+            <div>
+                <a href="https://www.google.com/maps/place/Arka+Networkz+System/@12.7360388,77.8222739,17z/data=!3m1!4b1!4m6!3m5!1s0x3bae7185e99a9cb5:0x3520348054405036!8m2!3d12.7360336!4d77.8248488!16s%2Fg%2F11t1ds8dv0?authuser=0&entry=ttu"
+                    target="_blank"> <i class="fa-solid fa-location-dot"
+                        style="font-size: 15px;margin-top:7.6px;display:inline-block; color: rgb(0, 0, 0);"></i></a>
+            </div>
         </div>
 
     </nav>
@@ -177,8 +185,6 @@ $ans = $conn->query($qur);
         const courseNav = document.querySelector('.side_nav_sub_catgr');
         const courseContent = document.getElementById('subCourseDiv');
 
-        console.log(categoryName.target.innerText)
-        // Show the second nav
         courseNav.style.transform = 'translateX(0%)';
 
         // Use AJAX to fetch the courses for the selected category
@@ -208,12 +214,44 @@ $ans = $conn->query($qur);
         }
     });
 
+    function OpenMobSearch() {
+        var searchbox = document.querySelector('.srch_input')
+        var OpenSearchBtn = document.getElementById('open_serachbtn_mob')
+        var CloseSearchBtn = document.getElementById('close_serachbtn_mob')
+
+        OpenSearchBtn.style.display = 'none';
+        CloseSearchBtn.style.display = 'block';
+        searchbox.style.display = 'block';
+    }
+    function CloseMobSearch() {
+        var searchbox = document.querySelector('.srch_input')
+        var OpenSearchBtn = document.getElementById('open_serachbtn_mob')
+        var CloseSearchBtn = document.getElementById('close_serachbtn_mob')
+
+        OpenSearchBtn.style.display = 'block';
+        CloseSearchBtn.style.display = 'none';
+        searchbox.style.display = 'none';
+    }
+
+    function checkScreenWidth() {
+        var searchbox = document.querySelector('.srch_input')
+        if (window.innerWidth > 992) {
+            searchbox.style.display = 'block';
+        } else {
+            searchbox.style.display = 'none';
+        }
+    }
+
+    checkScreenWidth();
+
+    window.addEventListener('resize', checkScreenWidth);
+
+
 
 
     function searchfetch(searchName) {
         searchbox.style.display = 'block';
         const searchval = document.querySelector('.srch_input_1');
-        console.log(searchval.value);
         if (searchval.value) {
             searchName = searchval.value
         }
@@ -233,4 +271,6 @@ $ans = $conn->query($qur);
     function innerSideNav() {
         subsidenav.style.transform = 'translateX(100%)'; // Hide the second nav
     }
+
+
 </script>

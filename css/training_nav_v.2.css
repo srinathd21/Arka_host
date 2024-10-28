@@ -101,11 +101,25 @@ nav {
     top: 13px;
     transition: 0.2s;
 }
-#nav_last_btn >a{
-    display: none;
+#nav_last_btn{
+    display: flex;
+    float: right;
 }
-.course_mob_btn{
+#nav_last_btn>div{
     display: none;
+    margin-left: 20px;
+}
+#open_serachbtn_mob,#close_serachbtn_mob{
+    color: black !important;
+    font-size: 15px;
+    margin-top: 8px;
+    display: block;
+}
+#close_serachbtn_mob{
+    display: none; 
+}
+
+.course_mob_btn{
     background-color: #00ad42;
     color: white;
     padding: 3px 30px 5px 15px;
@@ -114,8 +128,7 @@ nav {
     border-radius: 3px;
     cursor: pointer;
     position: relative;
-    left: -25px;
-    
+
 }
 
 .course_mob_btn img{
@@ -315,12 +328,11 @@ nav {
         justify-content: space-between;
     }
     .nav_links,
-    .srch_input,
     .cover_img_pc {
         display: none;
     }
 
-    .cover_img_mob,#nav_last_btn >a {
+    .cover_img_mob,#nav_last_btn >div {
         display: block;
     }
     .logo_img{
@@ -337,6 +349,20 @@ nav {
         left: 50%;
         transform: translateX(-50%);
     }
+    .srch_input{
+        position: absolute;
+        top: 76px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+        display: none;
+    }
+
+    .srch_input_1{
+        width: 100%;
+        border-radius: 7px;
+    }  
+
     .course_dropdown-content {
         top: 40px;
         left: -55px;
