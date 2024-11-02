@@ -76,11 +76,9 @@
             </div>
             <div id="collapseOne" class="collapse" data-bs-parent="#accordion">
                 <div class="card-body">
-                    Arka technologies provide IT trainings, internships, inplant trainings, and software development
-                    services. You can
-                    learn advance technologies in programming, cloud computing, and more. And also help Micro and Small
-                    businesses
-                    with website development, app customization, and IT solutions.
+                    Arka Technologies provides IT training, internships, in-plant training, and software development
+                    services. You can learn advanced technologies in programming, cloud computing, and more. We also
+                    help micro and small businesses with website development, app customization, and IT solutions.
                 </div>
             </div>
         </div>
@@ -92,24 +90,20 @@
             </div>
             <div id="collapseTwo" class="collapse" data-bs-parent="#accordion">
                 <div class="card-body">
-                    Anyone interested in learning technology can join. Arka specifically offers courses for students,
-                    working professionals,
-                    and school students from 6th to 12th grade.
+                Anyone interested in learning technology can join. Arka specifically offers courses for students, working professionals, and school students from 6th to 12th grade.
                 </div>
             </div>
         </div>
         <div class="card">
             <div class="card-header">
                 <a class="collapsed" data-bs-toggle="collapse" href="#collapseThree">
-                    Does arka technology provides job placement assistance after training?<i
+                    Does Arka Technology provides job placement assistance after training?<i
                         class="fa-solid fa-chevron-down rotate-icon"></i>
                 </a>
             </div>
             <div id="collapseThree" class="collapse" data-bs-parent="#accordion">
                 <div class="card-body">
-                    Yes, arka technologies offers students those who completed a prior course with job placement after
-                    the completion
-                    of the course.
+                Yes, Arka Technologies offers job placement assistance to students who have completed a prior course, after the completion of the current course.
                 </div>
             </div>
         </div>
@@ -117,15 +111,13 @@
         <div class="card">
             <div class="card-header">
                 <a class="collapsed" data-bs-toggle="collapse" href="#collapseFour">
-                    What is the fee structure for courses in arka technologies?<i
+                    What is the fee structure for courses in Arka Technologies?<i
                         class="fa-solid fa-chevron-down rotate-icon"></i>
                 </a>
             </div>
             <div id="collapseFour" class="collapse" data-bs-parent="#accordion">
                 <div class="card-body">
-                    Fee’s structure varies depending on the course. You can contact us or visit arka technologies
-                    official website for the
-                    latest fee details. Arka technologies aim to offer quality training at affordable prices.
+                The fee structure varies depending on the course. You can contact us or visit the Arka Technologies official website for the latest fee details. Arka Technologies aims to offer quality training at affordable prices.
                 </div>
             </div>
         </div>
@@ -138,9 +130,7 @@
             </div>
             <div id="collapseFive" class="collapse" data-bs-parent="#accordion">
                 <div class="card-body">
-                    Training in arka technologies is mostly hands-on. And focusing on practical learning so you can
-                    apply the skills directly
-                    in real-world projects.
+                Training at Arka Technologies is mostly hands-on, focusing on practical learning so you can directly apply the skills in real-world projects.
                 </div>
             </div>
         </div>
@@ -153,9 +143,7 @@
             </div>
             <div id="collapseSix" class="collapse" data-bs-parent="#accordion">
                 <div class="card-body">
-                    Arka Technologies located in the urban area of Hosur. Our office is just 100-meter walk from the
-                    Hosur Main Bus Stand
-                    and 1.2 KMs from the Hosur Railway Station.<br><br>
+                Arka Technologies is located in the urban area of Hosur. Our office is just a 100-meter walk from the Hosur Main Bus Stand and 1.2 km from the Hosur Railway Station.<br><br>
                     How to Contact Us:<br><br>
                     No prior appointment is required, you can visit us directly!
 
@@ -172,17 +160,12 @@
             </div>
             <div id="collapseSeven" class="collapse" data-bs-parent="#accordion">
                 <div class="card-body">
-                    Arka Technologies as a premier training institute in hosur offers cutting-edge courses that align
-                    with the latest industry
-                    trends and technological advancements, ensuring students are always ahead of the curve. From
-                    foundational training
-                    to advanced skill development, Arka Technologies has been trusted by many, as reflected in our
-                    positive Google reviews
-                    from satisfied students.
+                Arka Technologies, a premier training institute in Hosur, offers cutting-edge courses that align with the latest industry trends and technological advancements, ensuring students are always ahead of the curve. From foundational training to advanced skill development, Arka Technologies has been trusted by many, as reflected in our positive Google reviews from satisfied students.
                     <br><br>
-                    Check out what our clients have to say: <a style="text-decoration:underline; display:inline; color:#004bee !important;"
-    href="https://www.google.com/maps/place/Arka+Networkz+System/@12.7360388,77.8222739,17z/data=!3m1!4b1!4m6!3m5!1s0x3bae7185e99a9cb5:0x3520348054405036!8m2!3d12.7360336!4d77.8248488!16s%2Fg%2F11t1ds8dv0?authuser=0&entry=ttu"
-    target="_blank">Click here [https://maps.app.goo.gl/7kcv46nm5zt3m3DGA?g_st=iwb]</a>
+                    Check out what our clients have to say: <a
+                        style="text-decoration:underline; display:inline; color:#004bee !important;"
+                        href="https://www.google.com/maps/place/Arka+Networkz+System/@12.7360388,77.8222739,17z/data=!3m1!4b1!4m6!3m5!1s0x3bae7185e99a9cb5:0x3520348054405036!8m2!3d12.7360336!4d77.8248488!16s%2Fg%2F11t1ds8dv0?authuser=0&entry=ttu"
+                        target="_blank">Click here [https://maps.app.goo.gl/7kcv46nm5zt3m3DGA?g_st=iwb]</a>
 
                 </div>
             </div>
