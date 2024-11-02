@@ -87,7 +87,7 @@
         <div class="card">
             <div class="card-header">
                 <a class="collapsed" data-bs-toggle="collapse" href="#collapseTwo">
-                    Who can join your training programs?<i class="fa-solid fa-chevron-down rotate-icon"></i>
+                    Who can join the training programs?<i class="fa-solid fa-chevron-down rotate-icon"></i>
                 </a>
             </div>
             <div id="collapseTwo" class="collapse" data-bs-parent="#accordion">
