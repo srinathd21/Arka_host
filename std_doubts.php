@@ -1,6 +1,6 @@
 <style>
     .card-header a {
-        font-size: 15px !important;
+        font-size: 12px !important;
         font-weight: 600;
         font-style: normal;
         color: rgb(52, 52, 52);
@@ -18,6 +18,7 @@
 
     .card-header {
         border-radius: 10px !important, 0px;
+        font-size: 12px;
     }
 
     #accordion>div {
@@ -34,7 +35,7 @@
     }
 
     .card-body {
-        font-size: 15px !important;
+        font-size: 11px !important;
     }
 
     #accordion a i {
