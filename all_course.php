@@ -82,6 +82,11 @@
                     echo '<div class="course_details">
                                     <span><i class="fa-regular fa-calendar-days"></i>' . $row["hours"] . 'Hours</span><br>
                                     <span><i class="fa-regular fa-circle-check"></i>Certification program</span>
+                                    <div class="crs-msg">
+                                        <span><span>*</span>Including Internship, Project Guidance, Career Guidance</span>
+                                    </div>
+                                    
+                                    <span class="crs_tC">*T&C Apply</span>
                                 </div>';
 
                     echo "</a>";

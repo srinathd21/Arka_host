@@ -64,7 +64,7 @@ $ans = $conn->query($qur);
             </div>
 
             <div>
-                <a href="">Support</a>
+                <a href="#arka-supports">Support</a>
             </div>
 
             <div>
@@ -100,10 +100,6 @@ $ans = $conn->query($qur);
                 <div>
                     <a id="top_nav_link_mob" href="index.php">For Training</a>
                 </div>
-
-                <ul class="nav_link_mob">
-                    <li><a href="">Support</a></li>
-                </ul>
             </div>
         </div>
         <div id="nav_last_btn" style="">

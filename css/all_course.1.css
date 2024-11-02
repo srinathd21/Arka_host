@@ -45,8 +45,8 @@ h2,h3,h4,h5{
     text-decoration: none;
     color: black;
     display:block;
-    height: 300px;
-    width: 295px;
+    height: 320px;
+    width:320px;
     background-color: white;
     border-radius: 10px;
     margin: 10px;
@@ -77,6 +77,20 @@ h2,h3,h4,h5{
 .course_details span i {
     color: #427a7a;
     margin-right: 10px;
+}
+.crs-msg{
+    margin-top: 10px;
+    font-size: 10px;
+    line-height: 20px;
+    color: rgb(78, 78, 78,0.8);
+}
+
+.crs_tC{
+    position: absolute;
+    bottom: 1px;
+    right: 10px;
+    font-size: 10px;
+    color: rgb(78, 78, 78,0.8);
 }
 @media screen and (max-width: 992px) {
     .course_top_img {

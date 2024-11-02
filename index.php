@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Srinath, Arka Networkz System">
     <title>Arka for Training</title>
 
     <link rel="icon" href="img/Arka Logo.png" type="image/png">
@@ -60,7 +62,8 @@
 
     <div class="container ">
         <div id="card_slider">
-            <button id="crs_left_btn" onclick="onSwipeRight()">< </button>
+            <button id="crs_left_btn" onclick="onSwipeRight()">
+                < </button>
                     <button id="crs_right_btn" onclick="onSwipeLeft()">></button>
                     <div class="all_courses">
 
@@ -82,6 +85,13 @@
                                 <div class="course_details">
                                     <span><i class="fa-regular fa-calendar-days"></i>120 Hours</span><br>
                                     <span><i class="fa-regular fa-circle-check"></i>Certification program</span>
+                                    <div class="crs-msg">
+                                        <span><span>*</span>Including Internship, Project Guidance, Career
+                                            Guidance</span>
+                                    </div>
+
+                                    <span class="crs_tC">*T&C Apply</span>
+
                                 </div>
                             </a>
 
@@ -97,6 +107,11 @@
                                 <div class="course_details">
                                     <span><i class="fa-regular fa-calendar-days"></i>120 Hours</span><br>
                                     <span><i class="fa-regular fa-circle-check"></i>Certification program</span>
+                                    <div class="crs-msg">
+                                        <span>*Including Internship, Project Guidance, Career Guidance</span>
+                                    </div>
+
+                                    <span class="crs_tC">*T&C Apply</span>
                                 </div>
                             </a>
 
@@ -110,6 +125,12 @@
                                 <div class="course_details">
                                     <span><i class="fa-regular fa-calendar-days"></i>200 Hours</span><br>
                                     <span><i class="fa-regular fa-circle-check"></i>Certification program</span>
+                                    <div class="crs-msg">
+                                        <span><span>*</span>Including Internship, Project Guidance, Career
+                                            Guidance</span>
+                                    </div>
+
+                                    <span class="crs_tC">*T&C Apply</span>
                                 </div>
                             </a>
 
@@ -123,6 +144,12 @@
                                 <div class="course_details">
                                     <span><i class="fa-regular fa-calendar-days"></i>200 Hours</span><br>
                                     <span><i class="fa-regular fa-circle-check"></i>Certification program</span>
+                                    <div class="crs-msg">
+                                        <span><span>*</span>Including Internship, Project Guidance, Career
+                                            Guidance</span>
+                                    </div>
+
+                                    <span class="crs_tC">*T&C Apply</span>
                                 </div>
                             </a>
 
@@ -136,6 +163,12 @@
                                 <div class="course_details">
                                     <span><i class="fa-regular fa-calendar-days"></i>200 Hours</span><br>
                                     <span><i class="fa-regular fa-circle-check"></i>Certification program</span>
+                                    <div class="crs-msg">
+                                        <span><span>*</span>Including Internship, Project Guidance, Career
+                                            Guidance</span>
+                                    </div>
+
+                                    <span class="crs_tC">*T&C Apply</span>
                                 </div>
                             </a>
                         </div>
@@ -171,6 +204,11 @@
                 <div class="course_details">
                     <span><i class="fa-regular fa-calendar-days"></i>' . $row["hours"] . ' Hours</span><br>
                     <span><i class="fa-regular fa-circle-check"></i>Certification program</span>
+                    <div class="crs-msg">
+                                        <span><span>*</span>Including Internship, Project Guidance, Career Guidance</span>
+                                    </div>
+                                    
+                                    <span class="crs_tC">*T&C Apply</span>
                 </div>
             </a>';
                 }
@@ -213,6 +251,12 @@
                         <div class="course_details">
                             <span><i class="fa-regular fa-calendar-days"></i>' . $row["hours"] . ' Hours</span><br>
                             <span><i class="fa-regular fa-circle-check"></i>Certification program</span>
+
+                            <div class="crs-msg">
+                                        <span><span>*</span>Including Internship, Project Guidance, Career Guidance</span>
+                                    </div>
+                                    
+                                    <span class="crs_tC">*T&C Apply</span>
                         </div>
                     </a>
 
@@ -335,9 +379,13 @@
             </div>
 
         </div>
+
     </div>
 
     <!--    supports      -->
+    <span id="arka-supports"></span>
+    <br>
+    <br>
     <div class="bg-black pb-5 supports">
         <div class="container text-center text-white bg-black pt-4">
             <div>
@@ -359,11 +407,11 @@
     <?php include 'supports.php'; ?>
 
     <?php include "training_footer.php"; ?>
-    
+
     <script src="js/training.js"></script>
 
-     <!--  Font Awesome  -->
-     <script src="https://kit.fontawesome.com/8b7cdef8f0.js" crossorigin="anonymous"></script>
+    <!--  Font Awesome  -->
+    <script src="https://kit.fontawesome.com/8b7cdef8f0.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
