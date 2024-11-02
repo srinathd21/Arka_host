@@ -1,8 +1,9 @@
 let outerContainer = document.querySelector(".all_courses_container")
 let innerContainer_1 = outerContainer.querySelector(".all_courses_list")
 let innerContainer = outerContainer.getElementsByTagName("a")
-let innercardWidth = innerContainer_1.clientWidth + 25
+let innercardWidth = innerContainer_1.clientWidth+14
 
+console.log(innerContainer)
 let bodywidth = 3
 
 if (document.body.clientWidth < 1200) {
@@ -12,8 +13,8 @@ if (document.body.clientWidth < 768) {
     bodywidth = 1
 }
 
-outerContainer.style.width = (innercardWidth + 7) * innerContainer.length + "px"
-
+outerContainer.style.width = (innercardWidth*innerContainer.length)+20 + "px"
+console.log(outerContainer.clientWidth)
 let cardLeftBtn = document.querySelector("#crs_left_btn")
 let cardRightBtn = document.querySelector("#crs_right_btn")
 
@@ -52,9 +53,7 @@ swipeArea.addEventListener('touchend', (event) => {
     // Determine the swipe direction
     if (endX > startX + 50) { // Swiped right (50px threshold to ensure it's a swipe)
         onSwipeRight();
-    }
-
-    if (endX < startX + 50) { // Swiped right (50px threshold to ensure it's a swipe)
+    } else if (endX < startX - 50) { // Swiped left (50px threshold to ensure it's a swipe)
         onSwipeLeft();
     }
 });
