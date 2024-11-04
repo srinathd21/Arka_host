@@ -73,104 +73,37 @@
                             <a href="all_course.php?category=Software&title=Python" class="explore_link"
                                 style="">Explore all courses<i class="fa-solid fa-arrow-right"></i></a>
                         </div>
-
+                        <?php
+                        $query = 'SELECT * FROM course_form where special="Yes"';
+                        $ans = $conn->query($query);
+                        ?>
                         <div class="all_courses_container ">
-                            <a class="all_courses_list " href="course_details.php?category=Software&title=Python">
-                                <div class="course_title">
-                                    <h2 class="">Python</h2>
+                            <?php
+                            if ($ans->num_rows > 0) {
+                                while ($row = $ans->fetch_assoc()) {
+                                    echo '<a class="all_courses_list" href="course_details.php?category=' . $row["category"] . '&title=' . $row["title"] . '">
+                                    <div class="course_title">';
+                                    if ($row['offer'] == 'Yes') {
+                                        echo '<span class="offer_lable">Offer</span>';
+                                    }
+                                    echo '<h2 class="">' . $row["title"] . '</h2>
                                     <p>Extensive syllabus</p>
 
                                     <span><i class="fa-solid fa-book-open"></i>Specialized certificate</span>
-                                </div>
-                                <div class="course_details">
-                                    <span><i class="fa-regular fa-calendar-days"></i>120 Hours</span><br>
-                                    <span><i class="fa-regular fa-circle-check"></i>Certification program</span>
-                                    <div class="crs-msg">
-                                        <span><span>*</span>Including Internship, Project Guidance, Career
-                                            Guidance</span>
                                     </div>
-
-                                    <span class="crs_tC">*T&C Apply</span>
-
-                                </div>
-                            </a>
-
-
-
-                            <a class="all_courses_list" href="course_details.php?category=Software&title=java">
-                                <div class="course_title">
-                                    <h2 class="">Java</h2>
-                                    <p>Extensive syllabus</p>
-
-                                    <span><i class="fa-solid fa-book-open"></i>Specialized certificate</span>
-                                </div>
-                                <div class="course_details">
-                                    <span><i class="fa-regular fa-calendar-days"></i>120 Hours</span><br>
-                                    <span><i class="fa-regular fa-circle-check"></i>Certification program</span>
-                                    <div class="crs-msg">
-                                        <span>*Including Internship, Project Guidance, Career Guidance</span>
+                                    <div class="course_details">
+                                        <span><i class="fa-regular fa-calendar-days"></i>' . $row["hours"] . ' Hours</span><br>
+                                        <span><i class="fa-regular fa-circle-check"></i>Certification program</span>
+                                        <div class="crs-msg">
+                                                        <span><span>*</span>Including Internship, Project Guidance, Career Guidance</span>
+                                                    </div>
+                                                    
+                                                    <span class="crs_tC">*T&C Apply</span>
                                     </div>
-
-                                    <span class="crs_tC">*T&C Apply</span>
-                                </div>
-                            </a>
-
-                            <a class="all_courses_list" href="course_details.php?category=Ui/Ux&title=Full%20Stack">
-                                <div class="course_title">
-                                    <h2 class="">Full Stack</h2>
-                                    <p>Extensive syllabus</p>
-
-                                    <span><i class="fa-solid fa-book-open"></i>Specialized certificate</span>
-                                </div>
-                                <div class="course_details">
-                                    <span><i class="fa-regular fa-calendar-days"></i>200 Hours</span><br>
-                                    <span><i class="fa-regular fa-circle-check"></i>Certification program</span>
-                                    <div class="crs-msg">
-                                        <span><span>*</span>Including Internship, Project Guidance, Career
-                                            Guidance</span>
-                                    </div>
-
-                                    <span class="crs_tC">*T&C Apply</span>
-                                </div>
-                            </a>
-
-                            <a class="all_courses_list" href="course_details.php?category=Software&title=Back%20End">
-                                <div class="course_title">
-                                    <h2 class="">Back End</h2>
-                                    <p>Extensive syllabus</p>
-
-                                    <span><i class="fa-solid fa-book-open"></i>Specialized certificate</span>
-                                </div>
-                                <div class="course_details">
-                                    <span><i class="fa-regular fa-calendar-days"></i>200 Hours</span><br>
-                                    <span><i class="fa-regular fa-circle-check"></i>Certification program</span>
-                                    <div class="crs-msg">
-                                        <span><span>*</span>Including Internship, Project Guidance, Career
-                                            Guidance</span>
-                                    </div>
-
-                                    <span class="crs_tC">*T&C Apply</span>
-                                </div>
-                            </a>
-
-                            <a class="all_courses_list" href="course_details.php?category=Software&title=PHP">
-                                <div class="course_title">
-                                    <h2 class="">PHP</h2>
-                                    <p>Extensive syllabus</p>
-
-                                    <span><i class="fa-solid fa-book-open"></i>Specialized certificate</span>
-                                </div>
-                                <div class="course_details">
-                                    <span><i class="fa-regular fa-calendar-days"></i>200 Hours</span><br>
-                                    <span><i class="fa-regular fa-circle-check"></i>Certification program</span>
-                                    <div class="crs-msg">
-                                        <span><span>*</span>Including Internship, Project Guidance, Career
-                                            Guidance</span>
-                                    </div>
-
-                                    <span class="crs_tC">*T&C Apply</span>
-                                </div>
-                            </a>
+                                    </a>';
+                                }
+                            }
+                            ?>
                         </div>
 
                     </div>
@@ -195,8 +128,11 @@
             if ($ans->num_rows > 0) {
                 while ($row = $ans->fetch_assoc()) {
                     echo '<a class="trend_courses_list" href="course_details.php?category=' . $row["category"] . '&title=' . $row["title"] . '">
-                <div class="course_title">
-                    <h2 class="">' . $row["title"] . '</h2>
+                <div class="course_title">';
+                    if ($row['offer'] == 'Yes') {
+                        echo '<span class="offer_lable">Offer</span>';
+                    }
+                    echo '<h2 class="">' . $row["title"] . '</h2>
                     <p>Extensive syllabus</p>
 
                     <span><i class="fa-solid fa-book-open"></i>Specialized certificate</span>
@@ -241,8 +177,11 @@
                     while ($row = $ans->fetch_assoc()) {
                         echo '<div class="carousel-item ' . $active . ' text-center">';
                         $active = '';
-                        echo '<a class="trend_courses_list" href="course_details.php?category=' . $row["category"] . '&title=' . $row["title"] . '">
-                        <div class="course_title">
+                        echo '<a class="trend_courses_list" href="course_details.php?category=' . $row["category"] . '&title=' . $row["title"] . '">';
+                        if ($row['offer'] == 'Yes') {
+                            echo '<span class="offer_lable">Offer</span>';
+                        }
+                        echo '<div class="course_title">
                             <h2 class="">' . $row["title"] . '</h2>
                             <p>Extensive syllabus</p>
 
