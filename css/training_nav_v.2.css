@@ -299,18 +299,27 @@ nav {
     right: 25px;
     top: 21px;
 }
-.catgr_drop_btn, .side_nav_sub_catgr a{
+.catgr_drop_btn, #subCourseTitle>a, #mainTitle>span{
     display: block;
     border-bottom: 0.1px solid rgb(209, 209, 209,0.6);
     margin: 0px 15px;
     padding: 15px 5px;
     text-decoration: none;
     color: rgb(58, 58, 58);
+    position: relative;
     font-size: 15px;
 }
-.side_nav_sub_catgr a{
+#maintitleIcon{
+    position: absolute;
+    right: 15px;
+    top: 18px;
+    font-size: 12px;
+    transition: 0.2s;
+}
+#mainTitle>span{
     margin: 0px 15px;
 }
+
 .side_nav_sub_catgr{
     position: absolute;
     top: 0px;
@@ -322,6 +331,32 @@ nav {
 }
 .catgr_side_dropdown:hover .side_nav_sub_catgr{
     transform: translateX(0%);
+}
+#sub_domain{
+    display:none ;
+    background-color: white;
+    box-shadow: 2px 2px 5px rgb(210, 210, 210,0.2),-2px -2px 5px rgb(210, 210, 210,0.2);
+    width: 80%;
+    border-radius: 5px;
+    margin: 5px auto;
+    color: red !important;
+}
+#sub_domain>a{
+    display: block;
+    border-bottom: 0.1px solid rgb(209, 209, 209,0.3);
+    padding: 15px;
+    text-decoration: none;
+    color: rgb(58, 58, 58);
+    font-size: 15px;
+}
+#sub_domain>a:last-child{
+    border: none;
+}
+#mainTitle:hover #sub_domain{
+    display: block;
+}
+#mainTitle span:hover #maintitleIcon{
+    transform: rotate(180deg);
 }
 @media screen and (min-width: 992px) {
     .srch_input{

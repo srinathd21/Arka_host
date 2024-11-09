@@ -18,18 +18,20 @@ $course_img_tmp = $_FILES["course_img"]["tmp_name"];
 if (move_uploaded_file($course_img_tmp, $course_img_path)) {
 
     // Prepare and bind SQL statement
-    $stmt = $conn->prepare("INSERT INTO course_form (title, category, hours, cost, syllabus, img_path, description, trending, offer, special) 
-    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-    $stmt->bind_param("ssisssssss", $title, $category, $hours, $cost, $syllabus, $img_path, $description, $trending, $offer, $special);
+    $stmt = $conn->prepare("INSERT INTO course_form (title, category, sub_domain, hours, cost, syllabus, img_path, description, trending, offer, special, main_domain) 
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+    $stmt->bind_param("sssissssssss", $title, $category, $sub_domain, $hours, $cost, $syllabus, $img_path, $description, $trending, $offer, $special, $main_domain);
 
     // Set parameters from POST request
     $title = $_POST['title'];
-    $category = $_POST['cars'];
+    $category = $_POST['category'];
+    $sub_domain = $_POST['sbdomain'];
     $hours = $_POST['hours'];
     $cost = $_POST['cost'];
     $syllabus = $_POST['syllabus'];
     $img_path = $course_img_path;    // File path for course image
     $description = $_POST['description'];
+    $main_domain = isset($_POST['main_domain']) ? "Yes" : "No";
     $trending = isset($_POST['Trending']) ? "Yes" : "No";
     $offer = isset($_POST['Offer']) ? "Yes" : "No";
     $special = isset($_POST['Special']) ? "Yes" : "No";

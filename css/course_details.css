@@ -275,7 +275,7 @@ body {
     color: #018001;
 }   
 .benefits_img_box img{
-    width: 90%;
+    width: 100%;
     border-radius: 30px;
 }
 
@@ -284,7 +284,8 @@ body {
     padding: 18px 0px 5px 20px;
     margin: 15px 0px;
     border-radius: 5px;
-    box-shadow: 2px 2px 7px rgb(171, 171, 171,0.5)
+    box-shadow: 2px 2px 7px rgb(171, 171, 171,0.5);
+
 }
 .benefits_txt div img{
     width: 20px;
@@ -293,22 +294,15 @@ body {
 }
 .benefits_txt div:nth-child(1){
     background-color: #feffe7;
-    position: relative;
 }
 .benefits_txt div:nth-child(2){
     background-color: #e7ffeb;
-    position: relative;
-    left: -30px;
 }
 .benefits_txt div:nth-child(3){
     background-color: #e7f8ff;
-    position: relative;
-    left: -50px;
 }
 .benefits_txt div:nth-child(4){
     background-color: #f7eafe;
-    position: relative;
-    left: -70px;
 }
 .crs_aboutus{
     padding: 40px 10px;

@@ -31,17 +31,97 @@ h2,h3,h4,h5{
 .crs_para{
     color: rgb(88, 88, 88);
 }
-
-#course_cards_div{
-    display: flex;
-    flex-wrap: wrap;
-    background-color: rgba(219, 219, 219, 0.2);
-    padding: 15px;
-    border-radius: 15px;
-    
+/* Categories Scrolling */
+.scroll-container-wrapper {
+    position: sticky;
+    top: 70px;
+    width: 100%; /* Adjust width as needed */
+    margin: 0 auto;
+    overflow: hidden; /* Hide the overflowing content */
+    z-index: 2;
+    background-color: #eefef9;
 }
 
-#course_cards{
+.scroll-container {
+    display: flex;
+    overflow-x: auto; /* Enables horizontal scrolling */
+    white-space: nowrap; /* Prevents items from wrapping to the next line */
+    scroll-behavior: smooth; /* Smooth scrolling effect */
+    padding: 10px 25px;
+}
+
+/* Individual items */
+.scroll-item {
+    display: inline-block;
+    margin-right: 25px;
+    color: rgb(96, 96, 96);
+    text-align: center;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.scroll-item.active {
+    color: black;
+    font-weight: 500;
+    border-bottom: 2px solid #8ec8b5  ;
+}
+
+/* Hide scrollbar */
+.scroll-container::-webkit-scrollbar {
+    display: none;
+}
+.scroll-container {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+/* Left and Right buttons */
+.scroll-button {
+    position: absolute;
+    top: 50%;
+    background-color: transparent;
+    transform: translateY(-50%);
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10; 
+    border-radius: 50%;
+    font-size: 22px;
+    width: 40px; 
+    height: 40px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 21px;
+}
+
+.scroll-button.left {
+    left: -5px; 
+}
+
+.scroll-button.right {
+    right: -5px; 
+}
+
+/* Optional: Show buttons when hovering over the container */
+.scroll-container-wrapper:hover .scroll-button {
+    display: flex;
+}
+
+#course_cards_div{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    background-color: rgba(226, 226, 226, 0.1);
+    padding: 15px;
+    border-radius: 15px;
+    margin-bottom: 50px;
+    overflow: hidden;
+
+}
+
+#course_cards_div a{
     position: relative;
     text-decoration: none;
     color: black;
@@ -50,9 +130,11 @@ h2,h3,h4,h5{
     width:320px;
     background-color: white;
     border-radius: 10px;
-    margin: 10px;
+    margin: 8px;
     box-shadow: rgba(127, 127, 127, 0.6) 5px 10px 20px -3px, rgba(0, 0, 0, 0.3) 0px 4px 6px -2px;
     transition: .3s;
+    overflow: hidden;
+
 }
 .offer_lable{
     position: absolute;
@@ -65,8 +147,8 @@ h2,h3,h4,h5{
     box-shadow: 2px 2px 5px gray;
     color: rgb(255, 255, 255);
 }
-#course_cards:hover{
-    transform: translateY(-15px);
+#course_cards_div a:hover{
+    transform: translateY(-10px);
 }
 .course_title {
     height: 50%;
@@ -112,9 +194,9 @@ h2,h3,h4,h5{
         font-size: 23px;
 
     }
-}
-@media screen and (max-width:1200px){
-    #course_cards_div{  
-        justify-content:center ;
+    #course_cards_div{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
     }
 }

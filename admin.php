@@ -41,8 +41,8 @@
                     </div>
 
                     <div>
-                        <label for="category">Category</label>
-                        <select class="form-control" id="cars" name="cars">
+                        <label for="category">Domain</label>
+                        <select class="form-control" id="category" name="category">
                             <option value=""></option>
                             <?php
                             if ($ans->num_rows > 0) {
@@ -53,6 +53,24 @@
                             ?>
                         </select>
                         <a id="ct_on_btn" onclick="cat_on_btn()" class="btn btn-primary m-2">+ Add new</a>
+                    </div>
+
+                    <div>
+                    <?php
+                        $qur = "SELECT title FROM course_form";
+                        $sbans = $conn->query($qur);
+                    ?>
+                        <label for="sbdomain">Sub Domain</label>
+                        <select class="form-control" id="sbdomain" name="sbdomain">
+                            <option value=""></option>
+                            <?php
+                            if ($sbans->num_rows > 0) {
+                                while ($row = $sbans->fetch_assoc()) {
+                                    echo "<option value='{$row['title']}'>{$row['title']}</option>";
+                                }
+                            }
+                            ?>
+                        </select>
                     </div>
 
                     <div>
@@ -80,6 +98,11 @@
                     <div>
                         <label for="description">Description:</label><br>
                         <textarea class="form-control" name="description" id="description"></textarea>
+                    </div>
+
+                    <div>
+                        <label for="main_domain">Is Main Domain</label>
+                        <input type="checkbox" id="main_domain" name="main_domain" value="main_domain">
                     </div>
 
                     <div>

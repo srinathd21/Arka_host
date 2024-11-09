@@ -7,7 +7,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT * FROM course_form WHERE title LIKE ?";
+$sql = "SELECT * FROM course_form WHERE title LIKE ?  and main_domain is null";
 $stmt = $conn->prepare($sql);
 
 $search_val = '%' . $search_val . '%'; // Add wildcards to the variable

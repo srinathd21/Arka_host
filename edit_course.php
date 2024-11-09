@@ -17,12 +17,14 @@ if (isset($_GET['id'])) {
     if ($course) {
         $title = $course['title'];
         $category = $course['category'];
+        $sub_domain = $course['sub_domain'];
         $hours = $course['hours'];
         $cost = $course['cost'];
         $syllabus = $course['syllabus'];
         $img_path = $course['img_path']; // Added for image path
         $description = $course['description'];
         $trending = $course['trending'] == 'Yes' ? 'checked' : '';
+        $main_domain = $course['main_domain'] == 'Yes' ? 'checked' : '';
         $offer = $course['offer'] == 'Yes' ? 'checked' : '';
         $special = $course['special'] == 'Yes' ? 'checked' : '';
     } else {
@@ -80,6 +82,23 @@ if (isset($_GET['id'])) {
                             ?>
                         </select>
                     </div>
+                    <div>
+                    <?php
+                        $qur = "SELECT title FROM course_form";
+                        $sbans = $conn->query($qur);
+                    ?>
+                        <label for="">Sub Domain</label>
+                        <select class="form-control" id="cars" name="sbdomain">
+                            <option value=""></option>
+                            <?php
+                            if ($sbans->num_rows > 0) {
+                                while ($row = $sbans->fetch_assoc()) {
+                                    echo "<option value='{$row['title']}'" . ($row['title'] == $sub_domain ? ' selected' : '') . ">{$row['title']}</option>";
+                                }
+                            }
+                            ?>
+                        </select>
+                    </div>
 
                     <div>
                         <label for="hours">Hours:</label><br>
@@ -110,7 +129,10 @@ if (isset($_GET['id'])) {
                             id="description"><?php echo $description; ?></textarea>
                     </div>
 
-
+                    <div>
+                        <label for="main_domain">Is Main Domain</label>
+                        <input type="checkbox" id="main_domain" name="main_domain" value="main_domain" <?php echo $main_domain; ?>>
+                    </div>
                     <div>
                         <label for="Trending"> Trending</label>
                         <input type="checkbox" id="Trending" name="Trending" value="Trending" <?php echo $trending; ?>>

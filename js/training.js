@@ -1,7 +1,7 @@
 let outerContainer = document.querySelector(".all_courses_container")
 let innerContainer_1 = outerContainer.querySelector(".all_courses_list")
 let innerContainer = outerContainer.getElementsByTagName("a")
-let innercardWidth = innerContainer_1.clientWidth+14
+let innercardWidth = innerContainer_1.clientWidth+10
 
 console.log(innerContainer)
 let bodywidth = 3
@@ -32,7 +32,7 @@ function onSwipeRight() {
 function onSwipeLeft() {
     if (-totalwidth != ((innerContainer_1.style.marginLeft.slice(0, -2)))) {
         //console.log((innerContainer_1.style.width.slice(0,-2))-innercardWidth)
-        innerContainer_1.style.marginLeft = ((+innerContainer_1.style.marginLeft.slice(0, -2)) - innercardWidth) + "px"
+        innerContainer_1.style.marginLeft = ((+innerContainer_1.style.marginLeft.slice(0, -2)) - innercardWidth) + "px";
     }
 }
 

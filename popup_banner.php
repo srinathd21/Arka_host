@@ -2,7 +2,7 @@
 
 <div class="popup_banner">
     <div class="banner_content">
-        <button class="banner_close_btn" onclick="banner_close()">X</button>
+        <button class="banner_close_btn" onclick="banner_close()"><i class="fa-solid fa-x"></i></button>
         <div class="banner_getdata">
             <div class="popbanner_title">
                 <h3>Get in touch</h3>
@@ -56,8 +56,6 @@
         }
     setTimeout(closeTq, 3000); 
     }
-
-    setTimeout(showAd, 5000);
 
     // Check if the ad has been shown before
     // if (!localStorage.getItem('adShown')) {

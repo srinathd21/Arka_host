@@ -95,7 +95,7 @@
         <div class="text-center">
             <div class="foot_social_media mb-3">
                 <a href="https://www.facebook.com/share/15UQWBSVqL/?mibextid=LQQJ4d" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
                 <a href="https://www.instagram.com/arka.officially/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
                 <a href="https://www.linkedin.com/company/arka-technologies-ind/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
             </div>

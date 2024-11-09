@@ -40,69 +40,79 @@
         <span class="course_grd_text" data-aos="fade-right" data-aos-duration="1300">Explore Our Courses and Unlock <br>
             Your Potential</span>
 
-        <p class="mt-4 crs_para" data-aos="fade-left" data-delay="100">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil error magni ratione
-            dolore in est qui id vero
-            unde quae, aspernatur impedit temporibus voluptate officiis quod nulla illum veritatis tempore maiores
-            molestiae consectetur ipsa earum! Animi possimus cumque voluptatem ipsum? Deserunt rerum ipsam dicta
-            corporis maxime voluptate velit fugiat veniam.</p>
+        <p class="mt-4 crs_para" data-aos="fade-left" data-delay="100">Empowers efficiency, automates tasks, enables innovation, and facilitates seamless communication and collaboration.</p>
     </div>
 
+    <div class="scroll-container-wrapper">
+        <button class="scroll-button left">&#8249;</button>
+        <?php
+        $qur = "SELECT * FROM course_category";
+        $ans = $conn->query($qur);
+        ?>
 
-
-    <div class="container mt-5">
-        <div class="mb-3">
+        <div class="scroll-container">
             <?php
-            $course_catagory_name = isset($_GET['category']) ? $_GET['category'] : 'Software';
-            echo "<h3>{$course_catagory_name} Courses</h3>";
-            ?>
-        </div>
-        <div id="course_cards_div">
+            if ($ans->num_rows > 0) {
+                while ($row = $ans->fetch_assoc()) {
 
-            <?php
-
-            $sql = "SELECT * FROM course_form WHERE category = ?";
-            $stmt = $conn->prepare($sql);
-            $stmt->bind_param("s", $course_catagory_name);
-            $stmt->execute();
-            $result = $stmt->get_result();
-            if ($result->num_rows > 0) {
-
-                // Loop through the result set
-                while ($row = $result->fetch_assoc()) {
-                    echo "<a href='course_details.php?category={$course_catagory_name}&title={$row["title"]}' id='course_cards' class='course_cards' data-aos='fade-right'>";
-                    if ($row['offer'] == 'Yes') {
-                        echo '<span class="offer_lable">Offer</span>';
-                    }
-                    echo "<div class='course_title'>";
-
-                    echo "<h4 class=''>" . $row["title"] . "</h4>";
-                    echo "<p>Extensive syllabus</p>";
-                    echo '<span><i class="fa-solid fa-book-open"></i>Specialized certificate</span>';
-
-                    echo "</div>";
-
-                    echo '<div class="course_details">
-                                    <span><i class="fa-regular fa-calendar-days"></i>' . $row["hours"] . 'Hours</span><br>
-                                    <span><i class="fa-regular fa-circle-check"></i>Certification program</span>
-                                    <div class="crs-msg">
-                                        <span><span>*</span>Including Internship, Project Guidance, Career Guidance</span>
-                                    </div>
-                                    
-                                    <span class="crs_tC">*T&C Apply</span>
-                                </div>';
-
-                    echo "</a>";
+                    echo "<a class='scroll-item' href='#{$row['category']}' onclick='coursechanger(event)'>{$row['category']}</a>";
                 }
-
-            } else {
-                echo "<tr><td colspan='5'>No data found</td></tr>";
             }
-
-            echo "</div>";
             ?>
         </div>
+        <button class="scroll-button right">&#8250;</button>
     </div>
-    
+
+
+
+    <div class="container coursecontainer mt-3">
+        
+    </div>
+
+    <script>
+        function coursechanger(e) {
+            const coursecategory = e.target.innerText;
+            const coursecontainer = document.querySelector('.coursecontainer')
+            console.log(coursecategory)
+            // Use AJAX to fetch the courses for the selected category
+           const xhr = new XMLHttpRequest();
+            xhr.open("GET", "ajaxresponse.php?coursecategory=" + coursecategory, true);
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    coursecontainer.innerHTML = xhr.responseText; // Update the course list with the response
+                }
+            };
+            xhr.send();
+        }
+    </script>
+    <script>
+    const items = document.querySelectorAll('.scroll-item');
+
+    items.forEach(item => {
+        item.addEventListener('click', () => {
+            // Remove 'active' class from all items
+            items.forEach(i => i.classList.remove('active'));
+
+            // Add 'active' class to the clicked item
+            item.classList.add('active');
+        });
+    });
+</script>
+
+    <script>
+        const scrollContainer = document.querySelector('.scroll-container');
+        const leftButton = document.querySelector('.scroll-button.left');
+        const rightButton = document.querySelector('.scroll-button.right');
+
+        leftButton.addEventListener('click', () => {
+            scrollContainer.scrollLeft -= 600; // Adjust scroll distance as needed
+        });
+
+        rightButton.addEventListener('click', () => {
+            scrollContainer.scrollLeft += 600; // Adjust scroll distance as needed
+        });
+    </script>
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script>

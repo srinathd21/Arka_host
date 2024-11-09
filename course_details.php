@@ -199,8 +199,8 @@
             </div>
             <div class="">
                 <img src="img/thumbs-up-solid.svg" alt="">
-                <h3>100%</h3>
-                <h5>Placement Support</h5>
+                <h3>300%</h3>
+                <h5>Job Assistance</h5>
             </div>
         </div>
     </div>
@@ -215,19 +215,19 @@
             <div class="benefits_txt col-lg-6 col-md-12">
                 <div data-aos="fade-left" data-aos-duration="1000">
                     <img src="img/thumbs-up-regular.svg" alt="">
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                    <p>Comprehensive curriculum designed by industry experts.</p>
                 </div>
                 <div data-aos="fade-left" data-aos-duration="1000" data-aos-delay="50">
                     <img src="img/thumbs-up-regular.svg" alt="">
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                    <p>Hands-on learning with state-of-the-art lab facilities.</p>
                 </div>
                 <div data-aos="fade-left" data-aos-duration="1000" data-aos-delay="100">
                     <img src="img/thumbs-up-regular.svg" alt="">
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                    <p>Industry-recognized certifications to boost career prospects.</p>
                 </div>
                 <div data-aos="fade-left" data-aos-duration="1000" data-aos-delay="150">
                     <img src="img/thumbs-up-regular.svg" alt="">
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                    <p>Real-world exposure through industry partnerships.</p>
                 </div>
             </div>
         </div>
@@ -240,10 +240,11 @@
 
         <div class="row">
             <div class="col-lg-6 col-md-12 crs_about_txt ">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim quae laudantium aspernatur illo
-                    explicabo ea velit commodi nulla consectetur harum. Ea exercitationem quis assumenda cum rem
-                    nesciunt quaerat suscipit voluptatibus iure enim placeat, quas, minima quasi nemo cumque error
-                    perspiciatis eaque vero, rerum dolore labore voluptatum ipsam accusamus! Facere, quaerat!</p>
+                <p>Arka has empowered over 50,000+ learners through its offline classes,
+seminars, webinars, workshops and corporate trainings in cooperation with
+companies and organizations with a mission to offering high-quality education,
+arka has a network of in-collaboration with 75+ industries and top institutions
+across South-India and continue to serve onto the mission.</p>
             </div>
             <div class="col-lg-6 col-md-12 text-center aboutus_img">
                 <img src="img/aboutus.png" alt="About Us">
