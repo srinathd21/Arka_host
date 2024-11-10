@@ -33,7 +33,7 @@ if ($result->num_rows > 0) {
             echo "</div>";
         } else if (!$course_details['sub_domain']) {
             echo "<div id='subCourseTitle'>";
-            echo "<a href='course_details.php?category={$course_catagory_name}&title={$course_details['title']}'>{$course_details['title']}</a>";
+            echo "<a  href='course_details.php?category={$course_catagory_name}&title={$course_details['title']}'>{$course_details['title']}</a>";
             echo "</div>";
         }
 

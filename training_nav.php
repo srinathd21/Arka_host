@@ -166,6 +166,15 @@ $ans = $conn->query($qur);
         </div>
     </div>
 </div>
+
+<script>
+    const mainTitle = document.getElementById('mainTitle');
+    const subDomain = document.getElementById('sub_domain');
+
+    mainTitle.addEventListener('click', () => {
+        subDomain.classList.toggle('open');
+    });
+</script>
 <script>
     var sidenav = document.querySelector('.course_catgr_side_nav')
     var subsidenav = document.querySelector('.side_nav_sub_catgr')

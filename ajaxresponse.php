@@ -21,6 +21,7 @@ echo "<h3>{$course_catagory_name} Courses</h3>";
 echo '</div>';
 
 echo '<div id="course_cards_div">';
+
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
         echo '<a href="course_details.php?category='.$course_catagory_name.'&title='.$row["title"].'">';

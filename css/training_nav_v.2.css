@@ -172,7 +172,9 @@ nav {
 .course_dropdown:hover .course_dropbtn img{
     transform: rotate(180deg);
 }
-
+.catgr_side_nav_content{
+    overflow-y: auto;
+}
 #course_dropdown_mob{
     display: none;
 }
@@ -259,9 +261,10 @@ nav {
     height: 100%;
     width: 100%;
     top: 70px;
-    z-index: 2;
+    z-index: 3;
     transform: translateX(100%);
     transition: 0.2s;
+    overflow-y: auto;
 }
 .catgr_side_nav_title{
     font-size: 20px;
@@ -333,13 +336,16 @@ nav {
     transform: translateX(0%);
 }
 #sub_domain{
-    display:none ;
+    height: 0px;
+    overflow: hidden;
     background-color: white;
     box-shadow: 2px 2px 5px rgb(210, 210, 210,0.2),-2px -2px 5px rgb(210, 210, 210,0.2);
     width: 80%;
     border-radius: 5px;
     margin: 5px auto;
     color: red !important;
+    transition: 0.1s;
+    box-sizing: border-box;
 }
 #sub_domain>a{
     display: block;
@@ -353,7 +359,7 @@ nav {
     border: none;
 }
 #mainTitle:hover #sub_domain{
-    display: block;
+    height: 100%;
 }
 #mainTitle span:hover #maintitleIcon{
     transform: rotate(180deg);
