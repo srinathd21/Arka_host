@@ -161,7 +161,7 @@ nav {
     display: block;
 }
 
-.course_dropdown-content a:hover {
+.course_dropdown-content a:hover,#mainTitlePc span:hover {
     background-color: #49ba4d;
     color: white;
 }
@@ -184,11 +184,15 @@ nav {
 .catgr_link_btn{
     position: relative;
 }
-.catgr_link_btn img{
+.catgr_link_btn img,#mainTitlePc span img{
     position: absolute;
-    right: 20px;
-    top: 18px;
+    right: 10px;
+    top: 15px;
     width: 8px;
+}
+#mainTitlePc span img{
+    top: 13px;
+ 
 }
 .catgr_dropdown_content{
     display: none;
@@ -199,15 +203,33 @@ nav {
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.5);
     background-color: rgb(255, 255, 255);
 }
-.catgr_dropdown_content a{
+.catgr_dropdown_content a,.catgr_dropdown_content span{
     color: black;
     padding: 7px 16px;
     text-decoration: none;
     display: block;
 }
-.catgr_link:hover .catgr_dropdown_content{
+
+#mainTitlePc{
+    position: relative;
+}
+#mainTitlePc span{
+    position: relative;
+}
+#sub_domainPc{
+    display: none;
+    position: absolute;
+    top: 5px;
+    right: -200px;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.5);
+    background-color: rgb(255, 255, 255);
+}
+
+.catgr_link:hover .catgr_dropdown_content,#mainTitlePc:hover #sub_domainPc{
     display: block;
 }
+
 
 .nav_links>div{
     display: inline-block;

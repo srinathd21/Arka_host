@@ -10,7 +10,7 @@ if ($conn->connect_error) {
 }
 
 // Query to get courses for the selected category
-$sql = "SELECT * FROM course_form WHERE category = ? and main_domain is null";
+$sql = "SELECT * FROM course_form WHERE category = ?  and main_domain='No'";
 $stmt = $conn->prepare($sql);
 $stmt->bind_param("s", $course_catagory_name);
 $stmt->execute();

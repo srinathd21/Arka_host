@@ -119,7 +119,7 @@
                                 style="">Explore all courses<i class="fa-solid fa-arrow-right"></i></a>
                         </div>
                         <?php
-                        $query = 'SELECT * FROM course_form where special="Yes"';
+                        $query = 'SELECT * FROM course_form where special="Yes" and main_domain="No"';
                         $ans = $conn->query($query);
                         ?>
                         <div class="all_courses_container ">
@@ -165,7 +165,7 @@
             <h2>Trending courses</h2>
         </div>
         <?php
-        $query = 'SELECT * FROM course_form where trending="Yes"';
+        $query = 'SELECT * FROM course_form where trending="Yes"  and main_domain="No"';
         $ans = $conn->query($query);
         ?>
         <div class="trand_courses_container ">
@@ -214,7 +214,7 @@
             <!-- The slideshow/carousel -->
             <div class="carousel-inner">
                 <?php
-                $query = 'SELECT * FROM course_form where trending="Yes"';
+                $query = 'SELECT * FROM course_form where trending="Yes"  and main_domain="No"';
                 $ans = $conn->query($query);
 
                 if ($ans->num_rows > 0) {
