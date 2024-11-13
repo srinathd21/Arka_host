@@ -140,7 +140,7 @@ body {
     display: inline-block;
     position: relative;
     left: 10%;
-    top: 10px;
+    top: 20px;
 
 }
 .crs_syllabus_model li{
@@ -165,10 +165,10 @@ body {
 .lineicon{
     display: inline-block;
     height: 17px;
-    border: 0.1px solid rgba(125, 125, 125, 0.7);
+    border: 2px solid rgba(125, 125, 125, 0.4);
     border-radius: 2px;
     margin-top: 3px;
-    margin-left: -14px;
+    margin-left: -14.8px;
 }
 .lineicon:last-child{
     visibility: hidden;

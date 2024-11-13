@@ -57,8 +57,8 @@
                                 <span id='grd_text'>{$course_details['hours']} hours</span>
                             </div>
                             <div>
-                                <h4>Fees</h4>
-                                <span id='grd_text'>Rs: {$course_details['cost']}</span>
+                                <h4>Mode</h4>
+                                <span id='grd_text'>Offline / Online</span>
                             </div>
                         </div>";
 
@@ -145,7 +145,7 @@
             </div>
             <div class="syllabus_content">
 
-                <ul class="crs_syllabus_model">
+                <ul class="crs_syllabus_model  mt-4">
                     <?php
                     $sql = "SELECT syllabus FROM course_form WHERE title = ?";
                     $stmt = $conn->prepare($sql);
