@@ -352,6 +352,10 @@
 
     <script src="js/training.js"></script>
 
+    <script>
+        setTimeout(openuserform, 5000);
+    </script>
+
     <!--  Font Awesome  -->
     <script src="https://kit.fontawesome.com/8b7cdef8f0.js" crossorigin="anonymous"></script>
 </body>

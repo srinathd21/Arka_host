@@ -113,5 +113,4 @@
     usercontact.addEventListener('input', updateButtonState);
     username.addEventListener('input', updateButtonState);
 
-    setTimeout(openuserform, 5000);
     </script>
