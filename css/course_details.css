@@ -141,6 +141,9 @@ body {
     position: relative;
     left: 10%;
     top: 20px;
+    width: 80%;
+    height: 480px;
+    overflow-X:auto;
 
 }
 .crs_syllabus_model li{

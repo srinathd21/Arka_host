@@ -14,6 +14,8 @@
     <?php include "topnav.php"; ?>
     <?php include "training_nav.php"; ?>
 
+    <?php include 'popup2.php'; ?>
+
     <?php include 'db_link.php'; ?>
     <?php
 

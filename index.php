@@ -23,53 +23,8 @@
 
     <?php include 'training_nav.php'; ?>
 
-    <div class="UserFormFrontPage">
-        <form class="UserInnerForm">
-
-            <span onclick="closeuserform()"><i class="fa-solid fa-x"></i></span>
-
-            <h4 class="mb-3">Interested to learn <br> new skills?</h4>
-
-            <div><input id="username" type="text" name="name" placeholder="Name"></div>
-            <div><input id="usercontact" type="tel" name="contact" placeholder="Phone Number"></div>
-            <div><input type="email" name="email" placeholder="Mail ID(optional)"></div>
-
-            <div>
-                <p>87% learners upskilling to get high paying IT jobs</p>
-            </div>
-
-            <button id="userformbtn" type="submit" disabled>I'm interested</button>
-
-        </form>
-    </div>
-    <script>
-        var userform = document.querySelector('.UserFormFrontPage');
-        var userbtn = document.getElementById('userformbtn');
-        var username = document.getElementById('username');
-        var usercontact = document.getElementById('usercontact');
-
-        function closeuserform() {
-            userform.style.display = 'none';
-        }
-        function openuserform() {
-            userform.style.display = 'block';
-        }
-        function updateButtonState() {
-        if (username.value.length > 2 && usercontact.value.length > 9) {
-            userbtn.style.background = '#008535';
-            userbtn.style.color = 'white';
-            userbtn.disabled = false;
-        } else {
-            userbtn.style.background = '#d9d9d9';
-            userbtn.style.color = '#1e1e1e';
-            userbtn.disabled = true;
-        }
-    }
-    usercontact.addEventListener('input', updateButtonState);
-    username.addEventListener('input', updateButtonState);
-
-    setTimeout(openuserform, 5000);
-    </script>
+    <?php include 'popup2.php'; ?>
+    
 
     <div style="position:relative;" class="">
         <img class="cover_img_pc" src="img/Arka-Cover-1920x600-Individual.avif" width="100%" alt="">
@@ -387,10 +342,13 @@
 
 
     <?php include 'std_doubts.php'; ?>
+    
 
     <?php include 'supports.php'; ?>
 
     <?php include "training_footer.php"; ?>
+
+    
 
     <script src="js/training.js"></script>
 

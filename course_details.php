@@ -16,7 +16,7 @@
 
     <?php include "topnav.php"; ?>
     <?php include "training_nav.php"; ?>
-
+    <?php include 'popup2.php'; ?>
     <div class="container" id="first_container">
         <div class="course_details_card" data-aos="fade-down" data-aos-duration="1500">
             <?php
@@ -320,12 +320,17 @@ across South-India and continue to serve onto the mission.</p>
 
         function opensyllabus() {
             let syllabusdiv = document.querySelector('.syllabus_mob')
+            let body = document.querySelector('body')
             syllabusdiv.style.transform = 'translateY(0px)';
             syllabusdiv.style.position = 'fixed';
+            body.style.overflow = 'hidden';
         }
 
         function Closesyllabus() {
             let syllabusdiv = document.querySelector('.syllabus_mob')
+            let body = document.querySelector('body')
+
+            body.style.overflow = 'auto';
             syllabusdiv.style.transform = 'translateY(645px)';
             syllabusdiv.style.position = 'static';
         }

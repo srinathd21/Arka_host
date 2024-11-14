@@ -286,7 +286,6 @@ nav {
     z-index: 3;
     transform: translateX(100%);
     transition: 0.2s;
-    overflow-y: auto;
 }
 .catgr_side_nav_title{
     font-size: 20px;
@@ -312,17 +311,25 @@ nav {
     top: -2px;
     left: -5px;
 }
-
+.catgr_side_nav_overflow{
+    height: 80vh;
+    overflow-y: auto;
+}
 .catgr_side_dropdown{
     display: flex;
     flex-direction: column;
     position: relative;
+    
 }
 .catgr_side_dropdown >img{
     width: 7px;
     position: absolute;
     right: 25px;
     top: 21px;
+}
+#subCourseDiv{
+    height: 80vh;
+    overflow: auto;
 }
 .catgr_drop_btn, #subCourseTitle>a, #mainTitle>span{
     display: block;
@@ -358,7 +365,6 @@ nav {
     transform: translateX(0%);
 }
 #sub_domain{
-    height: 0px;
     overflow: hidden;
     background-color: white;
     box-shadow: 2px 2px 5px rgb(210, 210, 210,0.2),-2px -2px 5px rgb(210, 210, 210,0.2);
@@ -366,8 +372,8 @@ nav {
     border-radius: 5px;
     margin: 5px auto;
     color: red !important;
-    transition: 0.1s;
     box-sizing: border-box;
+    display: none;
 }
 #sub_domain>a{
     display: block;
@@ -380,12 +386,7 @@ nav {
 #sub_domain>a:last-child{
     border: none;
 }
-#mainTitle:hover #sub_domain{
-    height: 100%;
-}
-#mainTitle span:hover #maintitleIcon{
-    transform: rotate(180deg);
-}
+
 @media screen and (min-width: 992px) {
     .srch_input{
         display: block !important;

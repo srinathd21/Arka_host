@@ -82,7 +82,7 @@ $ans = $conn->query($qur);
             </div>
 
             <div>
-                <a href="#footer_container" href="#arka-supports" >Support</a>
+                <a style="cursor:pointer;" onclick="openuserform()" >Support</a>
             </div>
 
             <div>
@@ -118,6 +118,10 @@ $ans = $conn->query($qur);
                 <div>
                     <a id="top_nav_link_mob" href="index.php">For Training</a>
                 </div>
+
+                <div>
+                <a id="top_nav_link_mob" style="cursor:pointer;" onclick="openuserform()" >Support</a>
+            </div>
             </div>
         </div>
         <div id="nav_last_btn" style="">
@@ -157,6 +161,7 @@ $ans = $conn->query($qur);
     ?>
 
     <div class="catgr_side_nav_content">
+        <div class="catgr_side_nav_overflow">
         <?php
         // Populate the custom dropdown with course categories
         if ($ans->num_rows > 0) {
@@ -171,6 +176,7 @@ $ans = $conn->query($qur);
             }
         }
         ?>
+        </div>
         <div class='side_nav_sub_catgr'>
             <div class="mb-4">
                 <h1 class="catgr_side_nav_title">Courses</h1>
@@ -186,22 +192,34 @@ $ans = $conn->query($qur);
 </div>
 
 <script>
-    const mainTitle = document.getElementById('mainTitle');
-    const subDomain = document.getElementById('sub_domain');
+  function toggleCollapse(headerElement) {
+    // Select the content element that follows the header
+    const content = headerElement.nextElementSibling;
+    const icon = headerElement.querySelector('#maintitleIcon');
 
-    mainTitle.addEventListener('click', () => {
-        subDomain.classList.toggle('open');
-    });
+    // Toggle display of the content
+    if (content.style.display === 'none' || content.style.display === '') {
+      content.style.display = 'block';
+      icon.style.transform = 'rotate(180deg)'; 
+    } else {
+      content.style.display = 'none';
+      icon.style.transform = 'rotate(0deg)'; 
+    }
+  }
+
 </script>
 <script>
     var sidenav = document.querySelector('.course_catgr_side_nav')
     var subsidenav = document.querySelector('.side_nav_sub_catgr')
+    var body = document.querySelector('body')
 
     function opensidenav() {
         sidenav.style.transform = "translateX(0%)"
+        body.style.overflow = 'hidden';
     }
     function sidenavBack() {
         sidenav.style.transform = "translateX(100%)"
+        body.style.overflow = 'auto';
     }
 
     function loadSubCourse(categoryName) {
