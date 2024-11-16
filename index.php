@@ -13,7 +13,7 @@
     <?php include 'links.php'; ?>
 
     <!-- css -->
-    <link rel="stylesheet" href="css/training_v.0.9.css">
+    <link rel="stylesheet" href="css/index.v.0.1.css">
 </head>
 
 <body>

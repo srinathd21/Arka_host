@@ -71,7 +71,7 @@
             echo '
             
             <div class="crs_img_card">
-                <img src="<?php echo $img_path; ?>" class="img-fluid" alt="Course Image">
+                <img src="' . $img_path . '" class="img-fluid" alt="Course Image">
             </div>
 
 
@@ -119,7 +119,7 @@
                                 $data = $row['syllabus'];
 
                                 // Split the data by commas into an array
-                                $dataArray = explode(",", $data);
+                                $dataArray = explode(";", $data);
                                 foreach ($dataArray as $item) {
                                     echo "<li>" . htmlspecialchars(trim($item)) . "</li>";
                                     echo '<span class="lineicon"></span>';
@@ -162,7 +162,7 @@
                         $data = $row['syllabus'];
 
                         // Split the data by commas into an array
-                        $dataArray = explode(",", $data);
+                        $dataArray = explode(";", $data);
                         foreach ($dataArray as $item) {
                             echo "<li>" . htmlspecialchars(trim($item)) . "</li>";
                             echo '<span class="lineicon"></span>';
