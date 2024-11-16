@@ -24,12 +24,18 @@
         <div class="new_category_div">
             <a onclick="cat_btn_close()">X</a>
             <form action="add_category.php" method="POST">
-                <label for="new_category">Add new Category:</label><br>
+                <label for="new_category">Category name:</label><br>
                 <input class="form-control mt-2" type="text" id="new_category" name="cat_name" required>
+                <label for="des">Description</label>
+                <textarea class="form-control mt-2" type="text" id="des" name="cat_descp" required></textarea>
                 <div class="text-center mt-4">
                     <button type="submit" class="btn btn-success px-4">Add</button>
                 </div>
             </form>
+        </div>
+        <div class="grpBtn">
+            <a class="btn btn-success" href="course_list.php">View all Courses</a>
+            <a class="btn btn-primary" href="customer_list.php">Customer List</a>
         </div>
         <form class="form1" action="add_course.php" method="post" enctype="multipart/form-data">
 
@@ -56,11 +62,11 @@
                     </div>
 
                     <div>
-                    <?php
-                        $qur = "SELECT title FROM course_form";
+                        <?php
+                        $qur = "SELECT title FROM course_form where main_domain='Yes'";
                         $sbans = $conn->query($qur);
-                    ?>
-                        <label for="sbdomain">Sub Domain</label>
+                        ?>
+                        <label for="sbdomain">Select Main Domain</label>
                         <select class="form-control" id="sbdomain" name="sbdomain">
                             <option value=""></option>
                             <?php
@@ -87,7 +93,7 @@
                 <div class="card_2">
                     <div>
                         <label for="syllabus">Syllabus:</label><br>
-                        <textarea class="form-control" type="te" id="syllabus" name="syllabus" required></textarea>
+                        <textarea class="form-control" id="syllabus" name="syllabus" required></textarea>
                     </div>
 
                     <div>
@@ -122,24 +128,22 @@
                 </div>
             </div>
 
-            <div class="mt-2">
+            <div class="resetbtn mt-2">
                 <input class="btn btn-danger" type="reset" value="Reset">
             </div>
 
-            <div class="text-center">
+            <div class="submitbtn text-center">
                 <input class="btn btn-success px-5 py-2" type="submit" value="Submit">
             </div>
         </form>
 
-        <br><br>
-        <a href="course_list.php" class="allcrs">View all Courses</a>
     </div>
 
     <script>
         var add_category = document.querySelector(".new_category_div");
 
         function cat_on_btn() {
-            add_category.style.height = "180px";
+            add_category.style.height = "auto";
         }
         function cat_btn_close() {
             add_category.style.height = "0px";

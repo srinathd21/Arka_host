@@ -24,7 +24,7 @@
     <?php include 'training_nav.php'; ?>
 
     <?php include 'popup2.php'; ?>
-    
+
 
     <div style="position:relative;" class="">
         <img class="cover_img_pc" src="img/Arka-Cover-1920x600-Individual.avif" width="100%" alt="">
@@ -130,7 +130,7 @@
                     echo '<a class="trend_courses_list" href="course_details.php?category=' . $row["category"] . '&title=' . $row["title"] . '">
                 <div class="course_title">';
                     if ($row['offer'] == 'Yes') {
-                        echo '<span class="offer_lable">Offer</span>';
+                        echo '<div class="offer_lable"><span>Offer</span></div>';
                     }
                     echo '<h2 class="">' . $row["title"] . '</h2>
                     <p>Extensive syllabus</p>
@@ -342,18 +342,41 @@
 
 
     <?php include 'std_doubts.php'; ?>
-    
+
 
     <?php include 'supports.php'; ?>
 
     <?php include "training_footer.php"; ?>
 
-    
+
 
     <script src="js/training.js"></script>
 
     <script>
-        setTimeout(openuserform, 5000);
+        function getCookie(cname) {
+            let name = cname + "=";
+            let decodedCookie = decodeURIComponent(document.cookie);
+            let ca = decodedCookie.split(';');
+            for (let i = 0; i < ca.length; i++) {
+                let c = ca[i];
+                while (c.charAt(0) == ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
+
+        function checkCookie() {
+            let user = getCookie("username");
+            if (user == "") {
+                setTimeout(openuserform, 5000);
+            } 
+        }
+        checkCookie()
+        
     </script>
 
     <!--  Font Awesome  -->

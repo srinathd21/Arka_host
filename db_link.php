@@ -7,11 +7,3 @@ $dbname = "u661449808_Arka"; // Your MySQL database name
 $conn = new mysqli($servername, $username, $password, $dbname);
 ?>
 
-<!-- 
-
-
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-
--->

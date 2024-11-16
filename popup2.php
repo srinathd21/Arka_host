@@ -65,7 +65,7 @@
 }
 </style>
 <div class="UserFormFrontPage">
-        <form class="UserInnerForm">
+        <form class="UserInnerForm" method="POST" action="customers.php">
 
             <span onclick="closeuserform()"><i class="fa-solid fa-x"></i></span>
 

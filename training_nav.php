@@ -10,9 +10,9 @@ $ans = $conn->query($qur);
 
 <div class="nav">
     <nav class="container">
-        <button class="btn d-lg-none" style="position:relative; left:-10px;" type="button" data-bs-toggle="offcanvas"
+        <button class="btn d-lg-none" style="width:40px;position:relative; left:-10px;" type="button" data-bs-toggle="offcanvas"
             data-bs-target="#demo">
-            <i class="fa-solid fa-bars" style="color: #000000;"></i>
+            <img id="nav-bar-icon" src="icons/bars-solid.svg" alt="">
         </button>
 
         <a href="index.php" class="logo_img ">
@@ -22,8 +22,8 @@ $ans = $conn->query($qur);
 
         <div class="srch_input">
             <input class="srch_input_1" type="text" placeholder="Search">
-            <button id="serachbtn" onclick="searchfetch()"><i class="fa-solid fa-magnifying-glass"
-                    style="color: #ffffff !important;"></i></button>
+            <button id="serachbtn" onclick="searchfetch()"><img src="icons/magnifying-glass-solid.svg"
+                    style="width:15px;margin-top:-2px;"></img></button>
 
             <div class="searchresultdiv">
                 <a href="">Search..</a>
@@ -134,9 +134,8 @@ $ans = $conn->query($qur);
                         alt=""></button>
             </div>
             <div>
-                <a href="https://www.google.com/maps/place/Arka+Networkz+System/@12.7360388,77.8222739,17z/data=!3m1!4b1!4m6!3m5!1s0x3bae7185e99a9cb5:0x3520348054405036!8m2!3d12.7360336!4d77.8248488!16s%2Fg%2F11t1ds8dv0?authuser=0&entry=ttu"
-                    target="_blank"> <i class="fa-solid fa-location-dot"
-                        style="font-size: 15px;margin-top:7.6px;display:inline-block; color: rgb(0, 0, 0);"></i></a>
+                <a id="icon-location" href="https://www.google.com/maps/place/Arka+Networkz+System/@12.7360388,77.8222739,17z/data=!3m1!4b1!4m6!3m5!1s0x3bae7185e99a9cb5:0x3520348054405036!8m2!3d12.7360336!4d77.8248488!16s%2Fg%2F11t1ds8dv0?authuser=0&entry=ttu"
+                    target="_blank" style="width:12px; margin-top:2px; display:inline-block;"><img src="icons/location-dot-solid.svg"></img></a>
             </div>
         </div>
 

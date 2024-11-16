@@ -5,11 +5,13 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$que = $conn->prepare("INSERT into course_category (category) values(?)");
+$que = $conn->prepare("INSERT into course_category (category, description) values(?, ?)");
 
-$que->bind_param("s", $category);
+$que->bind_param("ss", $category, $description);
 
 $category = $_POST['cat_name'];
+
+$description = $_POST['cat_descp'];
 
 $que->execute();
 

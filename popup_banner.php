@@ -8,17 +8,18 @@
                 <h3>Get in touch</h3>
             </div>
 
-            <div class="bannerinputs">
+            <form class="bannerinputs"  method="POST" action="customers.php">
+                <input type="hidden" name="course" id="ctitle">
                 <label for="name">Name</label>
-                <input type="text" name="name" id="name">
+                <input type="text" name="name" id="name" required>
+                <label for="contact">Contact</label>
+                <input type="tel" name="contact" id="contact" required>
                 <label for="email">Email</label>
                 <input type="email" name="email" id="email">
-                <label for="contact">Contact</label>
-                <input type="tel" name="contact" id="contact">
                 <div>
-                    <button onclick="opentq()" class="popupSendbtn">Next</button>
+                    <button type="submit" class="popupSendbtn">Next</button>
                 </div>
-            </div>
+            </form>
         </div>
         <div class="bannermsg">
             <div>
@@ -40,8 +41,10 @@
         localStorage.setItem('adShown', 'true');
     }
 
-    function showAd() {
+    function showAd(ctitle) {
+        console.log(ctitle)
         document.querySelector('.popup_banner').style.display = 'block';
+        document.getElementById('ctitle').value = ctitle;
     }
 
     let inptbox =document.querySelector(".banner_getdata")

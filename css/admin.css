@@ -9,19 +9,13 @@
 }
 .container{
     position: relative;
+   
 }
-.allcrs{
-    display: inline-block;
+.grpBtn{
     position: absolute;
-    right: 150px;
-    top: 0px;
-    text-decoration: none;
-    background-color: rgb(0, 147, 88);
-    color: white;
-    padding: 10px 40px;
-    border-radius: 5px;
+    right: 200px;
+    z-index: 2;
 }
-
 
 .cards{
     border: 2px solid gray;
@@ -34,6 +28,13 @@
     padding: 40px;
     width: 30vw;
     
+}
+.resetbtn{
+    display: inline-block;
+}
+.submitbtn{
+    display: inline-block;
+    margin-left: 31%;
 }
 .card_1 div, .card_2 div{
     margin-bottom: 25px;

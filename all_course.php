@@ -15,6 +15,7 @@
     <?php include "training_nav.php"; ?>
 
     <?php include 'popup2.php'; ?>
+    <?php include 'popup_banner.php'; ?>
 
     <?php include 'db_link.php'; ?>
     <?php
@@ -174,6 +175,32 @@
         rightButton.addEventListener('click', () => {
             scrollContainer.scrollLeft += 600; // Adjust scroll distance as needed
         });
+    </script>
+
+    <script>
+
+        const url = window.location.href;
+
+
+        const urlParams = new URLSearchParams(new URL(url).search);
+
+
+        const id = urlParams.get('userform');
+        if (id) {
+            function opentq() {
+                console.log('dsdasdasd')
+                document.querySelector('.popup_banner').style.display = 'block';
+                inptbox.style.display = 'none';
+                msgbox.style.display = 'block';
+
+                function closeTq() {
+                    document.querySelector('.popup_banner').style.display = 'none';
+                }
+                setTimeout(closeTq, 2000);
+            }
+            opentq()
+            
+        }
     </script>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

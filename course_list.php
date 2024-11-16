@@ -20,8 +20,10 @@
     }
 </style>
 <div class="p-5 table-responsive">
-    <div>
+    <div class="d-flex">
         <a href="admin.php" class="btn btn-success m-3">Add Course</a>
+    
+        <a href="category_list.php" class="btn btn-success m-3">View Category</a>
     </div>
     <table class="">
         <tr class="">

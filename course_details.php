@@ -9,7 +9,6 @@
 
     <link rel="stylesheet" href="css/course_details.css">
 
-    <link rel="stylesheet" href="css/popup_banner.css">
 </head>
 
 <body>
@@ -17,6 +16,7 @@
     <?php include "topnav.php"; ?>
     <?php include "training_nav.php"; ?>
     <?php include 'popup2.php'; ?>
+    <?php include 'popup_banner.php'; ?>
     <div class="container" id="first_container">
         <div class="course_details_card" data-aos="fade-down" data-aos-duration="1500">
             <?php
@@ -63,16 +63,13 @@
                         </div>";
 
                     echo '<div class="crs_crad_btn_mob text-center">
-                            <button onclick="popupform()" class="crs_apply_btn_mob">Apply Now</button>
+                            <button onclick="showAd(\'' . addslashes($course_details["title"]) . '\')" class="crs_apply_btn_mob">Apply Now</button>
                             <button onclick="opensyllabus()" class="crs_downlode_btn_mob">View Syllabus</button>
                         </div>';
                     echo "</div>";
-                }
-            } else {
-                echo "No course details found.";
-            }
-
-            ?>
+                
+            echo '
+            
             <div class="crs_img_card">
                 <img src="<?php echo $img_path; ?>" class="img-fluid" alt="Course Image">
             </div>
@@ -81,9 +78,14 @@
         </div>
 
         <div class="crs_crad_btn text-center">
-            <button onclick="popupform()" class="crs_apply_btn">Apply Now</button>
+            <button onclick="showAd(\'' . addslashes($course_details["title"]) . '\')" class="crs_apply_btn">Apply Now</button>
             <button class="crs_downlode_btn" data-bs-toggle="modal" data-bs-target="#myModal">View Syllabus</button>
-        </div>
+        </div>';
+    }
+} else {
+    echo "No course details found.";
+}
+        ?>
 
         <!--  Syllabus Mmodel Box -->
         <!-- The Modal -->
@@ -254,70 +256,10 @@ across South-India and continue to serve onto the mission.</p>
 
 
 
-    <div class="popup_banner">
-        <div class="banner_content">
-            <button class="banner_close_btn" onclick="banner_close()">X</button>
-            <div class="banner_getdata">
-                <div class="popbanner_title">
-                    <h3>Get in touch</h3>
-                </div>
-
-                <div class="bannerinputs">
-                    <label for="name">Name</label>
-                    <input type="text" name="name" id="name">
-                    <label for="email">Email</label>
-                    <input type="email" name="email" id="email">
-                    <label for="contact">Contact</label>
-                    <input type="tel" name="contact" id="contact">
-
-                    <div>
-                        <button onclick="opentq()" class="popupSendbtn">NEXT</button>
-                    </div>
-                </div>
-            </div>
-            <div class="bannermsg">
-                <div>
-                    <h1>Thank <br>You.</h1>
-                </div>
-                <div>
-                    <p>We'll be in touch <br> Shortly!</p>
-                </div>
-            </div>
-
-        </div>
-    </div>
+    
 
     <script>
-        let top_banner_div = document.querySelector('.popup_banner')
-
-        function banner_close() {
-            top_banner_div.style.display = 'none'
-            localStorage.setItem('adShown', 'true');
-        }
-
-        function popupform() {
-            document.querySelector('.popup_banner').style.display = 'block';
-        }
-
-
-        let inptbox = document.querySelector(".banner_getdata")
-        let msgbox = document.querySelector(".bannermsg")
-
-        function opentq() {
-            inptbox.style.display = 'none';
-            msgbox.style.display = 'block';
-            function closeTq() {
-                msgbox.style.display='none';
-            inptbox.style.display='block';
-            document.querySelector('.popup_banner').style.display = 'none';
-                
-            }
-            setTimeout(closeTq, 3000);
-        }
-
-        setTimeout(showAd, 5000);
-
-
+       
         function opensyllabus() {
             let syllabusdiv = document.querySelector('.syllabus_mob')
             let body = document.querySelector('body')
