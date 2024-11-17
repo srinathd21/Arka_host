@@ -354,6 +354,29 @@
 
     <script src="js/training.js"></script>
 
+    <!-- course Btn Highlighs scripts-->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+        const courseBtnhighlight = document.getElementById('crsbtnhighlight');
+        const courseBtnhighlightMob = document.getElementById('crsbtnhighlightMob');
+        const courseBtn = document.querySelector('.course_dropbtn');
+        const courseBtnMob = document.querySelector('.course_mob_btn');
+
+        setTimeout(() => {
+                courseBtnhighlight.style.display = 'block';
+                courseBtnhighlightMob.style.display = 'block';
+                courseBtn.setAttribute('id', 'crsBtn');
+                courseBtnMob.setAttribute('id', 'crsBtn');
+                setTimeout(() => {
+                    courseBtnhighlight.style.display = 'none';
+                    courseBtnhighlightMob.style.display = 'none';
+                    courseBtn.removeAttribute('id');
+                    courseBtnMob.removeAttribute('id');
+                },3000);
+            }, 3000);
+    });
+    </script>
+
     <script>
         function getCookie(cname) {
             let name = cname + "=";

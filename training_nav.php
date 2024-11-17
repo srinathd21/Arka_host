@@ -210,13 +210,15 @@ $ans = $conn->query($qur);
     </div>
 </div>
 <script>
+    /*
     document.addEventListener('DOMContentLoaded', () => {
         const courseBtnhighlight = document.getElementById('crsbtnhighlight');
         const courseBtnhighlightMob = document.getElementById('crsbtnhighlightMob');
         const courseBtn = document.querySelector('.course_dropbtn');
         const courseBtnMob = document.querySelector('.course_mob_btn');
 
-        setTimeout(() => {
+        if (!localStorage.getItem('visited')) {
+            setTimeout(() => {
                 courseBtnhighlight.style.display = 'block';
                 courseBtnhighlightMob.style.display = 'block';
                 courseBtn.setAttribute('id', 'crsBtn');
@@ -229,14 +231,11 @@ $ans = $conn->query($qur);
                 },3000);
             }, 3000);
 
-        /*if (!localStorage.getItem('visited')) {
-            
-
             localStorage.setItem('visited', 'true');
-        }*/
+        }
     });
 
-
+        */
 
 </script>
 <script>
