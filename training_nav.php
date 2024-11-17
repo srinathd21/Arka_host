@@ -216,8 +216,7 @@ $ans = $conn->query($qur);
         const courseBtn = document.querySelector('.course_dropbtn');
         const courseBtnMob = document.querySelector('.course_mob_btn');
 
-        if (!localStorage.getItem('visited')) {
-            setTimeout(() => {
+        setTimeout(() => {
                 courseBtnhighlight.style.display = 'block';
                 courseBtnhighlightMob.style.display = 'block';
                 courseBtn.setAttribute('id', 'crsBtn');
@@ -230,8 +229,11 @@ $ans = $conn->query($qur);
                 },3000);
             }, 3000);
 
+        /*if (!localStorage.getItem('visited')) {
+            
+
             localStorage.setItem('visited', 'true');
-        }
+        }*/
     });
 
 
