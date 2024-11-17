@@ -83,7 +83,44 @@ nav {
     border: none;
     background-color: green;
 }
+/* course btn highlight */
+#courseBtn{
+    position: relative;
+}
+#crsbtnhighlight,#crsbtnhighlightMob{
+    display: none;
+    position: absolute;
+    text-align: center;
+    animation: crsbtnanimation 0.8s 1 ;
+    
+}
+#crsbtnhighlight h5,#crsbtnhighlightMob h5{
+    color: black !important;
+    font-size: 17px;
+    font-weight: 500;
+}
+#crsbtnhighlight img,#crsbtnhighlightMob img{
+    width: 25px;
+    position: relative;
+    left: -5px;
+}
 
+@keyframes crsbtnanimation{
+    0% {
+        transform: translateY(20px);
+    }
+    100% {
+
+        transform: translateY(0px);
+    }
+}
+
+
+#crsBtn{
+    animation: crsbtnblink 1.5s infinite;
+    animation-delay: 0.4s;
+    box-shadow: 0px 0px 10px 1000px rgba(221, 221, 221, 0.6);
+}
 .course_dropbtn {
     background-color: #4CAF50;
     color: white;
@@ -92,7 +129,19 @@ nav {
     font-size: 16px;
     border: none;
     cursor: pointer;
-    position: relative;
+    position: relative ;
+   
+}
+@keyframes crsbtnblink{
+    0% {
+        background-color: #37b33d;
+        transform: scale(1);
+    }
+    50% {
+        background-color: #48c64e;
+        transform: scale(1.06);
+    }
+ 
 }
 .course_dropbtn img{
     position: absolute;

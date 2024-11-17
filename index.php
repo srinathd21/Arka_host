@@ -25,7 +25,6 @@
 
     <?php include 'popup2.php'; ?>
 
-
     <div style="position:relative;" class="">
         <img class="cover_img_pc" src="img/Arka-Cover-1920x600-Individual.avif" width="100%" alt="">
 
@@ -251,7 +250,8 @@
 
                             <p class="std_msg">
                                 <i class="fas fa-quote-left p-2"></i>
-                                I pursued my internship in ccna . Teaching was ultimately best.I would recommend it for
+                                I pursued my internship in ccna . Teaching was ultimately best.I would recommend it
+                                for
                                 others for those who wanted to enhance theirskills in the field of hardware and
                                 networking.
                             </p>
@@ -271,7 +271,8 @@
 
                             <p class="std_msg">
                                 <i class="fas fa-quote-left p-2"></i>
-                                Hello. This is Subhiksha and I am from Amrita Vishwa Vidhyapeetham, Coimbatore. I learnt
+                                Hello. This is Subhiksha and I am from Amrita Vishwa Vidhyapeetham, Coimbatore. I
+                                learnt
                                 Advanced Python. I had learnt a lot of new stuffs using this course. I had great fun
                                 learning the syllabus and was successfully able to code small program using
                                 whatever i learnt.
@@ -350,6 +351,7 @@
 
 
 
+
     <script src="js/training.js"></script>
 
     <script>
@@ -372,11 +374,11 @@
         function checkCookie() {
             let user = getCookie("username");
             if (user == "") {
-                setTimeout(openuserform, 5000);
-            } 
+                setTimeout(openuserform, 10000);
+            }
         }
         checkCookie()
-        
+
     </script>
 
     <!--  Font Awesome  -->

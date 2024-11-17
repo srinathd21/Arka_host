@@ -10,8 +10,8 @@ $ans = $conn->query($qur);
 
 <div class="nav">
     <nav class="container">
-        <button class="btn d-lg-none" style="width:40px;position:relative; left:-10px;" type="button" data-bs-toggle="offcanvas"
-            data-bs-target="#demo">
+        <button class="btn d-lg-none" style="width:40px;position:relative; left:-10px;" type="button"
+            data-bs-toggle="offcanvas" data-bs-target="#demo">
             <img id="nav-bar-icon" src="icons/bars-solid.svg" alt="">
         </button>
 
@@ -32,7 +32,17 @@ $ans = $conn->query($qur);
 
         <div class="nav_links">
             <div class="course_dropdown">
-                <button class="course_dropbtn">Course <img src="icons/angle-down-solid.svg" alt=""></button>
+                <div id="courseBtn">
+                    <button class="course_dropbtn">Course <img src="icons/angle-down-solid.svg" alt=""></button>
+                    <div id="crsbtnhighlight">
+                        <div>
+                            <img src="img/up-arrow-l.png" alt="">
+                        </div>
+                        <div>
+                            <h5>Explore Courses</h5>
+                        </div>
+                    </div>
+                </div>
                 <div class="course_dropdown-content">
                     <?php
                     // Populate the custom dropdown with course categories
@@ -68,7 +78,7 @@ $ans = $conn->query($qur);
                                         echo "<a  href='course_details.php?category={$course_catagory_name}&title={$course_details['title']}'>{$course_details['title']}</a>";
                                         echo "</div>";
                                     }
-                            
+
                                 }
                             } else {
                                 echo "No course_details found.";
@@ -82,7 +92,7 @@ $ans = $conn->query($qur);
             </div>
 
             <div>
-                <a style="cursor:pointer;" onclick="openuserform()" >Support</a>
+                <a style="cursor:pointer;" onclick="openuserform()">Support</a>
             </div>
 
             <div>
@@ -120,8 +130,8 @@ $ans = $conn->query($qur);
                 </div>
 
                 <div>
-                <a id="top_nav_link_mob" style="cursor:pointer;" onclick="openuserform()" >Support</a>
-            </div>
+                    <a id="top_nav_link_mob" style="cursor:pointer;" onclick="openuserform()">Support</a>
+                </div>
             </div>
         </div>
         <div id="nav_last_btn" style="">
@@ -129,13 +139,23 @@ $ans = $conn->query($qur);
                 <i id="open_serachbtn_mob" onclick="OpenMobSearch()" class="fa-solid fa-magnifying-glass"></i>
                 <i id="close_serachbtn_mob" onclick="CloseMobSearch()" class="fa-solid fa-x"></i>
             </div>
-            <div>
+            <div id="courseBtn">
                 <button class="course_mob_btn" onclick="opensidenav()">Course <img src="icons/angle-down-solid.svg"
                         alt=""></button>
+                <div id="crsbtnhighlightMob">
+                    <div>
+                        <img src="img/up-arrow-l.png" alt="">
+                    </div>
+                    <div>
+                        <h5>Explore Courses</h5>
+                    </div>
+                </div>
             </div>
             <div>
-                <a id="icon-location" href="https://www.google.com/maps/place/Arka+Networkz+System/@12.7360388,77.8222739,17z/data=!3m1!4b1!4m6!3m5!1s0x3bae7185e99a9cb5:0x3520348054405036!8m2!3d12.7360336!4d77.8248488!16s%2Fg%2F11t1ds8dv0?authuser=0&entry=ttu"
-                    target="_blank" style="width:12px; margin-top:2px; display:inline-block;"><img src="icons/location-dot-solid.svg"></img></a>
+                <a id="icon-location"
+                    href="https://www.google.com/maps/place/Arka+Networkz+System/@12.7360388,77.8222739,17z/data=!3m1!4b1!4m6!3m5!1s0x3bae7185e99a9cb5:0x3520348054405036!8m2!3d12.7360336!4d77.8248488!16s%2Fg%2F11t1ds8dv0?authuser=0&entry=ttu"
+                    target="_blank" style="width:12px; margin-top:2px; display:inline-block;"><img
+                        src="icons/location-dot-solid.svg"></img></a>
             </div>
         </div>
 
@@ -161,20 +181,20 @@ $ans = $conn->query($qur);
 
     <div class="catgr_side_nav_content">
         <div class="catgr_side_nav_overflow">
-        <?php
-        // Populate the custom dropdown with course categories
-        if ($ans->num_rows > 0) {
-            while ($row = $ans->fetch_assoc()) {
+            <?php
+            // Populate the custom dropdown with course categories
+            if ($ans->num_rows > 0) {
+                while ($row = $ans->fetch_assoc()) {
 
-                echo "<div class='catgr_side_dropdown'>";
-                echo "<span class='catgr_drop_btn' onclick='loadSubCourse(event)'>{$row['category']}</span>
+                    echo "<div class='catgr_side_dropdown'>";
+                    echo "<span class='catgr_drop_btn' onclick='loadSubCourse(event)'>{$row['category']}</span>
                 <img src='img/angle-right-solid-black.svg'>
                 ";
 
-                echo "</div>";
+                    echo "</div>";
+                }
             }
-        }
-        ?>
+            ?>
         </div>
         <div class='side_nav_sub_catgr'>
             <div class="mb-4">
@@ -189,22 +209,49 @@ $ans = $conn->query($qur);
         </div>
     </div>
 </div>
-
 <script>
-  function toggleCollapse(headerElement) {
-    // Select the content element that follows the header
-    const content = headerElement.nextElementSibling;
-    const icon = headerElement.querySelector('#maintitleIcon');
+    document.addEventListener('DOMContentLoaded', () => {
+        const courseBtnhighlight = document.getElementById('crsbtnhighlight');
+        const courseBtnhighlightMob = document.getElementById('crsbtnhighlightMob');
+        const courseBtn = document.querySelector('.course_dropbtn');
+        const courseBtnMob = document.querySelector('.course_mob_btn');
 
-    // Toggle display of the content
-    if (content.style.display === 'none' || content.style.display === '') {
-      content.style.display = 'block';
-      icon.style.transform = 'rotate(180deg)'; 
-    } else {
-      content.style.display = 'none';
-      icon.style.transform = 'rotate(0deg)'; 
+        if (!localStorage.getItem('visited')) {
+            setTimeout(() => {
+                courseBtnhighlight.style.display = 'block';
+                courseBtnhighlightMob.style.display = 'block';
+                courseBtn.setAttribute('id', 'crsBtn');
+                courseBtnMob.setAttribute('id', 'crsBtn');
+                setTimeout(() => {
+                    courseBtnhighlight.style.display = 'none';
+                    courseBtnhighlightMob.style.display = 'none';
+                    courseBtn.removeAttribute('id');
+                    courseBtnMob.removeAttribute('id');
+                },3000);
+            }, 3000);
+
+            localStorage.setItem('visited', 'true');
+        }
+    });
+
+
+
+</script>
+<script>
+    function toggleCollapse(headerElement) {
+        // Select the content element that follows the header
+        const content = headerElement.nextElementSibling;
+        const icon = headerElement.querySelector('#maintitleIcon');
+
+        // Toggle display of the content
+        if (content.style.display === 'none' || content.style.display === '') {
+            content.style.display = 'block';
+            icon.style.transform = 'rotate(180deg)';
+        } else {
+            content.style.display = 'none';
+            icon.style.transform = 'rotate(0deg)';
+        }
     }
-  }
 
 </script>
 <script>

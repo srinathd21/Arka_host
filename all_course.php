@@ -82,8 +82,6 @@
             const coursecontainer = document.querySelector('.coursecontainer');
             const catyparagElement = document.querySelector('.catyparag');
 
-            console.log(coursecategory);
-
             // Use AJAX to fetch the courses for the selected category
             const xhr1 = new XMLHttpRequest();
             xhr1.open("GET", "ajaxresponse.php?coursecategory=" + coursecategory, true);
