@@ -361,7 +361,7 @@ nav {
     left: -5px;
 }
 .catgr_side_nav_overflow{
-    height: 100dvh;
+    height: 75dvh;
     overflow-y: auto;
 }
 .catgr_side_dropdown{
@@ -377,7 +377,7 @@ nav {
     top: 21px;
 }
 #subCourseDiv{
-    height: 100dvh;
+    height: 75dvh;
     overflow: auto;
 }
 .catgr_drop_btn, #subCourseTitle>a, #mainTitle>span{
