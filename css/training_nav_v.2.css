@@ -198,7 +198,8 @@ nav {
     top: 38px;
     left: -55px;
     background-color: #f9f9f9;
-    min-width: 250px;
+    width: 250px;
+    box-sizing: border-box;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.5);
     z-index: 1;
 }
@@ -229,6 +230,7 @@ nav {
 }
 .catgr_link{
     position: relative;
+
 }
 .catgr_link_btn{
     position: relative;
@@ -238,6 +240,7 @@ nav {
     right: 10px;
     top: 15px;
     width: 8px;
+    z-index: 0;
 }
 #mainTitlePc span img{
     top: 13px;
@@ -269,8 +272,8 @@ nav {
     display: none;
     position: absolute;
     top: 5px;
-    right: -200px;
-    min-width: 200px;
+    right: -220px;
+    width: 220px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.5);
     background-color: rgb(255, 255, 255);
 }
