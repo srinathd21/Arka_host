@@ -85,7 +85,7 @@
                                     if ($row['offer'] == 'Yes') {
                                         echo '<span class="offer_lable">Offer</span>';
                                     }
-                                    echo '<h2 class="">' . $row["title"] . '</h2>
+                                    echo '<h4 class="">' . $row["title"] . '</h4>
                                     <p>Extensive syllabus</p>
 
                                     <span><i class="fa-solid fa-book-open"></i>Specialized certificate</span>
@@ -131,7 +131,7 @@
                     if ($row['offer'] == 'Yes') {
                         echo '<div class="offer_lable"><span>Offer</span></div>';
                     }
-                    echo '<h2 class="">' . $row["title"] . '</h2>
+                    echo '<h4 class="">' . $row["title"] . '</h4>
                     <p>Extensive syllabus</p>
 
                     <span><i class="fa-solid fa-book-open"></i>Specialized certificate</span>
@@ -372,7 +372,7 @@
                     courseBtnhighlightMob.style.display = 'none';
                     courseBtn.removeAttribute('id');
                     courseBtnMob.removeAttribute('id');
-                },3000);
+                },2000);
             }, 3000);
     });
     </script>

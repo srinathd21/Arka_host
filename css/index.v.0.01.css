@@ -10,7 +10,7 @@ body {
     font-weight: 400;
     font-style: normal;
 }
-h2,h3,h5{
+h2,h3,h4,h5{
     font-style: normal;
     font-weight: 500;
     color: rgb(52, 52, 52) !important;
@@ -156,9 +156,8 @@ h2,h3,h5{
 }
 .course_title {
     height: 50%;
-    padding: 25px;
+    padding: 20px;
     color: gray;
-    box-sizing: border-box;
 }
 .course_title h2{
     color: rgb(52, 52, 52) !important;
