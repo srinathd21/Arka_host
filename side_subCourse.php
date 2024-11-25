@@ -30,9 +30,19 @@ if ($result->num_rows > 0) {
                     echo "<a href='course_details.php?category={$course_catagory_name}&title={$sub_course['title']}'>{$sub_course['title']}</a>";
                 }
             }
-            
+
             echo "</div>";
-        } else if (!$course_details['sub_domain']) {
+        }
+    }
+}
+$sql = "SELECT * FROM course_form WHERE category = ? and main_domain='No'";
+$stmt = $conn->prepare($sql);
+$stmt->bind_param("s", $course_catagory_name);
+$stmt->execute();
+$result = $stmt->get_result();
+if ($result->num_rows > 0) {
+    while ($course_details = $result->fetch_assoc()) {
+        if (!$course_details['sub_domain']) {
             echo "<div id='subCourseTitle'>";
             echo "<a  href='course_details.php?category={$course_catagory_name}&title={$course_details['title']}'>{$course_details['title']}</a>";
             echo "</div>";
