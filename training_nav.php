@@ -73,7 +73,19 @@ $ans = $conn->query($qur);
                                         }
                                         echo "</div>";
                                         echo "</div>";
-                                    } else if (!$course_details['sub_domain']) {
+                                    }
+                                }
+                            }
+                            $course_catagory_name = $row['category'];
+                            $sql = "SELECT * FROM course_form WHERE category = ? and main_domain='No'";
+                            $stmt = $conn->prepare($sql);
+                            $stmt->bind_param("s", $course_catagory_name);
+                            $stmt->execute();
+                            $result = $stmt->get_result();
+
+                            if ($result->num_rows > 0) {
+                                while ($course_details = $result->fetch_assoc()) {
+                                    if (!$course_details['sub_domain']) {
                                         echo "<div id='subCourseTitlePc'>";
                                         echo "<a  href='course_details.php?category={$course_catagory_name}&title={$course_details['title']}'>{$course_details['title']}</a>";
                                         echo "</div>";
